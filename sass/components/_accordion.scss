@@ -1,0 +1,62 @@
+.accordion {
+    .accordion-item {
+        background-color: var(--white-color);
+        .accordion-button {
+            box-shadow: none;
+            background-color: var(--white-color);
+            color: var(--secondary-color);
+            &:focus {
+                background-color: var(--theme-light);
+            }
+            &:not(.collapsed) {
+                background-color: var(--theme-light);
+                color: var(--theme-color);
+            }
+        }
+        .accordion-body {
+            color: var(--secondary-color);
+        }
+    }
+
+    &.advance {
+        .accordion-item {
+            background-color: var(--white-color);
+            .accordion-button {
+                transition: all ease 0.1s;
+                box-shadow: none;
+                background-color: var(--white-color);
+                color: var(--secondary-color);
+                &::before {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    content: "";
+                    background-image: url("../../assets/icons/plus-circle-fill.svg");
+                    background-repeat: no-repeat;
+                    background-size: 1.25rem;
+                    margin-right: 10px;
+                }
+                &::after {
+                    display: none;
+                }
+                &:focus {
+                    background-color: transparent;
+                }
+                &:not(.collapsed) {
+                    background-color: transparent;
+                    color: var(--black-color);
+                    font-weight: bold;
+                    &::before {
+                        background-image: url("../../assets/icons/dash-circle-fill.svg");
+                    }
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            .accordion-body {
+                color: var(--secondary-color);
+                padding: 0 1.25rem 1rem 3.2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="402" height="274" viewBox="0 0 402 274">
+  <g id="_1" data-name="1" transform="translate(601 -1916)">
+    <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(-601 1916)" fill="#fff" stroke="#598dee" stroke-width="3">
+      <rect width="402" height="274" rx="10" stroke="none"/>
+      <rect x="1.5" y="1.5" width="399" height="271" rx="8.5" fill="none"/>
+    </g>
+    <path id="Rectangle_5" data-name="Rectangle 5" d="M10,0H392a10,10,0,0,1,10,10V41a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V10A10,10,0,0,1,10,0Z" transform="translate(-601 1916)" fill="#598dee"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="13" cy="13" r="13" transform="translate(-588 1924)" fill="#135fee"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="316" height="8" rx="4" transform="translate(-588 1980)" fill="rgba(89,141,238,0.38)"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="175" height="8" rx="4" transform="translate(-588 2010)" fill="rgba(89,141,238,0.38)"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="336" height="8" rx="4" transform="translate(-588 2040)" fill="rgba(89,141,238,0.38)"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="277" height="8" rx="4" transform="translate(-588 2070)" fill="rgba(89,141,238,0.38)"/>
+  </g>
+</svg>

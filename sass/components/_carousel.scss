@@ -1,0 +1,13 @@
+.carousel {
+    .carousel-caption {
+        h5,
+        p {
+            color: var(--white-color);
+        }
+    }
+    .carousel-indicators{
+        button{
+            background-color: var(--white-color) !important;
+        }
+    }
+}

@@ -1,5 +1,4 @@
-# Admin panel
-Simple admin panel.
+# Admin Panel 
 
-- HTML Template
-- Django
+Admin Panel
+

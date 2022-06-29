@@ -1,0 +1,99 @@
+.form-label,
+.form-check-label {
+    margin-bottom: 0;
+    font-size: 15px;
+    color: var(--black-color);
+    cursor: pointer;
+}
+.form-control,
+.form-select {
+    background-color: var(--white-color);
+    &:focus {
+        background-color: var(--white-color);
+    }
+
+    transition: all ease 0.1s;
+    border-color: var(--light-color);
+    color: var(--secondary-color);
+    &:disabled {
+        background-color: var(--bg-color);
+    }
+    &::placeholder {
+        transition: all ease 0.3s;
+    }
+    &:focus {
+        border-color: var(--theme-color);
+
+        &::placeholder {
+            padding-left: 5px;
+        }
+    }
+    &.is-valid {
+        border-color: var(--success-color);
+    }
+    &.is-invalid {
+        border-color: var(--danger-color);
+    }
+
+    &.table-input {
+        padding: 0 5px;
+        width: auto;
+        border: none;
+        background-color: var(--light-color);
+    }
+}
+.toggle-password-fill {
+    position: relative;
+    .pass-eye {
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 7px;
+        color: var(--secondary-color);
+        right: 10px;
+        z-index: 9;
+    }
+}
+.form-check-input {
+    cursor: pointer;
+    &:checked {
+        background-color: var(--theme-color);
+        border-color: var(--theme-color);
+    }
+}
+
+.required {
+    position: relative;
+    &::after {
+        content: "*";
+        position: absolute;
+        right: -10px;
+        top: -5px;
+        color: var(--danger-color);
+        font-size: 22px;
+    }
+}
+
+.input-group,
+.form-select {
+    position: relative;
+    .input-group-text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 9;
+        border: none;
+        background-color: transparent;
+        color: var(--secondary-color);
+    }
+    .form-control,
+    .form-select {
+        padding-left: 35px;
+        border-radius: 0.25rem !important;
+    }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--theme-color);
+}

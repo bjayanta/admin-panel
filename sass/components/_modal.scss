@@ -1,0 +1,20 @@
+.modal-dialog {
+    .modal-header,
+    .modal-footer {
+        padding: 0.5rem 1rem;
+        border: none;
+    }
+    .modal-header {
+        background-color: var(--bg-color);
+    }
+    .modal-footer {
+        background-color: var(--white-color);
+    }
+    .modal-body {
+        background-color: var(--white-color);
+        color: var(--secondary-color);
+    }
+    .modal-content {
+        background-color: transparent;
+    }
+}

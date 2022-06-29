@@ -1,0 +1,19 @@
+.list-group {
+    border-radius: 0;
+    .list-group-item {
+        border: none;
+        background-color: var(--white-color);
+        color: var(--secondary-color);
+    }
+    &.hover {
+        .list-group-item {
+            &:hover {
+                background-color: var(--light-color);
+            }
+            &.active {
+                background-color: var(--theme-color);
+                color: var(--white-color);
+            }
+        }
+    }
+}

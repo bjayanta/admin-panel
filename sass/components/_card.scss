@@ -1,0 +1,31 @@
+.card {
+    border: none;
+    background-color: var(--white-color);
+    .card-header {
+        background-color: var(--white-color);
+        padding: 1rem;
+        .card-title,
+        .card-subtitle {
+            text-transform: capitalize;
+        }
+    }
+    .card-body {
+        padding-top: 0;
+    }
+    &.user {
+        .card-header {
+            background-color: var(--white-color);
+            border: none;
+            padding-top: 1rem;
+            padding-bottom: 0;
+            @include flexBox();
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+// colors
+:root {
+    --ph:219;
+    --ps:81%;
+    --pl:64%;
+    --theme-color: hsl(var(--ph), var(--ps), var(--pl));
+    --theme-darken:hsl(var(--ph), var(--ps), calc(var(--pl) - 10%));
+    --theme-light:hsl(var(--ph), var(--ps), calc(var(--pl) + 32%));
+
+
+    --secondary-color: #516377;
+    --light-color: #dee2e6;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --bg-color: #f3f4f4;
+    --success-color: #39da8a;
+    --warning-color: #fdac41;
+    --danger-color: #ff5b5c;
+}
+
+$success-color: #39da8a;
+$warning-color: #fdac41;
+$danger-color: #ff5b5c;
+
+.dark-mode {
+    --white-color: #283144;
+    --secondary-color: #a1b0cb;
+    --black-color: #a1b0cb;
+    --bg-color: #1c222f;
+    --light-color: #323d53;
+}
+
+$common-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+
+
+
+

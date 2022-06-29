@@ -1,0 +1,18 @@
+.pagination {
+    .page-item {
+        box-shadow: $common-shadow;
+        background-color: transparent;
+        .page-link {
+            background-color: var(--white-color);
+            border: none;
+            color: var(--secondary-color);
+            &:hover {
+                background-color: var(--light-color);
+            }
+            &.active {
+                background-color: var(--theme-color);
+                color: var(--light-color);
+            }
+        }
+    }
+}

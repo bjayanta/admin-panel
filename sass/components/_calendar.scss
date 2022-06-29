@@ -1,0 +1,54 @@
+
+.calendar {
+    position: relative;
+    .btn {
+        text-transform: uppercase;
+        background-color: var(--bg-color);
+        position: absolute;
+        &.btn-next {
+            right: 0;
+        }
+        &.btn-prev {
+            left: 0;
+        }
+    }
+    .divCal {
+        .wrap {
+            .heading {
+                p {
+                    text-align: center;
+                    padding-top: 6px;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+            .days {
+                @include flexBox($justify-content: space-around);
+                font-weight: bold;
+                span {
+                    width: 30px;
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+            .date {
+                @include flexBox($justify-content: space-around);
+                span {
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                    &.not-current{
+                        opacity: .5;
+                    }
+                    &.today{
+                        font-weight: bold;
+                        background-color: var(--theme-color);
+                        border-radius: 30px;
+                        color: var(--white-color);
+                    }
+                }
+            }
+        }
+    }
+}

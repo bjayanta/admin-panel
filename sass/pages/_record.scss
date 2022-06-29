@@ -1,0 +1,17 @@
+.record-wrap{
+    .title-wrap{
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--bg-color);
+        margin-bottom: 10px;
+        .result{
+            font-size: 15px;
+            color: var(--secondary-color);
+            margin-bottom: 0;
+        }
+        @media print {
+            .page-title, .result{
+                color: var(--black-color);
+            }
+        }
+    }
+}

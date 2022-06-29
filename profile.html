@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Title -->
+    <title>Baky Billah | MaxSOP</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- C3 -->
+    <link rel="stylesheet" href="./plugins/c3/c3.css">
+    <!-- Bootstrap icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Bootstrap css CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./css/master.css">
+</head>
+
+<body>
+
+
+
+
+    <!-- Start aside =================================== -->
+    <aside id="page-aside">
+
+
+        <!-- Start aside button bar =================================== -->
+        <div class="left-icon-wrap">
+
+
+            <!-- Start logo =================================== -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logos/icon-logo.svg" class="w-100" alt="Brand name">
+            </a>
+            <!-- End logo =================================== -->
+
+            <!-- Start tad buttons =================================== -->
+            <div class="nav nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+                <!-- Start page button =================================== -->
+                <button class="nav-link" title="Pages" id="v-pills-pages-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-pages" type="button" role="tab" aria-controls="v-pills-pages"
+                    aria-selected="false">
+                    <i class="bi bi-display"></i>
+                </button>
+                <!-- End page button =================================== -->
+
+
+                <!-- Start component button =================================== -->
+                <button class="nav-link" title="Components" id="v-pills-components-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-components" type="button" role="tab" aria-controls="v-pills-components"
+                    aria-selected="false">
+                    <i class="bi bi-code-square"></i>
+                </button>
+                <!-- End component button =================================== -->
+            </div>
+            <!-- End tad buttons =================================== -->
+
+
+            <!-- Start aside Expand & logout button =================================== -->
+            <div class="footer-button">
+                <button class="button" onclick="expandFunction()">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+                <button class="button">
+                    <i class="bi bi-box-arrow-left"></i>
+                </button>
+            </div>
+            <!-- End aside Expand & logout button =================================== -->
+
+
+        </div>
+        <!-- End aside button bar =================================== -->
+
+
+        <!-- Start aside menu bar =================================== -->
+        <div class="right-menu-wrap">
+            <div class="tab-content" id="v-pills-tabContent">
+
+
+                <!-- Start pages menu list =================================== -->
+                <div class="tab-pane fade" id="v-pills-pages" role="tabpanel" aria-labelledby="v-pills-pages-tab">
+
+
+                    <!-- Start fixt title =================================== -->
+                    <div class="fixt-title">
+                        <p>Pages</p>
+                    </div>
+                    <!-- End fixt title =================================== -->
+
+                    <!-- Start components single menus =================================== -->
+                    <ul class="accordion" id="page">
+                        <li class="accordion-item">
+                            <a href="./index.html" class="sigle-nav-link">
+                                <i class="bi bi-speedometer2"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./empty_page.html" class="sigle-nav-link">
+                                <i class="bi bi-clipboard"></i>
+                                <span>Empty page</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./pages/chatbox.html" class="sigle-nav-link">
+                                <i class="bi bi-chat-dots"></i>
+                                <span>chatbox</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./pages/mail_template.html" class="sigle-nav-link">
+                                <i class="bi bi-envelope-paper"></i>
+                                <span>Mail template</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./pages/screen_lock.html" class="sigle-nav-link">
+                                <i class="bi bi-file-earmark-lock"></i>
+                                <span>Screen lock</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./pages/under_construction.html" class="sigle-nav-link">
+                                <i class="bi bi-tools"></i>
+                                <span>Under construction </span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./pages/copyright.html" class="sigle-nav-link">
+                                <i class="bi bi-clipboard-check"></i>
+                                <span>Copyright</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./pages/license.html" class="sigle-nav-link">
+                                <i class="bi bi-app"></i>
+                                <span>License</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./pages/support.html" class="sigle-nav-link">
+                                <i class="bi bi-question-circle"></i>
+                                <span>Support</span>
+                            </a>
+                        </li>
+
+
+                        <li class="accordion-item">
+                            <span class="accordion-item-title mt-2">Dropdown</span>
+                        </li>
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#authentication" aria-expanded="false" aria-controls="authentication">
+                                <i class="bi bi-fingerprint"></i>
+                                <span class="me-auto">authentication</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="authentication" class="accordion-collapse collapse" data-bs-parent="#page">
+                                <li>
+                                    <a href="./pages/auth_login.html" class="nav-link"><span>Login</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/auth_register.html" class="nav-link"><span>Register</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/auth_varify_email.html" class="nav-link"><span>varify email</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./pages/auth_forgot_pass.html" class="nav-link"><span>forgot
+                                            password</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/auth_reset_pass.html" class="nav-link"><span>reset
+                                            password</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#demo-item" aria-expanded="false" aria-controls="demo-item">
+                                <i class="bi bi-diagram-3"></i>
+                                <span class="me-auto">Demo item</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="demo-item" class="accordion-collapse collapse" data-bs-parent="#page">
+                                <li>
+                                    <a href="./pages/item_records.html" class="nav-link"><span>All records</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/item_details.html" class="nav-link"><span>view
+                                            single item</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/item_entry.html" class="nav-link"><span>New entry</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#media" aria-expanded="false" aria-controls="media">
+                                <i class="bi bi-images"></i>
+                                <span class="me-auto">Media</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="media" class="accordion-collapse collapse" data-bs-parent="#page">
+                                <li>
+                                    <a href="./pages/media_gallery.html" class="nav-link"><span>Media
+                                            gallery</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/media_album.html" class="nav-link"><span>Media album</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/media_upload.html" class="nav-link"><span>Media upload</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#receipt" aria-expanded="false" aria-controls="receipt">
+                                <i class="bi bi-receipt"></i>
+                                <span class="me-auto">receipt</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="receipt" class="accordion-collapse collapse" data-bs-parent="#page">
+
+                                <li>
+                                    <a href="./pages/invoice.html" class="nav-link"><span>Invoice</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/money_receipt.html" class="nav-link"><span>Money
+                                            receipt</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#error" aria-expanded="false" aria-controls="error">
+                                <i class="bi bi-exclamation-diamond"></i>
+                                <span class="me-auto">errors</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="error" class="accordion-collapse collapse" data-bs-parent="#page">
+                                <li>
+                                    <a href="./pages/error_404.html" class="nav-link"><span>404 error</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/error_500.html" class="nav-link"><span>500 error</span></a>
+                                </li>
+                                <li>
+                                    <a href="./pages/error_503.html" class="nav-link"><span>503 error</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                    </ul>
+                    <!-- End components single menus =================================== -->
+
+
+                </div>
+                <!-- End pages menu list =================================== -->
+
+                <!-- Start components menu list =================================== -->
+                <div class="tab-pane fade" id="v-pills-components" role="tabpanel"
+                    aria-labelledby="v-pills-components-tab">
+
+                    <!-- Start fixt title =================================== -->
+                    <div class="fixt-title">
+                        <p>Components</p>
+                    </div>
+                    <!-- End fixt title =================================== -->
+
+
+
+                    <!-- Start menus =================================== -->
+                    <ul class="accordion">
+                        <li class="accordion-item">
+                            <a href="./components/table.html" class="sigle-nav-link">
+                                <i class="bi bi-table"></i>
+                                <span>Table</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/form.html" class="sigle-nav-link">
+                                <i class="bi bi-input-cursor"></i>
+                                <span>Form</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/button.html" class="sigle-nav-link">
+                                <i class="bi bi-menu-button-fill"></i>
+                                <span>Button</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/accordion.html" class="sigle-nav-link">
+                                <i class="bi bi-view-list"></i>
+                                <span>Accordion</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/card.html" class="sigle-nav-link">
+                                <i class="bi bi-postcard"></i>
+                                <span>Card</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/alerts.html" class="sigle-nav-link">
+                                <i class="bi bi-exclamation-diamond"></i>
+                                <span>Alerts</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/breadcrumb.html" class="sigle-nav-link">
+                                <i class="bi bi-link"></i>
+                                <span>Breadcrumb</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/carousel.html" class="sigle-nav-link">
+                                <i class="bi bi-file-slides"></i>
+                                <span>Carousel</span>
+                            </a>
+                        </li>
+
+                        <li class="accordion-item">
+                            <a href="./components/List_group.html" class="sigle-nav-link">
+                                <i class="bi bi-card-checklist"></i>
+                                <span>List group</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/modal.html" class="sigle-nav-link">
+                                <i class="bi bi-aspect-ratio"></i>
+                                <span>Modal</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/pagination.html" class="sigle-nav-link">
+                                <i class="bi bi-123"></i>
+                                <span>Pagination</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/lazy_loader.html" class="sigle-nav-link">
+                                <i class="bi bi-arrow-clockwise"></i>
+                                <span>lazy loader</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/progressbar.html" class="sigle-nav-link">
+                                <i class="bi bi-kanban"></i>
+                                <span>Progressbar</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/tooltips.html" class="sigle-nav-link">
+                                <i class="bi bi-chat-square-dots"></i>
+                                <span>Tooltips</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/text_editor.html" class="sigle-nav-link">
+                                <i class="bi bi-postcard"></i>
+                                <span>Text editor</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/world_map.html" class="sigle-nav-link">
+                                <i class="bi bi-map"></i>
+                                <span>World map</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/country_map.html" class="sigle-nav-link">
+                                <i class="bi bi-map"></i>
+                                <span>Country map</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/Chart.html" class="sigle-nav-link">
+                                <i class="bi bi-bar-chart"></i>
+                                <span>Chart</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/calendar.html" class="sigle-nav-link">
+                                <i class="bi bi-calendar-date"></i>
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./components/calculator.html" class="sigle-nav-link">
+                                <i class="bi bi-calculator"></i>
+                                <span>calculator</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End menus =================================== -->
+
+
+                </div>
+                <!-- End components menu list =================================== -->
+
+
+
+
+            </div>
+        </div>
+        <!-- End aside menu bar =================================== -->
+
+    </aside>
+    <!-- End aside =================================== -->
+
+
+    <!-- Start aside background Shadow =================================== -->
+    <div id="aside-layer" onclick="expandFunction()"></div>
+    <!-- End aside background Shadow =================================== -->
+
+
+
+
+    <!-- main-bar -->
+    <main class="main-bar" id="main-bar">
+
+        <!-- Start navigation =================================== -->
+        <nav class="navbar bg-color">
+            <div class="container-fluid">
+                <ul class="navbar-wrap ms-auto mb-2 mb-lg-0">
+
+                    <!-- Start search button =================================== -->
+                    <li class="nav-item" onclick="shearchFunction()">
+                        <a class="nav-link " href="#"><i class="bi bi-search"></i></a>
+                    </li>
+                    <!-- End search button =================================== -->
+
+
+
+
+                    <!-- Start translate button =================================== -->
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><i class="bi bi-translate"></i></a>
+                    </li>
+                    <!-- End translate button =================================== -->
+
+
+                    <!-- Start dark theme button =================================== -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="themeColorChange()"><i class="bi bi-moon-stars"
+                                id="bi-moon-stars"></i></a>
+                    </li>
+                    <!-- End dark theme button =================================== -->
+
+
+                    <!-- Start notification =================================== -->
+                    <li class="nav-item notification dropdown">
+
+
+                        <!-- Start notification button =================================== -->
+                        <a class="nav-link" href="#" id="notification-dropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="bi bi-bell"></i>
+                            <!-- badge -->
+                            <span class="badge badge-counter">1</span>
+                        </a>
+                        <!-- End notification button =================================== -->
+
+                        <!-- Start notification Dropdoun memu =================================== -->
+                        <ul class="dropdown-menu" aria-labelledby="notification-dropdown">
+                            <li>
+                                <a class="dropdown-item isseen" href="#">
+                                    <img src="./assets/images/user/baky.jpg" alt="baky">
+                                    <div>
+                                        <p><strong>Baky Billah Khan Pathan</strong></p>
+                                        <p><small>Admin</small></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item isseen" href="#">
+                                    <img src="./assets/icons/success.svg" alt="success">
+                                    <div>
+                                        <p><strong>Success notification</strong></p>
+                                        <p><small>Success</small></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="./assets/icons/warning.svg" alt="success">
+                                    <div>
+                                        <p><strong>Warning notification</strong></p>
+                                        <p><small>Warning</small></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item isseen" href="#">
+                                    <img src="./assets/icons/danger.svg" alt="success">
+                                    <div>
+                                        <p><strong>Danger notification </strong></p>
+                                        <p><small>Danger Danger Danger Danger Danger Danger Danger Danger Danger
+                                            </small></p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- End notification Dropdoun memu =================================== -->
+                    </li>
+                    <!-- End notification =================================== -->
+
+
+
+                    <!-- Start service =================================== -->
+                    <li class="nav-item service dropdown">
+
+
+
+                        <!-- Start service dropdown button =================================== -->
+                        <a class="nav-link dropdown-toggl" href="#" id="service-dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-grid"></i>
+                            <!-- badge-circle -->
+                            <span class="badge-circle"></span>
+                        </a>
+                        <!-- End service dropdown button =================================== -->
+
+
+                        <!-- Start service dropdown menus =================================== -->
+                        <ul class="dropdown-menu" aria-labelledby="service-dropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-speedometer"></i>
+                                    <span>Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-calculator"></i>
+                                    <span> POS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-people"></i>
+                                    <span>HR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-chat-left-dots"></i>
+                                    <span>SMS</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-speedometer"></i>
+                                    <span>Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-calculator"></i>
+                                    <span> POS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-people"></i>
+                                    <span>HR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-chat-left-dots"></i>
+                                    <span>SMS</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-speedometer"></i>
+                                    <span>Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-calculator"></i>
+                                    <span> POS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-people"></i>
+                                    <span>HR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-chat-left-dots"></i>
+                                    <span>SMS</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-speedometer"></i>
+                                    <span>Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-calculator"></i>
+                                    <span> POS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-people"></i>
+                                    <span>HR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-chat-left-dots"></i>
+                                    <span>SMS</span></a>
+                            </li>
+                        </ul>
+                        <!-- End service dropdown menus =================================== -->
+                    </li>
+                    <!-- End service =================================== -->
+
+
+                    <!-- Start full screen button =================================== -->
+                    <li class="nav-item d-md-inline d-none">
+                        <a class="nav-link" href="#" onclick="toggleFullScreen()">
+                            <i class="bi bi-arrows-fullscreen" id="bi-arrows-fullscreen"></i>
+                        </a>
+                    </li>
+                    <!-- End full screen button =================================== -->
+
+
+                    <!-- Start user  =================================== -->
+                    <li class="nav-item user dropdown">
+
+                        <!-- Start user dropdown button  =================================== -->
+                        <a class="nav-link dropdown-toggl" href="#" id="user-dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./assets/images/user/baky.jpg" alt="">
+
+                            <!-- badge-circle Active-->
+                            <span class="badge-circle active"></span>
+                        </a>
+                        <!-- End user dropdown button  =================================== -->
+
+                        <!-- Start user dropdown menu  =================================== -->
+                        <ul class="dropdown-menu" aria-labelledby="user-dropdown">
+                            <li>
+                                <a class="dropdown-item profile" href="./profile.html">
+                                    <img src="./assets/images/user/baky.jpg" alt="">
+                                    <div>
+                                        <h5>baky billah khan pathan</h5>
+                                        <p>Admin</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./settings.html">
+                                    <i class="bi bi-gear"></i>
+                                    <span>Settings & Privacy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./support.html">
+                                    <i class="bi bi-question-circle"></i>
+                                    <span>Help & Support</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-box-arrow-left"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- End user dropdown menu  =================================== -->
+
+                    </li>
+                    <!-- End user  =================================== -->
+
+                </ul>
+
+                <!-- Start search-bar =================================== -->
+                <div class="search-bar" id="search-bar">
+                    <form class="h-100">
+                        <input class="form-control" id="search-input" type="text" placeholder="Search">
+                        <button type="button" class="close-button" onclick="shearchFunction()"><i
+                                class="bi bi-x-lg"></i></button>
+                    </form>
+                </div>
+                <!-- End search-bar =================================== -->
+            </div>
+        </nav>
+        <!-- End navigation =================================== -->
+
+
+
+
+
+        <div class="container-fluid mt-3 mb-5">
+
+
+            <!-- Start header button =================================== -->
+            <div class="nav-options">
+                <!-- Start bubbons ====================================== -->
+                <div class="button-area">
+                    <a href="index.html" class="btn custom icon lg" data-bs-toggle-tooltip="tooltip"
+                        data-bs-placement="bottom" title="Go back"><i class="bi bi-arrow-left"></i></a>
+
+
+                    <a href="settings.html" class="btn custom icon me-auto lg" data-bs-toggle-tooltip="tooltip"
+                        data-bs-placement="bottom" title="Edit item"><i class="bi bi-gear"></i></a>
+
+
+                    <div>
+                        <input type="date" class="form-control custom" placeholder="Example" name="#"
+                            id="inline-icon-text">
+                    </div>
+
+
+                </div>
+                <!-- End buttons ==================================== -->
+            </div>
+            <!-- End header button =================================== -->
+
+
+
+            <div class="row g-3">
+                <!-- Start profile aside =============================== -->
+                <div class="col-md-3">
+                    <div class="common-box profile-aside">
+
+
+                        <!-- Start aside head =============================== -->
+                        <div class="head">
+                            <div class="profile-image">
+                                <img src="./assets/images/user/baky.jpg" class="border" alt="profile">
+                            </div>
+                            <div class="ms-3">
+                                <h2>Baky Billah</h2>
+                                <p class="text-muted mb-0">Manager</p>
+                            </div>
+                        </div>
+                        <!-- End aside head =============================== -->
+
+
+
+
+                        <!-- Start aside body =============================== -->
+                        <div class="body">
+
+                            <!-- Start Contact =============================== -->
+                            <h5 class="border-bottom my-2 pb-1">Contact</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="row align-items-start">
+                                        <div class="col-1">
+                                            <i class="bi bi-telephone"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <span class="d-block">+880 1786 494650</span>
+                                            <span class="d-block">+880 1786 494650</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row align-items-start">
+                                        <div class="col-1">
+                                            <i class="bi bi-envelope"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <span class="d-block">info@maxsop.com</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row align-items-start">
+                                        <div class="col-1">
+                                            <i class="bi bi-house-door"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <span class="d-block">Permanent address:</span>
+                                            <span class="d-block">Thana, Upazilla, District, Division,
+                                                Mymensingh</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row align-items-start">
+                                        <div class="col-1">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <span class="d-block">Present address:</span>
+                                            <span class="d-block">Thana, Upazilla, District, Division,
+                                                Mymensingh</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- End Contact =============================== -->
+
+
+
+
+                            <!-- Start Personal =============================== -->
+                            <h5 class="border-bottom my-2 pb-1">Personal</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item"> Date of birth: <span>5 December,
+                                        2020</span></li>
+                                <li class="list-group-item"> Father's name: <span>Abcd</span></li>
+                                <li class="list-group-item"> Mother's name: <span>Abcd</span></li>
+                                <li class="list-group-item"> NID number: <span>123456789</span></li>
+                            </ul>
+                            <!-- End Personal =============================== -->
+
+
+
+                            <!-- Start Degignation =============================== -->
+                            <h5 class="border-bottom my-2 pb-1">Degignation</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item"> Post: <span>Manager</span></li>
+                                <li class="list-group-item"> Basic salary: <span>20000</span></li>
+                                <li class="list-group-item"> Home allowance: <span>0.00</span></li>
+                                <li class="list-group-item"> Medical allowance: <span>0.00</span>
+                                </li>
+                                <li class="list-group-item"> Transport allowance: <span>0.00</span>
+                                </li>
+                            </ul>
+                            <!-- End Degignation =============================== -->
+
+                        </div>
+                        <!-- End aside body =============================== -->
+                    </div>
+                </div>
+                <!-- End profile aside =============================== -->
+
+
+
+                <div class="col-md-9">
+                    <div class="row g-3">
+                        <!-- Start Late days =============================== -->
+                        <div class="col-md-4">
+                            <div class="dashboard-item widget success">
+                                <div class="icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div class="text">
+                                    <h5>02</h5>
+                                    <p>Late days</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Late days =============================== -->
+
+
+                        <!-- Start Early leave =============================== -->
+                        <div class="col-md-4">
+                            <div class="dashboard-item widget warning">
+                                <div class="icon">
+                                    <i class="bi bi-person-dash"></i>
+                                </div>
+                                <div class="text">
+                                    <h5>10</h5>
+                                    <p>Early leave</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Early leave =============================== -->
+
+
+
+                        <!-- Start Leave =============================== -->
+                        <div class="col-md-4">
+                            <div class="dashboard-item widget danger">
+                                <div class="icon">
+                                    <i class="bi bi-door-closed"></i>
+                                </div>
+                                <div class="text">
+                                    <h5>20</h5>
+                                    <p>Leave</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Leave =============================== -->
+
+
+                        <!-- Start Area Chart ======================= -->
+                        <div class="col-md-8">
+                            <div class="chart-wrap">
+                                <h5 class="border-bottom">Area Chart</h5>
+                                <div id="areaChart"></div>
+                            </div>
+                        </div>
+                        <!-- End Area Chart ======================= -->
+
+
+                        <!-- Start Pie Chart ======================= -->
+                        <div class="col-md-4">
+                            <div class="chart-wrap">
+                                <h5 class="border-bottom">Pie Chart</h5>
+                                <div id="pieChart"></div>
+                            </div>
+                        </div>
+                        <!-- End Pie Chart ======================= -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+
+    <!-- Javascript -->
+    <!-- Bootstrap js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/aside.js"></script>
+
+
+    <!-- Start Chart CDN -->
+    <script src="./plugins/c3/c3.min.js"></script>
+    <script src="./plugins/c3/docs/js/d3-5.8.2.min.js" charset="utf-8"></script>
+    <!-- End Chart CDN -->
+
+
+
+    <script>
+        // Start Area Chart =======================>
+        var chart = c3.generate({
+            bindto: '#areaChart',
+            data: {
+                columns: [
+                    ['Late days', 2, 2, 2, 0, 3, 2],
+                    ['Early leave', 3, 3, 3, 2, 1, 3],
+                    ['Leave', 2, 3, 1, 1, 3, 2]
+                ],
+                types: {
+                    Alu: 'area-spline',
+                    Kumra: 'area-spline',
+                    Tomato: 'area-spline'
+                }
+            },
+            color: {
+                pattern: ['#77BAE5', '#F68685', '#EC5051', '#6586A7', '#96D3C4', '#F4B264', '#F78CB8', '#7B879D', '#B76FD2', '#A2D6B2', '#D6C1C8', '#DF9F17', '#76D2A1']
+            },
+        });
+        // End Area Chart =======================>
+
+
+
+        // Start pie chart =======================>
+        var chart = c3.generate({
+            bindto: '#pieChart',
+            data: {
+                // iris data from R
+                columns: [
+                    ['Late days', 2],
+                    ['Early leave', 10],
+                    ['Leave', 20],
+                ],
+                type: 'pie',
+                onclick: function (d, i) { console.log("onclick", d, i); },
+                onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+                onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+            },
+            color: {
+                pattern: ['#77BAE5', '#F68685', '#EC5051', '#6586A7', '#96D3C4', '#F4B264', '#F78CB8', '#7B879D', '#B76FD2', '#A2D6B2', '#D6C1C8', '#DF9F17', '#76D2A1']
+            },
+        });
+        // End pie chart =======================>
+    </script>
+
+</body>
+
+</html>

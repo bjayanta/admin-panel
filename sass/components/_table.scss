@@ -1,0 +1,110 @@
+// Start Table
+.table {
+    // Start basic change table
+    tr {
+        vertical-align: middle;
+    }
+    tbody {
+        border-top: none !important;
+    }
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    tr {
+        border-style: dotted;
+        color: var(--black-color);
+        white-space: nowrap;
+        &.ws-wrap {
+            white-space: normal;
+        }
+    }
+    .btn{
+        &.round{
+            color: var(--secondary-color);
+            border: 1px solid transparent;
+            padding: 10px;
+            line-height: 0;
+            border-radius: 50px;
+            &:hover{
+                border-color: var(--light-color);
+                background-color: var(--bg-color);
+            }
+        }
+    }
+    // End basic change table
+
+    // Start hover table
+    &.table-hover {
+        tbody {
+            tr {
+                &:hover {
+                    th,
+                    td {
+                        background-color: var(--bg-color);
+                        color: var(--black-color);
+                    }
+                }
+            }
+        }
+        .btn{
+            &.round{
+                &:hover{
+                    background-color: var(--bg-color);
+                }
+            }
+        }
+    }
+    // End hover table
+
+    // Start clickable table
+    &.clickable {
+        tbody {
+            tr {
+                cursor: pointer;
+            }
+        }
+    }
+    // End clickable table
+
+    // Start Small table
+    &.table-sm {
+        td,
+        th {
+            padding: 0 0.5rem;
+        }
+    }
+    // End Small table
+
+    // Start action hover table
+    &.action-hover {
+        tbody {
+            tr {
+                position: relative;
+                .action {
+                    position: absolute;
+                    right: 0;
+                    top: 1px;
+                    bottom: 1px;
+                    border-bottom: none;
+                    display: flex;
+                    align-items: center;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &:hover {
+                    .action {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    // End action hover table
+}
+
+
+
+

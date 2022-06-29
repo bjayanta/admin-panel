@@ -1,0 +1,32 @@
+.profile-aside {
+    .head {
+        border-bottom: 1px solid var(--light-color);
+        @include flexBox($align-items: center);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        .profile-image {
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                padding: 5px;
+                border: 1px solid var(--theme-color);
+            }
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 0;
+        }
+    }
+    .body{
+        .list-group{
+            .list-group-item{
+                background-color: transparent;
+                border: none;
+                i{
+                    color: var(--black-color);
+                }
+            }
+        }
+    }
+}

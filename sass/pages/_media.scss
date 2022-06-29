@@ -1,0 +1,221 @@
+.media-wrap {
+    .img-wrap {
+        position: relative;
+        .form-check-input {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 5px;
+            left: 5px;
+            margin-top: 0;
+            opacity: 0;
+            transition: all ease 0.3s;
+            &:checked {
+                opacity: 1;
+            }
+        }
+        img {
+            height: 200px;
+            object-fit: cover;
+        }
+        &:hover {
+            .form-check-input {
+                opacity: 1;
+            }
+        }
+    }
+    &.album {
+        .album {
+            position: relative;
+            border: 1px solid var(--light-color);
+            border-radius: 3px;
+            @include flexBox($align-items: center);
+            transition: all ease 0.3s;
+            text-decoration: none;
+            img {
+                width: 100px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 3px 0 0 3px;
+            }
+            .text {
+                padding: 0 10px;
+                h5 {
+                    margin-bottom: 0;
+                    text-transform: capitalize;
+                }
+            }
+            .form-check-input {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                opacity: 0;
+                transition: all ease 0.3s;
+                &:checked {
+                    opacity: 1;
+                }
+            }
+            &:hover {
+                // border: 1px solid var(--secondary-color);
+                box-shadow: $common-shadow;
+                .form-check-input {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &.upload {
+        .upload-button {
+            width: 100%;
+            height: 200px;
+            border: 1px dotted var(--theme-color);
+            position: relative;
+            transition: all linear 0.3s;
+            border-radius: 3px;
+            .form-control {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                opacity: 0;
+            }
+            h5{
+                margin-bottom: 0;
+            }
+            i{
+                font-size: 52px;
+            }
+        }
+    }
+}
+.cursor {
+    cursor: pointer;
+}
+#lightBox {
+    &.modal {
+        position: fixed;
+        width: 100%;
+        max-height: 100vh;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #000000;
+        overflow: hidden;
+        .close {
+            font-size: 22px;
+            color: #ffffff;
+            position: absolute;
+            z-index: 99;
+            right: 10px;
+            top: 10px;
+        }
+        .modal-content {
+            background-color: transparent;
+            height: 100%;
+            .mySlides {
+                height: 80%;
+                text-align: center;
+                .numbertext {
+                    color: #ffffff;
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                }
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            .prev,
+            .next {
+                color: #222222;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                border-radius: 50px;
+                font-size: 22px;
+                background-color: #eeeeee;
+                position: absolute;
+                top: 45%;
+            }
+            .prev {
+                left: 20px;
+            }
+            .next {
+                right: 20px;
+            }
+            .currentSlide-wrap {
+                margin-top: 20px;
+                height: 15%;
+                overflow-x: scroll;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                .row,
+                .col-md-1 {
+                    height: 100%;
+                }
+                .row {
+                    flex-wrap: nowrap;
+                }
+                .demo {
+                    width: 100%;
+                    object-fit: cover;
+                    height: 100%;
+                    opacity: 0.5;
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+.modal-dialog {
+    &.lightbox {
+        .modal-body {
+            @include flexBox($flex-wrap: wrap);
+
+            .album {
+                position: relative;
+                width: 85px;
+                text-align: center;
+                display: inline-block;
+                margin: 5px auto;
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                label {
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    border: 1.5px dotted transparent;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    transition: all ease 0.3s;
+                    &:hover {
+                        background-color: var(--bg-color);
+                    }
+                }
+                input:checked + label {
+                    border-color: var(--theme-color);
+                }
+                i {
+                    display: block;
+                    margin-bottom: 0;
+                    line-height: 0;
+                    font-size: 42px;
+                }
+                span {
+                    font-weight: bold;
+                    color: var(--secondary-color);
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

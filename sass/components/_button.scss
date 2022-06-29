@@ -1,0 +1,48 @@
+// button color
+.btn-primary {
+    background-color: var(--theme-color) !important;
+    border: none;
+    &:hover{
+        background-color: var(--theme-darken) !important;
+    }
+}
+.btn-success {
+    background-color: var(--success-color) !important;
+    border: none;
+    color: var(--darck-color);
+    &:hover{
+        background-color: darken($color: $success-color, $amount: 10%) !important;
+        color: var(--black-color);
+    }
+}
+.btn-warning {
+    background-color: var(--warning-color) !important;
+    border: none;
+    &:hover{
+        background-color: darken($color: $warning-color, $amount: 10%) !important;
+    }
+}
+.btn-danger {
+    background-color: var(--danger-color) !important;
+    border: none;
+    &:hover{
+        background-color: darken($color: $danger-color, $amount: 10%) !important;
+    }
+}
+
+
+.dropdown-menu {
+    border: none;
+    box-shadow: $common-shadow;
+}
+
+
+// icon
+.bi{
+    &.icon-lg{
+        font-size: 20px;
+    }
+    &.icon-sm{
+        font-size: 14px;
+    }
+}

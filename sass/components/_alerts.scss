@@ -1,0 +1,36 @@
+.alert {
+    padding: 0.5rem 1rem;
+    &.alert-success {
+        border-color: rgba($color: $success-color, $alpha: 0.3);
+        background-color: rgba($color: $success-color, $alpha: 0.2);
+        color: var(--secondary-color);
+    }
+    &.alert-danger {
+        border-color: rgba($color: $danger-color, $alpha: 0.3);
+        background-color: rgba($color: $danger-color, $alpha: 0.2);
+        color: var(--secondary-color);
+    }
+    &.alert-warning {
+        border-color: rgba($color: $warning-color, $alpha: 0.3);
+        background-color: rgba($color: $warning-color, $alpha: 0.2);
+        color: var(--secondary-color);
+    }
+    &.alert-dismissible {
+        padding: 0.5rem 2.2rem 0.5rem 1rem;
+        .btn-close {
+            padding: 12px 1rem;
+        }
+    }
+}
+.top-right-alert,
+.bottom-right-alert {
+    width: 450px;
+    position: fixed;
+    right: 20px;
+}
+.bottom-right-alert {
+    bottom: 40px;
+}
+.top-right-alert {
+    top: 85px;
+}

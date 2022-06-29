@@ -1,0 +1,148 @@
+// Start badge ================================>
+.badge {
+    text-transform: capitalize;
+    &.bg-success {
+        &.transparent {
+            background-color: rgba($color: $success-color, $alpha: 0.3) !important;
+            color: darken($color: $success-color, $amount: 20%);
+        }
+    }
+    &.bg-danger {
+        &.transparent {
+            background-color: rgba($color: $danger-color, $alpha: 0.3) !important;
+            color: darken($color: $danger-color, $amount: 20%);
+        }
+    }
+    &.bg-warning {
+        &.transparent {
+            background-color: rgba($color: $warning-color, $alpha: 0.3) !important;
+            color: darken($color: $warning-color, $amount: 20%);
+        }
+    }
+}
+// End badge ================================>
+
+
+
+// Start Wrapper =======================>
+.widget {
+    background-color: var(--white-color);
+    @include scrollbar;
+    // max-height: 80vh;
+    // overflow-y: scroll;
+    padding: 0 1rem;
+    .widget-head {
+        padding: 1rem 0;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin-bottom: 0;
+        }
+        small {
+            color: var(--secondary-color);
+        }
+        img {
+            height: 35px;
+        }
+    }
+    .widget-body {
+        padding: 1rem 0;
+    }
+    .widget-foot {
+        border-top: 1px solid var(--bg-color);
+        padding: 1rem 0;
+    }
+}
+// End Wrapper =======================>
+
+// Start breadcrumb =========================>
+.breadcrumb {
+    margin-bottom: 0;
+    .breadcrumb-item{
+        font-size: 18px;
+    }
+}
+// End breadcrumb =========================>
+
+
+// Start progress =========================>
+.progress {
+    background-color: var(--light-color);
+    .progress-bar {
+        background-color: var(--theme-color);
+    }
+}
+// End progress =========================>
+
+
+
+// Start table ===========================================>
+.print-show {
+    display: none;
+}
+@media print {
+    .print-show {
+        display: block;
+    }
+    .print-none {
+        display: none !important;
+    }
+}
+// End table ===========================================>
+
+
+// .input-cell {
+//     border-collapse: collapse !important;
+//     padding: 0 !important;
+//     vertical-align: middle;
+//     background-color: #F2F2F2;
+//     input, select, textarea {
+//         width: 100%;
+//         padding: 8px 5px;
+//         border: 0;
+//         &:focus {
+//             background-color: #F2F2F2;
+//             outline: none;
+//         }
+//     }
+//     /* Chrome, Safari, Edge, Opera */
+//     input[type=number]::-webkit-outer-spin-button,
+//     input[type=number]::-webkit-inner-spin-button {
+//         -webkit-appearance: none;
+//         margin: 0;
+//     }
+//     /* Firefox */
+//     input[type=number] {
+//         -moz-appearance: textfield;
+//     }
+// }
+
+// Start social media =======================>
+.social-media {
+    list-style-type: none;
+    padding-left: 0;
+    @include flexBox();
+    li {
+        margin-right: 10px;
+        a {
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 35px;
+            display: inline-block;
+            color: var(--secondary-color);
+            text-align: center;
+            transition: all ease 0.3s;
+            font-size: 22px;
+            &:hover {
+                color: var(--black-color);
+                background-color: var(--light-color);
+            }
+        }
+    }
+}
+// End social media =======================>

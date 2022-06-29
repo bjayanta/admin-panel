@@ -1,0 +1,26 @@
+.calculator {
+    .form-control {
+        border-style: dotted;
+        border-color: var(--secondary-color);
+        border-radius: 0;
+        color: var(--black-color);
+    }
+    .button-area {
+        margin-top: 10px;
+        .line {
+            @include flexBox();
+            .btn {
+                margin: 3px;
+                width: 25%;
+                border-radius: 0;
+                border: 1px dotted var(--light-color);
+                transition: all ease .3s;
+                font-size: 18px;
+                color: var(--black-color);
+                &:hover{
+                    background-color: var(--light-color);
+                }
+            }
+        }
+    }
+}

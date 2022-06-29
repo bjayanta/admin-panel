@@ -1,0 +1,110 @@
+.receipt-wrap {
+    .header {
+        border-bottom: 1px solid var(--light-color);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        .logo {
+            height: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: var(--secondary-color);
+            margin-bottom: 0;
+            strong {
+                color: var(--secondary-color);
+            }
+        }
+        h4 {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        @media print {
+            .col-3 {
+                width: 40%;
+            }
+            .col-2 {
+                width: 25%;
+            }
+            p,
+            h4 {
+                strong {
+                    color: var(--black-color);
+                }
+                color: var(--black-color);
+            }
+        }
+    }
+    .body {
+        .title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+            span {
+                color: var(--secondary-color);
+                min-width: 130px;
+                display: inline-block;
+            }
+        }
+        strong {
+            color: var(--secondary-color);
+        }
+        @media print {
+            .col-9 {
+                width: 71%;
+            }
+            .col-3 {
+                width: 29%;
+            }
+            p,
+            strong {
+                span {
+                    color: var(--black-color);
+                }
+                color: var(--black-color);
+            }
+        }
+    }
+    .footer {
+        p {
+            margin-bottom: 0;
+            color: var(--secondary-color);
+            strong {
+                color: var(--secondary-color);
+            }
+        }
+        border-top: 1px solid var(--light-color);
+        margin-top: 10px;
+        padding-top: 10px;
+
+        @media print {
+            p {
+                color: var(--black-color);
+                strong {
+                    color: var(--black-color);
+                }
+            }
+        }
+    }
+    &.money{
+        .title{
+            border: 1px dotted var(--secondary-color);
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-size: 22px;
+        }
+        .signature{
+            @include flexBox($justify-content: space-around);
+            p{
+                margin-bottom: 0;
+                margin-top: 50px;
+                display: inline-block;
+                border-top: 1px dotted var(--black-color);
+                padding: 0 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+// font CDN ===================================>
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// End font CDN ===============================>
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Assistant", "Noto Sans Bengali", sans-serif;
+  ::selection {
+    background-color: var(--theme-color);
+    color: var(--white-color);
+  }
+}
+*:focus {
+  box-shadow: none !important;
+}
+p {
+  color: var(--black-color);
+}
+span {
+  color: var(--black-color);
+}
+
+a {
+  color: var(--theme-color);
+  &:hover {
+    color: var(--theme-darken);
+  }
+}
+
+// main-bar
+.main-bar {
+  margin-left: 320px;
+  &.main-bar-expand {
+    margin-left: 60px;
+  }
+  @media only screen and (max-width: 992px) {
+    margin-left: 60px;
+  }
+}
+
+// bg color
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+.bg-danger {
+  background-color: var(--danger-color) !important;
+}
+
+// text color
+.text-success {
+  color: var(--success-color) !important;
+}
+.text-warning {
+  color: var(--warning-color) !important;
+}
+.text-danger {
+  color: var(--danger-color) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+small,
+strong {
+  color: var(--black-color);
+}

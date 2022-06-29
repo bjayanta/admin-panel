@@ -1,0 +1,41 @@
+// Scroll bar ========================================>
+@mixin scrollbar {
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        transition: all ease 1s;
+    }
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--secondary-color);
+            border-radius: 20px;
+        }
+    }
+
+    &::-moz-scrollbar {
+        width: 5px;
+    }
+
+    &::-moz-scrollbar-track {
+        background-color: transparent;
+        transition: all ease 1s;
+    }
+    &:hover {
+        &::-moz-scrollbar-thumb {
+            background-color: var(--secondary-color);
+            border-radius: 20px;
+        }
+    }
+}
+
+// Flaxbox ===========================================>
+@mixin flexBox($align-items: flex-start, $justify-content: flex-start, $flex-wrap: nowrap, $flex-direction: row) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+    flex-direction: $flex-direction;
+}

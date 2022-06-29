@@ -1,0 +1,103 @@
+.settings-wrap{
+    .nav{
+        .nav-item{
+            .nav-link {
+                color: var(--black-color);
+                transition: all ease .3s;
+                border-radius: 3px;
+                &:hover{
+                    background-color: var(--light-color);
+                }
+                &.active{
+                    background-color: var(--theme-color);
+                    color: var(--white-color);
+                }
+            }
+        }
+    }
+    .photo{
+        position: relative;
+        input{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+            opacity: 0;
+        }
+        .icon{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all ease .3s;
+            i{
+                line-height: 0;
+                font-size: 42px;
+                color: var(--white-color);
+
+            }
+        }
+        img{
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+        }
+        &:hover{
+            .icon{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &.theme{
+        .single-theme{
+            position: relative;
+            cursor: pointer;
+            transition: all ease .3s;
+            input{
+                position: absolute;
+                opacity: 0;
+            }
+            .layer{
+                position: absolute;
+                background-color: rgba($color: #000000, $alpha: .3);
+                margin: 0 auto;
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                border-radius: 5px;
+                top: 40%;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                font-size: 28px;
+                text-align: center;
+                color: #ffffff;
+                opacity: 0;
+            }
+            &:hover{
+                transform: scale(1.1);
+                z-index: 9;
+            }
+            &.active{
+                .layer{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &.user-roles{
+        .card{
+            box-shadow: $common-shadow;
+        }
+    }
+}
