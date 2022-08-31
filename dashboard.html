@@ -15,7 +15,7 @@
 <body>
     
     <!-- app aside navigation -->
-	<aside class="app-aside" id="aside">
+	<aside class="app-aside" id="app-aside">
 		<nav class="nav nav-tabs">
 			<a class="brand" href="dashboard.html">
 				<img src="images/logo.svg" alt="MaxSOP" />
@@ -36,6 +36,16 @@
 			<button data-bs-toggle="tab" data-bs-target="#info-tab-pane" type="button">
 				<i class="bi bi-info-square"></i>
 			</button>
+
+			<div>
+				<button type="button" onclick="asideToggle()">
+					<i class="bi bi-chevron-right"></i>
+				</button>
+
+				<a href="#">
+					<i class="bi bi-box-arrow-right"></i>
+				</a>
+			</div>
 		</nav>
 
 		<div class="tab-content">
@@ -84,26 +94,29 @@
 				</ul>
 			</nav>
 
-			<div class="tab-pane fade" id="message-tab-pane">
-				Message
-			</div>
+			<nav class="tab-pane fade" id="message-tab-pane">
+				<h3>Message</h3>
+			</nav>
 
-			<div class="tab-pane fade" id="settings-tab-pane">
-				Settings
-			</div>
+			<nav class="tab-pane fade" id="settings-tab-pane">
+				<h3>Settings</h3>
+			</nav>
 
-			<div class="tab-pane fade" id="info-tab-pane">
-				Info
-			</div>
+			<nav class="tab-pane fade" id="info-tab-pane">
+				<h3>Info</h3>
+			</nav>
 		</div>
 	</aside>
 	<!-- app aside navigation end -->
 
 	<!-- main content start -->
 	<main class="app-content">
-		<h1>main content</h1>
+		<h1>main content kajsdfhka faksdf lkajsflkasdjf laksjdf alksdjf alskdfj asl;kdfj a;lk</h1>
 	</main>
 	<!-- main content end -->
+
+	<!-- overlay -->
+	<div class="overlay" onclick="asideToggle()"></div>
 
 	<!-- bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
