@@ -1,0 +1,28 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+::selection { 
+    background: $primary-color; 
+    color: $white-color;
+}
+
+*:focus {
+	box-shadow: none !important;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: $black-color;
+}
+
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

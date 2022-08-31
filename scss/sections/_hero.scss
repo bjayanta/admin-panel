@@ -1,0 +1,15 @@
+.hero {
+    width: 100%;
+    background-color: rgba($color: $primary-color, $alpha: 80%);
+    color: $white-color;
+    h1 {
+        font-weight: 800;
+    }
+}
+
+.page {
+    .hero {
+        padding-top: 180px;
+        padding-bottom: 80px;
+    }
+}

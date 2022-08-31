@@ -1,0 +1,163 @@
+.main-navigation {
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    transition: all ease $transition;
+    padding: 0;
+    .nav-item {
+        position: relative;
+        &:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            top: 15%;
+        }
+        .nav-link {
+            color: $white-color;
+            font-weight: 800;
+            letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+            line-height: 58px;
+            border-bottom: 4px solid transparent;
+            &:hover {
+                color: $black-color;
+            }
+            &.active {
+                border-bottom-color: $secondary-color;
+            }
+        }
+        .dropdown {
+            position: absolute;
+            background-color: $primary-color;
+            padding-left: 0;
+            left: 0;
+            top: 100%;
+            width: auto;
+            transform: translateY(64px);
+            opacity: 0;
+            visibility: hidden;
+            transition: ease $transition;
+            a {
+                padding: 12px 18px;
+                min-width: 300px;
+                color: $white-color;
+                text-decoration: none;
+                border-bottom: 1px solid rgba($color: $white-color, $alpha: 0.2);
+                &:hover {
+                    background-color: $secondary-color;
+                }
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                background-color: $primary-color;
+                top: -10px;
+                left: 40px;
+                transform: rotate(45deg);
+                z-index: -1;
+            }
+        }
+    }
+    .navbar-brand {
+        padding: 0px;
+        svg.maxsop {
+            max-width: 240px;
+            width: 100%;
+        }
+    }
+    #drawer-expand {
+        border: none;
+        font-size: 2rem;
+        color: $white-color;
+    }
+    &.sticky {
+        background-color: $white-color;
+        box-shadow: 0 0 20px rgba($color: $black-color, $alpha: 0.2);
+        .nav-item {
+            .nav-link {
+                color: $black-color;
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+        #drawer-expand {
+            color: $primary-color;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar-brand {
+        padding: 0;
+        svg.maxsop {
+            max-width: 140px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-navigation, .main-navigation.sticky {
+        .navbar-brand {
+            svg.maxsop {
+                max-width: 240px !important;
+            }
+        }
+        .collapse:not(.show) {
+            display: block;
+        }
+        .navbar-collapse {
+            position: fixed;
+            background-color: rgba($color: $primary-color, $alpha: 1);
+            width: 100vw;
+            height: 100vh;
+            left: 120%;
+            top: 0;
+            overflow: hidden;
+            z-index: 999;
+            padding: 2.5rem 0;
+            transition: ease $transition;
+            &.open-drawer {
+                left: 0px !important;
+            }
+            #drawer-collapse {
+                cursor: pointer;
+                color: $white-color;
+                padding: 0 1rem;
+                font-size: 1.5rem;
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+            .nav-item {
+                .nav-link {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    color: $white-color;
+                    &:hover {
+                        background-color: $secondary-color;
+                    }
+                }
+                .dropdown {
+                    position: relative;
+                    background-color: transparent;
+                    transform: translateY(0px);
+                    opacity: 1;
+                    visibility: visible;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .get-a-quote {
+            display: none;
+        }
+    }
+    
+    
+}

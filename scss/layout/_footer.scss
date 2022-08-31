@@ -1,0 +1,132 @@
+.footer{
+	a {
+		&:hover {
+			text-decoration: underline;
+			color: rgba($color: $primary-color, $alpha: 0.8);
+		}
+	}
+	.primary-footer {
+		.footer-column {
+			svg.maxsop {
+				margin-top: -28px;
+				width: 256px;
+			}
+			span {
+				display: inline-block;
+				font-size: 1.125rem;
+				font-weight: 800;
+				margin-bottom: 1rem;
+				cursor: default;
+				color: $primary-color;
+			}
+			ul > li a {
+				line-height: 32px;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+					color: $primary-color;
+				}
+			}
+			article {
+				padding-right: 60px;
+				text-align: justify;
+			}
+			.social-media {
+				a {
+					display: inline-block;
+					width: 48px;
+					height: 48px;
+					line-height: 48px;
+					text-align: center;
+					border-radius: 50%;
+					margin-right: 5px;
+					background-color: rgba($color: $black-color, $alpha: 0.8);
+					i {
+						font-size: 24px;
+						color: $white-color;
+					}
+					&:hover {
+						&.facebook {
+							background-color: #4267B2;
+						}
+						&.youtube {
+							background-color: #FF0000;
+						}
+						&.github {
+							background-color: #171515;
+						}
+						&.twitter {
+							background-color: #00acee;
+						}
+						&.linkedin {
+							background-color: #0072b1;
+						}
+						&.pinterest {
+							background-color: #E60023;
+						}
+					}
+				}
+			}
+		}
+    }
+	.secondary-footer {
+		border-top: 1px solid rgba($color: $primary-color, $alpha: 0.5);
+		nav.companies, nav.policy {
+			a {
+				font-weight: 800;
+				margin-right: 16px;
+				&:hover {
+					color: rgba($color: $primary-color, $alpha: 0.8);
+					text-decoration: underline;
+				}
+			}
+		}
+		nav.companies {
+			a {
+				font-size: 1.125rem;
+				letter-spacing: 1px;
+				line-height: 36px;
+			}
+		}
+		nav.policy, .copyright {
+			font-size: 0.875rem;
+		}
+    }
+}
+
+@media (max-width: 992px) {
+	.footer{
+		.primary-footer {
+			article {
+				padding-right: 0 !important;
+			}
+			.social-media {
+				margin-bottom: 24px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		.primary-footer {
+			.footer-column {
+				margin-top: 2rem;
+			}
+		}
+		.secondary-footer {
+			nav.companies, nav.policy {
+				a {
+					display: block;
+					line-height: 2rem;
+				}
+			}
+			nav.policy {
+				a {
+					font-size: 1rem;
+				}
+				
+			}
+		}
+	}
+}
