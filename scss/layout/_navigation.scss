@@ -22,7 +22,7 @@
                     background-color: $secondary-color;
                     position: absolute;
                     top: 10px;
-                    right: 5px;
+                    right: 10px;
                     animation: blinker 1.5s linear infinite;
                     @keyframes blinker {  
                         50% { opacity: 0; }

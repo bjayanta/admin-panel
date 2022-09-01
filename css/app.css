@@ -4,50 +4,34 @@
   padding: 0;
 }
 
+*:focus {
+  box-shadow: none !important;
+}
+
+*, html {
+  scroll-behavior: smooth;
+  scrollbar-color: #0e24bb transparent;
+  scrollbar-width: thin;
+}
+
 ::selection {
   background: #0e24bb;
   color: #ffffff;
 }
 
-*:focus {
-  box-shadow: none !important;
-}
-
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 5px;
 }
 
-*::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background-color: transparent;
-  transition: all ease 1s;
 }
 
-*:hover::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb:hover {
   background-color: #0e24bb;
-  border-radius: 20px;
-}
-
-*::-moz-scrollbar {
-  width: 5px;
-}
-
-*::-moz-scrollbar-track {
-  background-color: transparent;
-  transition: all ease 1s;
-}
-
-*:hover::-moz-scrollbar-thumb {
-  background-color: #FB1072;
-  border-radius: 20px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: #202124;
 }
 
 ul, ol {
@@ -57,10 +41,13 @@ ul, ol {
 }
 
 body {
-  font-family: "Assistant", "Noto Sans Bengali", sans-serif;
   font-size: 1rem;
-  color: #202124;
+  font-family: "Assistant", "Noto Sans Bengali", sans-serif;
   background-color: #f2f3f4;
+}
+body a {
+  color: #202124;
+  text-decoration: none;
 }
 
 .details, .more {
@@ -167,14 +154,15 @@ svg.maxsop.dark path {
 }
 
 .app-aside {
+  display: flex;
   width: 320px;
+  min-height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  min-height: 100vh;
-  display: flex;
-  background-color: white;
   z-index: 999;
+  background-color: white;
+  border-right: 1px solid #f2f3f4;
 }
 .app-aside .nav {
   display: flex;
@@ -351,7 +339,7 @@ svg.maxsop.dark path {
   background-color: #FB1072;
   position: absolute;
   top: 10px;
-  right: 5px;
+  right: 10px;
   animation: blinker 1.5s linear infinite;
 }
 @keyframes blinker {
