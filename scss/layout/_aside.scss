@@ -16,10 +16,11 @@
         position: relative;
         .brand {
             display: block;
-            padding: 5px 10px;
+            padding: 12px 10px;
             margin-bottom: 8px;
+            border-bottom: 1px solid lighten($color: $black-color, $amount: 82%);
             img {
-                max-width: 96px;
+                max-width: 33px;
                 width: 100%;
             }
         }
@@ -52,8 +53,9 @@
         height: 100vh;
         overflow-y: scroll;
         h3 {
-            padding: 0.8rem 1rem;
+            padding: 12px 16px;
             font-weight: 800;
+            border-bottom: 1px solid lighten($color: $black-color, $amount: 82%);
         }
         ul {
             li {
@@ -102,11 +104,6 @@
     }
 }
 
-.app-content {
-    margin-left: 320px;
-    min-height: 100vh;
-}
-
 .aside-toggle {
     .app-aside {
         width: 64px;
@@ -115,9 +112,6 @@
             opacity: 0;
             visibility: hidden;
         }
-    }
-    .app-content {
-        margin-left: 64px;
     }
 }
 
@@ -129,9 +123,6 @@
             visibility: hidden;
             width: 0;
         }
-    }
-    .app-content {
-        margin-left: 64px;
     }
     .aside-toggle {
         .app-aside {

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="warning" transform="translate(-672 -1752)">
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="100" height="100" transform="translate(672 1752)" fill="#ffeed9"/>
+    <g id="exclamation-triangle" transform="translate(698 1780.001)">
+      <path id="Path_1" data-name="Path 1" d="M24.305,4.114a.41.41,0,0,1,.389,0,.447.447,0,0,1,.165.175l21,35.724a.535.535,0,0,1,.006.56.5.5,0,0,1-.165.184.355.355,0,0,1-.2.052H3.508a.352.352,0,0,1-.2-.052.5.5,0,0,1-.165-.184.539.539,0,0,1,.006-.56L24.14,4.288a.45.45,0,0,1,.165-.175Zm3.2-1.378a3.46,3.46,0,0,0-6,0L.5,38.46a3.573,3.573,0,0,0,3,5.41H45.494a3.573,3.573,0,0,0,3-5.41Z" transform="translate(0 0)" fill="#fdac41"/>
+      <path id="Path_2" data-name="Path 2" d="M7,26.681a3.1,3.1,0,1,1,3.1,3.1A3.1,3.1,0,0,1,7,26.681Zm.3-18.59a2.8,2.8,0,1,1,5.572,0L11.794,18.948a1.709,1.709,0,0,1-3.405,0Z" transform="translate(14.403 7.902)" fill="#fdac41"/>
+    </g>
+  </g>
+</svg>
