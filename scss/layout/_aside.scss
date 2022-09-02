@@ -18,7 +18,7 @@
         .brand {
             display: block;
             padding: 12px 10px;
-            margin-bottom: 8px;
+            // margin-bottom: 8px;
             border-bottom: 1px solid lighten($color: $black-color, $amount: 82%);
             img {
                 max-width: 33px;
@@ -54,6 +54,7 @@
         height: 100vh;
         overflow-y: scroll;
         h3 {
+            margin-bottom: 0;
             padding: 12px 16px;
             font-weight: 800;
             border-bottom: 1px solid lighten($color: $black-color, $amount: 82%);
