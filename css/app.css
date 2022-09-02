@@ -227,15 +227,20 @@ svg.maxsop.dark path {
 .app-aside .tab-content ul li a:hover {
   background-color: #f2f3f4;
 }
-.app-aside .tab-content ul li a.active {
-  background-color: #f2f3f4;
-}
 .app-aside .tab-content ul li a.accordion-button:not(.collapsed) {
   background-color: #f2f3f4;
   box-shadow: none;
 }
 .app-aside .tab-content ul li a.accordion-button::after {
   opacity: 0.5;
+}
+.app-aside .tab-content ul li a.active, .app-aside .tab-content ul li a.accordion-button.active {
+  color: #ffffff;
+  background-color: #566af2;
+}
+.app-aside .tab-content ul li a.active::after, .app-aside .tab-content ul li a.accordion-button.active::after {
+  opacity: 1;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 .app-aside .tab-content ul li ul li a {
   position: relative;
@@ -247,8 +252,12 @@ svg.maxsop.dark path {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid #202124;
+  border: 1px solid #c5c6cb;
   margin-right: 10px;
+}
+.app-aside .tab-content ul li ul.accordion-collapse a.active {
+  color: initial;
+  background-color: #f2f3f4;
 }
 
 .aside-toggle .app-aside {
@@ -293,13 +302,6 @@ svg.maxsop.dark path {
   margin-left: 320px;
   min-height: 100vh;
   position: relative;
-}
-.app-content section {
-  padding: 0 16px;
-}
-.app-content section div {
-  width: 100%;
-  height: 100vh;
 }
 
 .aside-toggle .app-content {
