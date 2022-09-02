@@ -1,8 +1,26 @@
-// hero area design
-.header {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-	overflow: hidden;
+.app-header {
+	// background-color: $white-color;
+	& > div {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		.module-intro {
+			padding: 10px 0;
+			h3 {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.app-header {
+		// background-color: $white-color;
+		& > div {
+			// justify-content: start;
+			.module-intro {
+				display: none;
+			}
+		}
+	}
 }

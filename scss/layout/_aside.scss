@@ -7,46 +7,42 @@
     left: 0;
     z-index: 999;
     background-color: rgba($color: $white-color, $alpha: 1);
-    border-right: 1px solid lighten($color: $black-color, $amount: 82%);
     .nav {
         display: flex;
         flex-direction: column;
         max-width: 64px;
         width: 100%;
-        border-right: 1px solid lighten($color: $black-color, $amount: 82%);
-        position: relative;
+        border: none;
+        background-color: lighten($color: $black-color, $amount: 5%);
+        img {
+            width: 36px;
+            height: 36px;
+        }
         .brand {
             display: block;
             padding: 12px 10px;
-            // margin-bottom: 8px;
-            border-bottom: 1px solid lighten($color: $black-color, $amount: 82%);
-            img {
-                max-width: 33px;
-                width: 100%;
-            }
         }
         button, a {
+            background-color: transparent;
             border: 4px solid transparent;
             margin-bottom: 2px;
-            background-color: transparent;
             text-align: center;
+            color: $white-color;
             i {
                 font-size: 1.375rem;
             }
             &.active {
-                border-left: 4px solid rgba($color: $primary-color, $alpha: 1);
-                i {
-                    color: rgba($color: $primary-color, $alpha: 1);
-                }
+                border-left: 4px solid rgba($color: $white-color, $alpha: 1);
             }
-        }
-        div {
-            position: absolute;
-            left: 0;
-            bottom: 0.5rem;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
+            &.tab-bottom {
+                margin-top: auto;
+            }
+            &:last-child {
+                margin-bottom: 1.5rem;
+            }
+            &.account-tab > img {
+                border-radius: 50%;
+            }
         }
     }
     .tab-content {

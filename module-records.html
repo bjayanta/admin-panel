@@ -111,130 +111,148 @@
 
 	<!-- main content start -->
 	<main class="app-content">
-		<header>
-			<!-- top navigation -->
-			<nav class="app-navigation">
-				<ul>
-					<li>
-						<a href="#">
-							<i class="bi bi-search"></i>
-						</a>
-					</li>
+		<header class="app-header">
+			<div class="container-fluid">
+				<div class="module-intro">
+					<h3>Module name</h3>
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							  <li class="breadcrumb-item"><a href="#">Home</a></l>
+							  <li class="breadcrumb-item"><a href="#">Module</a></li>
+							  <li class="breadcrumb-item active" aria-current="page">Records</li>
+						</ol>
+					</nav>
+				</div>
 
-					<li>
-						<a href="#">
-							<i class="bi bi-translate"></i>
-						</a>
-					</li>
+				<!-- main navigation -->
+				<nav class="app-navigation">
+					<ul>
+						<li>
+							<a href="#">
+								<i class="bi bi-search"></i>
+							</a>
+						</li>
 
-					<li>
-						<a href="#">
-							<i class="bi bi-moon-stars"></i>
-						</a>
-					</li>
+						<li>
+							<a href="#">
+								<i class="bi bi-translate"></i>
+							</a>
+						</li>
 
-					<!-- notification menu -->
-					<li class="dropdown notification">
-						<a href="#" data-bs-toggle="dropdown">
-							<i class="bi bi-bell"></i>
-							<span class="highlight"></span>
-						</a>
+						<li>
+							<a href="#">
+								<i class="bi bi-moon-stars"></i>
+							</a>
+						</li>
 
-						<ul class="dropdown-menu">
-							<li>
-								<a href="#">
-									<img src="images/avatar.jpg" alt="User avatar">
-									<div>
-										<strong>Baky Billah Khan Pathan</strong>
-										<p>Admin</p>
-									</div>
-								</a>
-							</li>
+						<!-- notification menu -->
+						<li class="dropdown notification">
+							<a href="#" data-bs-toggle="dropdown">
+								<i class="bi bi-bell"></i>
+								<span class="highlight"></span>
+							</a>
 
-							<li>
-								<a href="#">
-									<img src="images/icons/success.svg" alt="success">
-									<div>
-										<strong>Success notification</strong>
-										<p>Success</p>
-									</div>
-								</a>
-							</li>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">
+										<img src="images/avatar.jpg" alt="User avatar">
+										<div>
+											<strong>Baky Billah Khan Pathan</strong>
+											<p>Admin</p>
+										</div>
+									</a>
+								</li>
 
-							<li>
-								<a href="#">
-									<img src="images/icons/warning.svg" alt="warning">
-									<div>
-										<strong>Warning notification</strong>
-										<p>Warning</p>
-									</div>
-								</a>
-							</li>
+								<li>
+									<a href="#">
+										<img src="images/icons/success.svg" alt="success">
+										<div>
+											<strong>Success notification</strong>
+											<p>Success</p>
+										</div>
+									</a>
+								</li>
 
-							<li>
-								<a href="#">
-									<img src="images/icons/danger.svg" alt="danger">
-									<div>
-										<strong>Danger notification </strong>
-										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</li>
+								<li>
+									<a href="#">
+										<img src="images/icons/warning.svg" alt="warning">
+										<div>
+											<strong>Warning notification</strong>
+											<p>Warning</p>
+										</div>
+									</a>
+								</li>
 
-					<li>
-						<a href="#">
-							<i class="bi bi-arrows-fullscreen"></i>
-						</a>
-					</li>
+								<li>
+									<a href="#">
+										<img src="images/icons/danger.svg" alt="danger">
+										<div>
+											<strong>Danger notification </strong>
+											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
 
-					<!-- user menu -->
-					<li class="dropdown user">
-						<a href="#" class="user" data-bs-toggle="dropdown">
-							<img src="images/avatar.jpg" alt="">
-							<span></span>
-						</a>
+						<li>
+							<a href="#">
+								<i class="bi bi-arrows-fullscreen"></i>
+							</a>
+						</li>
 
-						<ul class="dropdown-menu">
-							<li>
-								<a href="./profile.html">
-									<img src="./assets/images/avatar.jpg" alt="">
-									<div>
-										<strong>baky billah khan pathan</strong>
-										<p>Admin</p>
-									</div>
-								</a>
-							</li>
+						<!-- user menu -->
+						<li class="dropdown user">
+							<a href="#" class="pe-0 user" data-bs-toggle="dropdown">
+								<img src="images/avatar.jpg" alt="">
+								<span></span>
+							</a>
 
-							<li>
-								<a href="./settings.html">
-									<i class="bi bi-gear"></i>
-									<span>Settings & Privacy</span>
-								</a>
-							</li>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="./profile.html">
+										<img src="./assets/images/avatar.jpg" alt="">
+										<div>
+											<strong>baky billah khan pathan</strong>
+											<p>Admin</p>
+										</div>
+									</a>
+								</li>
 
-							<li>
-								<a href="./support.html">
-									<i class="bi bi-question-circle"></i>
-									<span>Help & Support</span>
-								</a>
-							</li>
+								<li>
+									<a href="./settings.html">
+										<i class="bi bi-gear"></i>
+										<span>Settings & Privacy</span>
+									</a>
+								</li>
 
-							<li>
-								<a href="#">
-									<i class="bi bi-box-arrow-left"></i>
-									<span>Logout</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-			<!-- top navigation end -->
+								<li>
+									<a href="./support.html">
+										<i class="bi bi-question-circle"></i>
+										<span>Help & Support</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="bi bi-box-arrow-left"></i>
+										<span>Logout</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<!-- main navigation end -->
+			</div>
 		</header>
-
+		
 		<section>
+			<header class="container-fluid">
+				<h1>This is page header</h1>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat reprehenderit optio.</p>
+			</header>
+
 			<div class="container">
 				<h1>Welcome to dashboard</h1>
 			</div>

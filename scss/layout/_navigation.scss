@@ -1,7 +1,4 @@
 .app-navigation {
-    background-color: $white-color;
-    padding: 0 .75rem;
-    border-bottom: 1px solid lighten($color: $black-color, $amount: 82%);
     ul {
         display: flex;
         justify-content: end;
@@ -90,6 +87,24 @@
                     a {
                         padding-top: 20px;
                         padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+	.app-navigation {
+        ul {
+            li {
+                position: static;
+                ul {
+                    &.dropdown-menu {
+                        width: calc(100vw - 64px);
+                        height: 100vh;
+                        transform: translate(0, 0) !important;
+                        inset: 0 0  0 0 !important;
                     }
                 }
             }
