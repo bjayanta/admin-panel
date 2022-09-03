@@ -1,17 +1,18 @@
-.app-content {
+.main {
     margin-left: 320px;
     min-height: 100vh;
+    padding: 0 0.75rem;
     position: relative;
 }
 
 .aside-toggle {
-    .app-content {
+    .main {
         margin-left: 64px;
     }
 }
 
 @media (max-width: 992px) {
-    .app-content {
+    .main {
         margin-left: 64px;
     }
 }

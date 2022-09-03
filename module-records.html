@@ -12,44 +12,38 @@
     <!-- app stylesheet -->
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body class="app">
     
     <!-- app aside navigation -->
-	<aside class="app-aside" id="app-aside">
+	<aside class="aside" id="aside">
 		<nav class="nav nav-tabs">
 			<a class="brand" href="dashboard.html">
 				<img src="images/logo.svg" alt="MaxSOP" />
 			</a>
 
-			<button class="active" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button">
+			<button class="active" data-bs-toggle="tab" data-bs-target="#home-tab" type="button">
 				<i class="bi bi-tv"></i>
 			</button>
 
-			<button data-bs-toggle="tab" data-bs-target="#message-tab-pane" type="button">
+			<button data-bs-toggle="tab" data-bs-target="#message-tab" type="button">
 				<i class="bi bi-envelope"></i>
 			</button>
 
-			<button data-bs-toggle="tab" data-bs-target="#settings-tab-pane" type="button">
-				<i class="bi bi-gear"></i>
-			</button>
-
-			<button data-bs-toggle="tab" data-bs-target="#info-tab-pane" type="button">
+			<button data-bs-toggle="tab" data-bs-target="#info-tab" type="button">
 				<i class="bi bi-info-square"></i>
 			</button>
 
-			<div>
-				<button type="button" onclick="asideToggle()">
-					<i class="bi bi-chevron-right"></i>
-				</button>
+			<button class="tab-bottom" data-bs-toggle="tab" data-bs-target="#settings-tab" type="button">
+				<i class="bi bi-gear"></i>
+			</button>
 
-				<a href="#">
-					<i class="bi bi-box-arrow-right"></i>
-				</a>
-			</div>
+			<button type="button" onclick="asideToggle()">
+				<i class="bi bi-list"></i>
+			</button>
 		</nav>
 
 		<div class="tab-content">
-			<nav class="tab-pane fade show active" id="home-tab-pane">
+			<nav class="tab-pane fade show active" id="home-tab">
 				<h3>Home</h3>
 				<ul class="accordion open" id="home-accordion">
 					<li>
@@ -57,6 +51,18 @@
 							<i class="bi bi-speedometer2"></i>
 							<span>Dashboard</span>
 						</a>
+					</li>
+					<li>
+						<a href="#" class="accordion-button active" data-bs-toggle="collapse" data-bs-target="#module">
+							<i class="bi bi-menu-app"></i>
+							<span>Module</span>
+						</a>
+						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-accordion">
+							<li><a href="module-records.html" class="active">Records</a></li>
+							<li><a href="module-search.html">Search</a></li>
+							<li><a href="module-form.html">Form</a></li>
+							<li><a href="module-trash.html">Trash</a></li>
+						</ul>
 					</li>
 					<li>
 						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages" aria-expanded="true">
@@ -74,18 +80,6 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#" class="accordion-button active" data-bs-toggle="collapse" data-bs-target="#module">
-							<i class="bi bi-menu-app"></i>
-							<span>Module</span>
-						</a>
-						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-accordion">
-							<li><a href="module-records.html" class="active">Records</a></li>
-							<li><a href="module-search.html">Search</a></li>
-							<li><a href="module-form.html">Form</a></li>
-							<li><a href="module-trash.html">Trash</a></li>
-						</ul>
-					</li>
-					<li>
 						<a href="#">
 							<i class="bi bi-cast"></i>
 							<span>Media</span>
@@ -94,168 +88,167 @@
 				</ul>
 			</nav>
 
-			<nav class="tab-pane fade" id="message-tab-pane">
+			<nav class="tab-pane fade" id="message-tab">
 				<h3>Message</h3>
 			</nav>
 
-			<nav class="tab-pane fade" id="settings-tab-pane">
-				<h3>Settings</h3>
+			<nav class="tab-pane fade" id="info-tab">
+				<h3>Info</h3>
 			</nav>
 
-			<nav class="tab-pane fade" id="info-tab-pane">
-				<h3>Info</h3>
+			<nav class="tab-pane fade" id="account-tab">
+				<h3>Account</h3>
+				<ul>
+					<li>
+						<a href="#">
+							<i class="bi bi-person"></i>
+							<span>My details</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-bell"></i>
+							<span>Notifications</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-gear"></i>
+							<span>Settings</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-box-arrow-right"></i>
+							<span>Sign Out</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="tab-pane fade" id="settings-tab">
+				<h3>Settings</h3>
 			</nav>
 		</div>
 	</aside>
 	<!-- app aside navigation end -->
 
 	<!-- main content start -->
-	<main class="app-content">
-		<header class="app-header">
-			<div class="container-fluid">
-				<div class="module-intro">
-					<h3>Module name</h3>
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-							  <li class="breadcrumb-item"><a href="#">Home</a></l>
-							  <li class="breadcrumb-item"><a href="#">Module</a></li>
-							  <li class="breadcrumb-item active" aria-current="page">Records</li>
-						</ol>
-					</nav>
-				</div>
+	<main class="main">
+		<!-- main header -->
+		<header class="header">
+			<!-- module details -->
+			<article class="module">
+				<strong>All Records</strong>
+				<p class="text-muted">Module short description goes to here.</p>
+			</article>
+			
+			<!-- main navigation -->
+			<nav class="navigation">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="bi bi-binoculars"></i>
+						</a>
+					</li>
 
-				<!-- main navigation -->
-				<nav class="app-navigation">
-					<ul>
-						<li>
-							<a href="#">
-								<i class="bi bi-search"></i>
-							</a>
-						</li>
+					<li>
+						<a href="#">
+							<i class="bi bi-bell"></i>
+							<span class="highlight"></span>
+						</a>
+					</li>
 
-						<li>
-							<a href="#">
-								<i class="bi bi-translate"></i>
-							</a>
-						</li>
+					<li class="dropdown user">
+						<a href="#" class="user" data-bs-toggle="dropdown">
+							<img src="images/avatar.jpg" alt="User avatar">
+							<!-- <i class="bi bi-person-circle"></i> -->
+						</a>
 
-						<li>
-							<a href="#">
-								<i class="bi bi-moon-stars"></i>
-							</a>
-						</li>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="./profile.html">
+									<img src="./assets/images/avatar.jpg" alt="">
+									<div>
+										<strong>Baky billah khan pathan</strong>
+										<p>Adminstrator</p>
+									</div>
+								</a>
+							</li>
 
-						<!-- notification menu -->
-						<li class="dropdown notification">
-							<a href="#" data-bs-toggle="dropdown">
-								<i class="bi bi-bell"></i>
-								<span class="highlight"></span>
-							</a>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
 
-							<ul class="dropdown-menu">
-								<li>
-									<a href="#">
-										<img src="images/avatar.jpg" alt="User avatar">
-										<div>
-											<strong>Baky Billah Khan Pathan</strong>
-											<p>Admin</p>
-										</div>
-									</a>
-								</li>
+							<li>
+								<a href="./profile.html">
+									<i class="bi bi-person"></i>
+									<span>My details</span>
+								</a>
+							</li>
 
-								<li>
-									<a href="#">
-										<img src="images/icons/success.svg" alt="success">
-										<div>
-											<strong>Success notification</strong>
-											<p>Success</p>
-										</div>
-									</a>
-								</li>
+							<li>
+								<a href="#">
+									<i class="bi bi-person-bounding-box"></i>
+									<span>Switch account</span>
+								</a>
+							</li>
 
-								<li>
-									<a href="#">
-										<img src="images/icons/warning.svg" alt="warning">
-										<div>
-											<strong>Warning notification</strong>
-											<p>Warning</p>
-										</div>
-									</a>
-								</li>
+							<li>
+								<a href="#">
+									<i class="bi bi-box-arrow-left"></i>
+									<span>Sign out</span>
+								</a>
+							</li>
 
-								<li>
-									<a href="#">
-										<img src="images/icons/danger.svg" alt="danger">
-										<div>
-											<strong>Danger notification </strong>
-											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-										</div>
-									</a>
-								</li>
-							</ul>
-						</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
 
-						<li>
-							<a href="#">
-								<i class="bi bi-arrows-fullscreen"></i>
-							</a>
-						</li>
+							<li>
+								<a href="#">
+									<i class="bi bi-gear"></i>
+									<span>Settings & Privacy</span>
+								</a>
+							</li>
 
-						<!-- user menu -->
-						<li class="dropdown user">
-							<a href="#" class="pe-0 user" data-bs-toggle="dropdown">
-								<img src="images/avatar.jpg" alt="">
-								<span></span>
-							</a>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
 
-							<ul class="dropdown-menu">
-								<li>
-									<a href="./profile.html">
-										<img src="./assets/images/avatar.jpg" alt="">
-										<div>
-											<strong>baky billah khan pathan</strong>
-											<p>Admin</p>
-										</div>
-									</a>
-								</li>
+							<li>
+								<a href="#">
+									<i class="bi bi-info-circle"></i>
+									<span>Help</span>
+								</a>
+							</li>
 
-								<li>
-									<a href="./settings.html">
-										<i class="bi bi-gear"></i>
-										<span>Settings & Privacy</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="./support.html">
-										<i class="bi bi-question-circle"></i>
-										<span>Help & Support</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#">
-										<i class="bi bi-box-arrow-left"></i>
-										<span>Logout</span>
-									</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-				<!-- main navigation end -->
-			</div>
+							<li>
+								<a href="#">
+									<i class="bi bi-send-exclamation"></i>
+									<span>Send feedback</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!-- main navigation end -->
 		</header>
-		
-		<section>
-			<header class="container-fluid">
-				<h1>This is page header</h1>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat reprehenderit optio.</p>
-			</header>
 
+		<!-- main section -->
+		<section class="section">
 			<div class="container">
 				<h1>Welcome to dashboard</h1>
+				<button type="button" class="btn btn-primary" onclick="asideToggle()">
+					<i class="bi bi-chevron-right"></i>
+					<span>Aside Toggle</span>
+				</button>
 			</div>
+
 		</div>
 	</main>
 	<!-- main content end -->

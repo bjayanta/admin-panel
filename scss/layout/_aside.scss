@@ -1,4 +1,4 @@
-.app-aside {
+.aside {
     display: flex;
     width: 320px;
     min-height: 100vh;
@@ -38,10 +38,7 @@
                 margin-top: auto;
             }
             &:last-child {
-                margin-bottom: 1.5rem;
-            }
-            &.account-tab > img {
-                border-radius: 50%;
+                margin-bottom: 2.5rem;
             }
         }
     }
@@ -115,7 +112,7 @@
 }
 
 .aside-toggle {
-    .app-aside {
+    .aside {
         width: 64px;
         .tab-content {
             width: 0;
@@ -126,7 +123,7 @@
 }
 
 @media (max-width: 992px) {
-    .app-aside {
+    .aside {
         width: 64px;
         .tab-content {
             opacity: 0;
@@ -135,7 +132,7 @@
         }
     }
     .aside-toggle {
-        .app-aside {
+        .aside {
             width: 320px;
             .tab-content {
                 width: 100%;

@@ -1,26 +1,17 @@
-.app-header {
+.header {
 	// background-color: $white-color;
-	& > div {
-		display: flex;
-		justify-content: space-between;
-		align-items: stretch;
-		.module-intro {
-			padding: 10px 0;
-			h3 {
-				margin-bottom: 0;
-			}
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	.module {
+		strong {
+			font-size: 1.5rem;
 		}
 	}
 }
 
 @media (max-width: 768px) {
-	.app-header {
-		// background-color: $white-color;
-		& > div {
-			// justify-content: start;
-			.module-intro {
-				display: none;
-			}
-		}
-	}
+	.header {}
 }
