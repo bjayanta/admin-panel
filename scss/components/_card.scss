@@ -1,0 +1,17 @@
+.card {
+    border: none;
+    border-radius: 0;
+    box-shadow: $shadow;
+    background-color: $white-color;
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+        border-bottom-color: lighten($color: $black-color, $amount: 75%);
+    }
+    .card-body {}
+    .card-footer {
+        background-color: transparent;
+        border-top-color: lighten($color: $black-color, $amount: 75%);
+    }
+}

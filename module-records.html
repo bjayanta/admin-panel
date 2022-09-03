@@ -241,14 +241,135 @@
 
 		<!-- main section -->
 		<section class="section">
-			<div class="container">
-				<h1>Welcome to dashboard</h1>
-				<button type="button" class="btn btn-primary" onclick="asideToggle()">
-					<i class="bi bi-chevron-right"></i>
-					<span>Aside Toggle</span>
-				</button>
-			</div>
+			<!-- card -->
+			<div class="card">
+				<div class="card-header">
+					<h2>Card header</h2>
+					<nav class="btn-toolbar">
+						<div class="btn-group me-2">
+							<a href="#" class="btn">
+								<i class="bi bi-plus-circle"></i>
+							</a>
+							<a href="#" class="btn">
+								<i class="bi bi-search"></i>
+							</a>
+							<a href="#" class="btn">
+								<i class="bi bi-printer"></i>
+							</a>
+						</div>
 
+						<div class="btn-group">
+							<button type="button" class="btn" data-bs-toggle="collapse" data-bs-target="#recordsCard">
+								<i class="bi bi-chevron-expand"></i>
+							</button>
+						</div>
+					</nav>
+				</div>
+
+				<div class="card-body collapse show" id="recordsCard">
+					<table class="table table-hover">
+						<caption>About 1,820,000 results.</caption>
+						<thead>
+							<tr>
+								<th>SL</th>
+								<th>Date</th>
+								<th>Supplier</th>
+								<th>Voucher no.</th>
+								<th class="text-end">Total</th>
+								<th class="text-end">Paid</th>
+								<th class="text-end">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01.</td>
+								<td>1 September, 2022</td>
+								<td>লক্ষী ইন্ডাস্ট্রিজ</td>
+								<td>00000156</td>
+								<td class="text-end">0.00</td>
+								<td class="text-end">0.00</td>
+								<td class="text-end">
+									<a href="#" class="btn btn-sm btn-outline-primary" title="Details">
+										<i class="bi bi-folder"></i>
+									</a>
+									<a href="#" class="btn btn-sm btn-outline-success" title="Edit">
+										<i class="bi bi-pencil-square"></i>
+									</a>
+									<a href="#" class="btn btn-sm btn-outline-danger" title="Delete">
+										<i class="bi bi-x-square"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>02.</td>
+								<td>31 August, 2022</td>
+								<td>পিয়া</td>
+								<td>00000155</td>
+								<td class="text-end">0.00</td>
+								<td class="text-end">0.00</td>
+								<td class="text-end">
+									<a href="#" class="btn btn-sm btn-outline-primary" title="Details">
+										<i class="bi bi-folder"></i>
+									</a>
+									<a href="#" class="btn btn-sm btn-outline-success" title="Edit">
+										<i class="bi bi-pencil-square"></i>
+									</a>
+									<a href="#" class="btn btn-sm btn-outline-danger" title="Delete">
+										<i class="bi bi-x-square"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>03.</td>
+								<td>29 August, 2022</td>
+								<td>লক্ষী ইন্ডাস্ট্রিজ </td>
+								<td>00000154</td>
+								<td class="text-end">0.00</td>
+								<td class="text-end">0.00</td>
+								<td class="text-end">
+									<a href="#" class="btn btn-sm btn-outline-primary" title="Details">
+										<i class="bi bi-folder"></i>
+									</a>
+									<a href="#" class="btn btn-sm btn-outline-success" title="Edit">
+										<i class="bi bi-pencil-square"></i>
+									</a>
+									<a href="#" class="btn btn-sm btn-outline-danger" title="Delete">
+										<i class="bi bi-x-square"></i>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th colspan="4" class="text-end">Total</th>
+								<th class="text-end">0.00</th>
+								<th class="text-end">0.00</th>
+								<th>&nbsp;</th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+
+				<div class="card-footer py-3">
+					<nav class="text-end">
+						<ul class="pagination">
+							<li class="page-item disabled">
+								<a class="page-link" href="#">
+									<i class="bi bi-chevron-left"></i>
+								</a>
+							</li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<i class="bi bi-chevron-right"></i>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 		</div>
 	</main>
 	<!-- main content end -->

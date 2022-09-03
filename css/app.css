@@ -51,100 +51,66 @@ body a {
   text-decoration: none;
 }
 
-.details, .more {
-  padding: 0.5rem 1.125rem;
-  text-decoration: none;
-  border-radius: 8px;
-  border: 2px solid #0e24bb;
-  color: #0e24bb;
-  background-color: transparent;
-  transition: all ease 0.3s;
+.card {
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 5px 5px -3px rgba(32, 33, 36, 0.1);
+  background-color: #ffffff;
 }
-.details:hover, .more:hover {
-  color: #ffffff;
-  background-color: #0e24bb;
-}
-
-.indicator {
+.card .card-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-bottom-color: #e0e0e3;
+}
+.card .card-footer {
+  background-color: transparent;
+  border-top-color: #e0e0e3;
+}
+
+@media (max-width: 768px) {
+  .table thead tr, .table tbody tr, .table tfoot tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .table thead tr th, .table thead tr td, .table tbody tr th, .table tbody tr td, .table tfoot tr th, .table tfoot tr td {
+    text-align: left !important;
+  }
+  .table thead {
+    display: none;
+  }
+}
+.btn-group {
   align-items: center;
-  width: 75px;
-  height: 75px;
-  border-radius: 40px;
-  color: #0e24bb;
-  border: 2px solid #0e24bb;
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: all ease 0.3s;
 }
-.indicator:hover {
+.btn-group button, .btn-group a {
+  color: #747883;
+  border: 1px solid #747883;
+}
+.btn-group button:hover, .btn-group a:hover {
   color: #ffffff;
   background-color: #0e24bb;
+  border-color: #0e24bb;
 }
 
-.get-a-quote {
-  background-color: #FB1072;
-  padding: 1.125rem 1.5rem;
-  border-radius: 30px;
-  transition: all ease 0.3s;
-  color: #ffffff;
+.pagination {
+  display: inline-flex;
 }
-.get-a-quote.animate {
-  padding: 0.5rem 1rem;
+.pagination li a {
+  color: #747883;
+  border: 1px solid #747883;
 }
-.get-a-quote.animate span {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 5px solid #ffffff;
-  border-radius: 50%;
-  margin: 0 4px -3px -4px;
-  animation: getAQuoteAnimate 2.5s infinite;
-}
-@keyframes getAQuoteAnimate {
-  0% {
-    box-shadow: 0 0 0 0 white;
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-  }
-}
-.get-a-quote:hover {
+.pagination li a:hover {
   color: #ffffff;
   background-color: #0e24bb;
+  border-color: #0e24bb;
 }
-
-.more {
-  padding: 0.8rem 1.5rem !important;
+.pagination li.disabled a {
+  border-color: #747883;
 }
-.more i {
-  font-size: 1.125rem;
-  margin-left: 5px;
-}
-
-.details {
-  padding: 0.8rem 1.75rem !important;
-  border-radius: 28px;
-  border-color: #FB1072;
-  background-color: #FB1072;
-  color: #ffffff;
-  font-weight: 800;
-}
-.details i {
-  font-size: 1.125rem;
-  margin-left: 5px;
-}
-.details:hover {
+.pagination li.active a {
   border-color: #0e24bb;
   background-color: #0e24bb;
-}
-
-svg.view {
-  width: 100px;
 }
 
 svg.maxsop path {
@@ -359,14 +325,15 @@ svg.maxsop.dark path {
   top: 16px !important;
   right: 0;
   position: relative;
-  border: none;
+  z-index: 1;
+  border: 1px solid #e0e0e3;
 }
 .navigation ul li ul::before {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
-  background-color: #ffffff;
+  background-color: #c5c6cb;
   position: absolute;
   top: -8px;
   right: 5px;
@@ -390,17 +357,18 @@ svg.maxsop.dark path {
 }
 .navigation ul li ul li a:hover {
   color: #ffffff;
-  background-color: #0e24bb;
+  background-color: #0e24bb !important;
 }
 .navigation ul li ul.dropdown-menu {
   padding-top: 0;
   padding-bottom: 0;
 }
-.navigation ul li.user .dropdown-menu > li:first-child > a {
+.navigation ul li ul.dropdown-menu li:first-child > a {
   padding-top: 16px;
   padding-bottom: 16px;
+  background-color: #ffffff;
 }
-.navigation ul li.user hr {
+.navigation ul li ul.dropdown-menu .dropdown-divider {
   margin: 0;
 }
 
@@ -426,7 +394,7 @@ svg.maxsop.dark path {
   justify-content: space-between;
   align-items: stretch;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 5px;
 }
 .header .module strong {
   font-size: 1.5rem;

@@ -1,0 +1,18 @@
+.table {}
+
+@media (max-width: 768px) {
+	.table {
+        thead, tbody, tfoot {
+            tr {
+                display: flex;
+                flex-direction: column;
+                th, td {
+                    text-align: left !important;
+                }
+            }
+        }
+        thead {
+            display: none;
+        }
+    }
+}

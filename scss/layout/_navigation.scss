@@ -45,14 +45,14 @@
                 top: 16px !important;
                 right: 0;
                 position: relative;
-                border: none;
+                z-index: 1;
+                border: 1px solid lighten($color: $black-color, $amount: 75%);
                 &::before {
                     content: "";
                     display: block;
                     width: 20px;
                     height: 20px;
-                    background-color: $white-color;
-                    // border: 1px solid lighten($color: $black-color, $amount: 60%);
+                    background-color: lighten($color: $black-color, $amount: 65%);
                     position: absolute;
                     top: -8px;
                     right: 5px;
@@ -74,22 +74,21 @@
                         }
                         &:hover {
                             color: $white-color;
-                            background-color: $primary-color;
+                            background-color: $primary-color !important;
                         }
                     }
                 }
                 &.dropdown-menu {
                     padding-top: 0;
                     padding-bottom: 0;
-                }
-            }
-            &.user {
-                .dropdown-menu > li:first-child > a {
-                    padding-top: 16px;
-                    padding-bottom: 16px;
-                }
-                hr {
-                    margin: 0;
+                    li:first-child > a {
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        background-color: $white-color;
+                    }
+                    .dropdown-divider {
+                        margin: 0;
+                    }
                 }
             }
         }
