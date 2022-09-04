@@ -80,6 +80,18 @@ body a {
     display: none;
   }
 }
+.required {
+  position: relative;
+}
+.required::after {
+  content: "*";
+  position: absolute;
+  right: -10px;
+  top: -5px;
+  color: #FF0000;
+  font-size: 24px;
+}
+
 .btn-group {
   align-items: center;
 }
@@ -400,105 +412,92 @@ svg.maxsop.dark path {
   font-size: 1.5rem;
 }
 
-.footer a:hover {
-  text-decoration: underline;
-  color: rgba(14, 36, 187, 0.8);
+.authentication {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-.footer .primary-footer .footer-column svg.maxsop {
-  margin-top: -28px;
-  width: 256px;
+.authentication > section {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
 }
-.footer .primary-footer .footer-column span {
-  display: inline-block;
-  font-size: 1.125rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  cursor: default;
+.authentication > section > div.container {
+  display: flex;
+}
+.authentication > section > div.container article {
+  padding-right: 3.75rem;
+}
+.authentication > section > div.container article p {
+  padding-top: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.authentication > section > div.container article a {
+  font-weight: 400;
   color: #0e24bb;
 }
-.footer .primary-footer .footer-column ul > li a {
-  line-height: 32px;
+.authentication > section > div.container article a:hover {
   text-decoration: underline;
 }
-.footer .primary-footer .footer-column ul > li a:hover {
-  text-decoration: none;
+.authentication > section > div.container form {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  box-shadow: 0 5px 5px -3px rgba(32, 33, 36, 0.1);
+  background-color: #ffffff;
+}
+.authentication > section > div.container form div .input-group-text, .authentication > section > div.container form div input, .authentication > section > div.container form div .btn {
+  border-radius: 0;
+}
+.authentication > section > div.container form div .btn {
+  width: 100%;
+}
+.authentication > section > div.container form div a {
+  font-weight: 400;
   color: #0e24bb;
 }
-.footer .primary-footer .footer-column article {
-  padding-right: 60px;
-  text-align: justify;
-}
-.footer .primary-footer .footer-column .social-media a {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  border-radius: 50%;
-  margin-right: 5px;
-  background-color: rgba(32, 33, 36, 0.8);
-}
-.footer .primary-footer .footer-column .social-media a i {
-  font-size: 24px;
-  color: #ffffff;
-}
-.footer .primary-footer .footer-column .social-media a:hover.facebook {
-  background-color: #4267B2;
-}
-.footer .primary-footer .footer-column .social-media a:hover.youtube {
-  background-color: #FF0000;
-}
-.footer .primary-footer .footer-column .social-media a:hover.github {
-  background-color: #171515;
-}
-.footer .primary-footer .footer-column .social-media a:hover.twitter {
-  background-color: #00acee;
-}
-.footer .primary-footer .footer-column .social-media a:hover.linkedin {
-  background-color: #0072b1;
-}
-.footer .primary-footer .footer-column .social-media a:hover.pinterest {
-  background-color: #E60023;
-}
-.footer .secondary-footer {
-  border-top: 1px solid rgba(14, 36, 187, 0.5);
-}
-.footer .secondary-footer nav.companies a, .footer .secondary-footer nav.policy a {
-  font-weight: 800;
-  margin-right: 16px;
-}
-.footer .secondary-footer nav.companies a:hover, .footer .secondary-footer nav.policy a:hover {
-  color: rgba(14, 36, 187, 0.8);
+.authentication > section > div.container form div a:hover {
   text-decoration: underline;
 }
-.footer .secondary-footer nav.companies a {
-  font-size: 1.125rem;
-  letter-spacing: 1px;
-  line-height: 36px;
+.authentication > section > div.container form div .input-group .input-group-text, .authentication > section > div.container form div .input-group button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  border: none;
+  background-color: transparent;
 }
-.footer .secondary-footer nav.policy, .footer .secondary-footer .copyright {
-  font-size: 0.875rem;
+.authentication > section > div.container form div .input-group .input-group-text i, .authentication > section > div.container form div .input-group button i {
+  font-size: 20px;
+  color: #747883;
 }
-
-@media (max-width: 992px) {
-  .footer .primary-footer article {
-    padding-right: 0 !important;
-  }
-  .footer .primary-footer .social-media {
-    margin-bottom: 24px;
-  }
+.authentication > section > div.container form div .input-group .input-group-text {
+  left: 0;
 }
-@media (max-width: 768px) {
-  .footer .primary-footer .footer-column {
-    margin-top: 2rem;
-  }
-  .footer .secondary-footer nav.companies a, .footer .secondary-footer nav.policy a {
-    display: block;
-    line-height: 2rem;
-  }
-  .footer .secondary-footer nav.policy a {
-    font-size: 1rem;
-  }
+.authentication > section > div.container form div .input-group button {
+  right: 0;
+  padding: 0 0.8rem;
+}
+.authentication > section > div.container form div .input-group input {
+  padding-left: 42px;
+}
+.authentication > section > div.container form div .input-group input[type=password] {
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.authentication footer {
+  margin-top: auto;
+  background-color: #ffffff;
+}
+.authentication footer > .container {
+  padding: 2.5rem 0;
+}
+.authentication footer > .container p {
+  margin: 0;
+}
+.authentication footer > .container p a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=app.css.map */
