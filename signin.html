@@ -33,7 +33,7 @@
 							<span class="input-group-text">
 								<i class="bi bi-person"></i>
 							</span>
-							<input type="text" class="form-control" name="username" placeholder="example@maxsop.com" id="username" required>
+							<input type="email" class="form-control" name="username" placeholder="example@maxsop.com" id="username" required>
 						</div>
 					</div>
 					
@@ -44,9 +44,7 @@
 								<i class="bi bi-shield-lock"></i>
 							</span>
 							<input type="password" class="form-control" placeholder="&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;" name="password" id="password" required>
-							<button type="button" onclick="show(event, password)">
-								<i class="bi bi-eye"></i>
-							</button>
+							<button type="button" onclick="passwordViewer(event, password)"><i class="bi bi-eye"></i></button>
 						</div>
 					</div>
 
@@ -73,11 +71,9 @@
 
 		<footer>
 			<div class="container">
-				<p>
-					&copy; 2018 - <script>document.write(new Date().getFullYear())</script> 
+				<p>&copy; 2018 - <script>document.write(new Date().getFullYear())</script> 
 					<a href="https://maxsop.com/" target="_blank">MaxSOP</a>. 
-					All rights reserved.
-				</p>
+					All rights reserved.</p>
 			</div>
 		</footer>
 	</main>

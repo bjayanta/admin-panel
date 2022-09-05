@@ -8,9 +8,15 @@
         min-height: 80vh;
         & > div.container {
             display: flex;
+            justify-content: space-between;
             // align-items: center;
             article {
-                padding-right: 3.75rem;
+                max-width: 800px;
+                width: 100%;
+                img {
+                    max-width: 512px;
+                    width: 100%;
+                }
                 p {
                     padding-top: 0.8rem;
                     font-size: 1.5rem;
@@ -66,10 +72,8 @@
                         }
                         input {
                             padding-left: 42px;
-                            &[type=password] {
-                                letter-spacing: 2px;
-                                font-size: 18px;
-                            }
+                            letter-spacing: 1px;
+                            font-size: 18px;
                         }
                         
                     }
@@ -80,8 +84,8 @@
     footer {
         margin-top: auto;
         background-color: $white-color;
+        padding: 2.5rem 0;
         & > .container {
-            padding: 2.5rem 0;
             p {
                 margin: 0;
                 a {
@@ -95,5 +99,32 @@
 }
 
 @media (max-width: 992px) {
+    .authentication {
+        & > section {
+            & > div.container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                article {
+                    margin-bottom: 2rem;
+                    p {
+                        font-size: 1.3rem;
+                    }
+                }
+                form {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
 
+@media (max-width: 768px) {
+    .authentication {
+        & > section {
+            & > div.container {
+                max-width: 100%;
+            }
+        }
+    }
 }
