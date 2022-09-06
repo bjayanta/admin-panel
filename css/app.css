@@ -95,14 +95,23 @@ body a {
 .btn-group {
   align-items: center;
 }
-.btn-group button, .btn-group a {
-  color: #747883;
-  border: 1px solid #747883;
+.btn-group button, .btn-group a, .btn-group .btn {
+  border-radius: 0;
+  color: #202124;
+  border: 1px solid #c5c6cb;
 }
-.btn-group button:hover, .btn-group a:hover {
+.btn-group button:hover, .btn-group a:hover, .btn-group .btn:hover {
   color: #ffffff;
   background-color: #0e24bb;
   border-color: #0e24bb;
+}
+.btn-group button span, .btn-group a span, .btn-group .btn span {
+  margin-left: 5px;
+}
+.btn-group button.active, .btn-group a.active, .btn-group .btn.active {
+  color: #ffffff;
+  border: 1px solid #566af2;
+  background-color: #566af2;
 }
 
 .pagination {
