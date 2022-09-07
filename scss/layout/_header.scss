@@ -1,15 +1,6 @@
 .header {
 	// background-color: $white-color;
-	display: flex;
-	justify-content: space-between;
-	align-items: stretch;
-	padding-top: 12px;
-	padding-bottom: 5px;
-	.module {
-		strong {
-			font-size: 1.5rem;
-		}
-	}
+	// border-bottom: 1px solid lighten($color: $black-color, $amount: 75%);
 }
 
 @media (max-width: 768px) {

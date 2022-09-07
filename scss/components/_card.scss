@@ -5,9 +5,18 @@
     background-color: $white-color;
     .card-header {
         display: flex;
+        align-items: stretch;
         justify-content: space-between;
         background-color: transparent;
         border-bottom-color: lighten($color: $black-color, $amount: 75%);
+        article {
+            h3 {
+                font-weight: 300;
+            }
+            h3, p {
+                margin: 0;
+            }
+        }
     }
     .card-body {}
     .card-footer {

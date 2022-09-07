@@ -1,17 +1,18 @@
 .navigation {
-    ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 0;
+    & > ul {
         display: flex;
-        justify-content: end;
-        align-items: center;
         li {
             position: relative;
             a {
                 display: inline-block;
                 padding: 0 10px;
                 position: relative;
-                i {
-                    font-size: 1.375rem;
-                }
+                i {font-size: 1.375rem;}
                 .highlight {
                     display: block;
                     width: 10px;
@@ -27,68 +28,66 @@
                         50% { opacity: 0; }
                     }
                 }
-                &.user {
-                    padding-right: 0;
-                    img {
-                        width: 32px;
-                        border-radius: 50%;
+                img {
+                    width: 32px;
+                    border-radius: 50%;
+                }
+            }
+            &.dropdown {
+                .dropdown-menu {
+                    width: 340px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    border-radius: 0;
+                    box-shadow: $shadow;
+                    top: 15px !important;
+                    li {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            padding: 0.5rem 1rem;
+                            img {
+                                width: 48px;
+                                height: 48px;
+                            }
+                            img, i {
+                                margin-right: 12px;
+                            }
+                            &:hover {
+                                color: $white-color;
+                                background-color: $primary-color !important;
+                            }
+                            &.user {
+                                padding-top: 1rem;
+                                padding-bottom: 1rem;
+                                p {margin: 0;}
+                            }
+                        }
+                        .dropdown-divider {
+                            margin: 0;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        top: -10px;
+                        right: 15px;
+                        transform: rotate(45deg);
+                        border: 1px solid lighten($color: $black-color, $amount: 65%);
+                        border-right: none;
+                        border-bottom: none;
+                        background-color: $white-color;
+                        z-index: -1;
                     }
                 }
             }
-            ul {
-                display: none;
-                width: 350px;
-                background-color: $white-color;
-                box-shadow: $shadow;
-                border-radius: 0;
-                position: absolute;
-                top: 16px !important;
-                right: 0;
-                position: relative;
-                z-index: 1;
-                border: 1px solid lighten($color: $black-color, $amount: 75%);
-                &::before {
-                    content: "";
-                    display: block;
-                    width: 20px;
-                    height: 20px;
-                    background-color: lighten($color: $black-color, $amount: 65%);
-                    position: absolute;
-                    top: -8px;
-                    right: 5px;
-                    z-index: -1;
-                    transform: rotate(45deg);
-                }
-                li {
-                    width: 100%;
-                    a {
-                        display: flex;
-                        align-items: center;
-                        padding: 8px 16px;
-                        img {
-                            width: 48px;
-                            height: 48px;
-                        }
-                        img, i {
-                            margin-right: 12px;
-                        }
-                        &:hover {
-                            color: $white-color;
-                            background-color: $primary-color !important;
-                        }
-                    }
-                }
-                &.dropdown-menu {
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    li:first-child > a {
-                        padding-top: 16px;
-                        padding-bottom: 16px;
-                        background-color: $white-color;
-                    }
-                    .dropdown-divider {
-                        margin: 0;
-                    }
+            &:first-child, &:last-child {
+                a {
+                    padding-left: 0;
+                    padding-right: 0;
                 }
             }
         }
@@ -97,19 +96,20 @@
 
 @media (max-width: 768px) {
 	.navigation {
-        ul {
-            border: none;
+        & > ul {
             li {
-                position: static;
-                ul {
-                    &::before {
-                        display: none;
-                    }
-                    &.dropdown-menu {
-                        width: calc(100vw - 64px);
+                &.dropdown {
+                    position: static;
+                    .dropdown-menu {
+                        max-width: calc(100vw - 64px);
+                        width: 100%;
                         height: 100vh;
                         transform: translate(0, 0) !important;
-                        inset: 0 0  0 0 !important;
+                        inset: 0 !important;
+                        border: none;
+                        &::after {
+                            display: none;
+                        }
                     }
                 }
             }

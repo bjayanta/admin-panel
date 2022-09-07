@@ -1,8 +1,10 @@
 .main {
     margin-left: 320px;
     min-height: 100vh;
-    padding: 0 0.75rem;
     position: relative;
+    .header, .footer, .section {
+        // padding: 0 1rem;
+    }
 }
 
 .aside-toggle {
