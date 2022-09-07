@@ -1,18 +1,20 @@
-.table {}
-
-@media (max-width: 768px) {
-	.table {
-        thead, tbody, tfoot {
-            tr {
-                display: flex;
-                flex-direction: column;
-                th, td {
-                    text-align: left !important;
+.table {
+    tbody {
+        tr {
+            td {
+                &.action {
+                    a {
+                        margin-right: 5px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
                 }
             }
         }
-        thead {
-            display: none;
-        }
     }
+}
+
+@media (max-width: 768px) {
+	.table {}
 }

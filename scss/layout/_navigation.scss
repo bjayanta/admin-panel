@@ -35,7 +35,7 @@
             }
             &.dropdown {
                 .dropdown-menu {
-                    width: 340px;
+                    width: 320px;
                     padding-top: 0;
                     padding-bottom: 0;
                     border-radius: 0;
@@ -45,7 +45,7 @@
                         a {
                             display: flex;
                             align-items: center;
-                            padding: 0.5rem 1rem;
+                            padding: 0.2rem 1rem;
                             img {
                                 width: 48px;
                                 height: 48px;
@@ -55,7 +55,7 @@
                             }
                             &:hover {
                                 color: $white-color;
-                                background-color: $primary-color !important;
+                                background-color: $primary-light !important;
                             }
                             &.user {
                                 padding-top: 1rem;

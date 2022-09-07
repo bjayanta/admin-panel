@@ -37,15 +37,15 @@
 				<i class="bi bi-gear"></i>
 			</button>
 
-			<button type="button" onclick="asideToggle()">
-				<i class="bi bi-list"></i>
+			<button type="button">
+				<i class="bi bi-box-arrow-right"></i>
 			</button>
 		</nav>
 
 		<div class="tab-content">
 			<nav class="tab-pane fade show active" id="home-tab">
 				<h3>Home</h3>
-				<ul class="accordion open" id="home-accordion">
+				<ul class="accordion">
 					<li>
 						<a href="dashboard.html">
 							<i class="bi bi-speedometer2"></i>
@@ -53,36 +53,108 @@
 						</a>
 					</li>
 					<li>
+						<a href="#">
+							<i class="bi bi-cast"></i>
+							<span>Media</span>
+						</a>
+					</li>
+				</ul>
+
+				<strong>Pages</strong>
+				<ul class="accordion">
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Starter</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages">
+							<i class="bi bi-input-cursor-text"></i>
+							<span>Pages</span>
+						</a>
+						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">Faq</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Empty page</a></li>
+							<li><a href="#">Notifications</a></li>
+							<li><a href="#">Members</a></li>
+							<li><a href="#">Mail templates</a></li>
+							<li><a href="#">Under construction</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#errors" aria-expanded="true">
+							<i class="bi bi-input-cursor-text"></i>
+							<span>Errors</span>
+						</a>
+						<ul id="errors" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">404</a></li>
+							<li><a href="#">500</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<strong>Modules</strong>
+				<ul class="accordion">
+					<li>
 						<a href="#" class="accordion-button active" data-bs-toggle="collapse" data-bs-target="#module">
 							<i class="bi bi-menu-app"></i>
 							<span>Module</span>
 						</a>
-						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-accordion">
-							<li><a href="module-records.html" class="active">Records</a></li>
+
+						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-tab">
+							<li><a href="module-records.html">Records</a></li>
 							<li><a href="module-search.html">Search</a></li>
 							<li><a href="module-form.html">Form</a></li>
 							<li><a href="module-trash.html">Trash</a></li>
 						</ul>
 					</li>
+				</ul>
+
+				<strong>Documentation</strong>
+				<ul class="accordion">
 					<li>
-						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages" aria-expanded="true">
-							<i class="bi bi-input-cursor-text"></i>
-							<span>Pages</span>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Getting started</span>
 						</a>
-						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#home-accordion">
-							<li><a href="#">Empty page</a></li>
-							<li><a href="#">Mail templates</a></li>
-							<li><a href="#">Copyright</a></li>
-							<li><a href="#">License</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">Under construction</a></li>
-							<li><a href="#">Error page</a></li>
+					</li>
+
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#customization">
+							<i class="bi bi-menu-app"></i>
+							<span>Customization</span>
+						</a>
+						<ul id="customization" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">Styling</a></li>
+							<li><a href="#">Plugin</a></li>
 						</ul>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Support</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Change log</span>
+						</a>
 					</li>
 					<li>
 						<a href="#">
-							<i class="bi bi-cast"></i>
-							<span>Media</span>
+							<i class="bi bi-speedometer2"></i>
+							<span>License</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Copyright</span>
 						</a>
 					</li>
 				</ul>
@@ -140,14 +212,15 @@
 	<main class="main">
 		<!-- main header -->
 		<header class="header">
-			<!-- module details -->
-			<article class="module">
-				<strong>All Records</strong>
-				<p class="text-muted">Module short description goes to here.</p>
-			</article>
-			
 			<!-- main navigation -->
 			<nav class="navigation">
+				<ul>
+					<li>
+						<a href="#" onclick="asideToggle()">
+							<i class="bi bi-list"></i>
+						</a>
+					</li>
+				</ul>
 				<ul>
 					<li>
 						<a href="#">
@@ -162,15 +235,14 @@
 						</a>
 					</li>
 
-					<li class="dropdown user">
-						<a href="#" class="user" data-bs-toggle="dropdown">
+					<li class="dropdown">
+						<a href="#" data-bs-toggle="dropdown">
 							<img src="images/avatar.jpg" alt="User avatar">
-							<!-- <i class="bi bi-person-circle"></i> -->
 						</a>
 
 						<ul class="dropdown-menu">
 							<li>
-								<a href="./profile.html">
+								<a href="./profile.html" class="user">
 									<img src="./assets/images/avatar.jpg" alt="">
 									<div>
 										<strong>Baky billah khan pathan</strong>
@@ -185,15 +257,15 @@
 
 							<li>
 								<a href="./profile.html">
-									<i class="bi bi-person"></i>
+									<i class="bi bi-fingerprint"></i>
 									<span>My details</span>
 								</a>
 							</li>
 
 							<li>
 								<a href="#">
-									<i class="bi bi-person-bounding-box"></i>
-									<span>Switch account</span>
+									<i class="bi bi-people"></i>
+									<span>User manager</span>
 								</a>
 							</li>
 
@@ -221,6 +293,13 @@
 
 							<li>
 								<a href="#">
+									<i class="bi bi-blockquote-left"></i>
+									<span>About</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
 									<i class="bi bi-info-circle"></i>
 									<span>Help</span>
 								</a>
@@ -241,27 +320,39 @@
 
 		<!-- main section -->
 		<section class="section">
+			<!-- module details start -->
+			<article class="module">
+				<h2 class="mb-0">Module records</h2>
+				<p class="lead text-muted">Module short description goes to here.</p>
+			</article>
+			<!-- module details end -->
+
 			<!-- card -->
 			<div class="card">
 				<div class="card-header">
-					<h2>Card header</h2>
+					<strong>Card header</strong>
+
 					<nav class="btn-toolbar">
 						<div class="btn-group me-2">
-							<a href="module-form.html" class="btn" title="Create">
+							<a href="module-form.html" class="btn btn-outline-primary btn-sm" title="Create">
 								<i class="bi bi-plus-circle"></i>
 							</a>
 
-							<a href="#" class="btn">
+							<a href="module-form.html" class="btn btn-outline-primary btn-sm active" title="List">
+								<i class="bi bi-view-list"></i>
+							</a>
+
+							<a href="#" class="btn btn-outline-primary btn-sm">
 								<i class="bi bi-search"></i>
 							</a>
 
-							<a href="#" class="btn">
+							<a href="#" class="btn btn-outline-primary btn-sm">
 								<i class="bi bi-printer"></i>
 							</a>
 						</div>
 
 						<div class="btn-group">
-							<button type="button" class="btn" data-bs-toggle="collapse" data-bs-target="#recordsCard">
+							<button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#recordsCard">
 								<i class="bi bi-chevron-expand"></i>
 							</button>
 						</div>
@@ -269,14 +360,14 @@
 				</div>
 
 				<div class="card-body collapse show" id="recordsCard">
-					<table class="table table-hover">
+					<table class="table table-sm table-hover">
 						<caption>About 1,820,000 results.</caption>
 						<thead>
 							<tr>
 								<th>SL</th>
 								<th>Date</th>
-								<th>Supplier</th>
 								<th>Voucher no.</th>
+								<th>Supplier</th>
 								<th class="text-end">Total</th>
 								<th class="text-end">Paid</th>
 								<th class="text-end">Actions</th>
@@ -286,58 +377,37 @@
 							<tr>
 								<td>01.</td>
 								<td>1 September, 2022</td>
+								<td><a href="#" class="link-primary">00000156</a></td>
 								<td>লক্ষী ইন্ডাস্ট্রিজ</td>
-								<td>00000156</td>
 								<td class="text-end">0.00</td>
 								<td class="text-end">0.00</td>
-								<td class="text-end">
-									<a href="#" class="btn btn-sm btn-primary" title="Details">
-										<i class="bi bi-folder"></i>
-									</a>
-									<a href="#" class="btn btn-sm btn-success" title="Edit">
-										<i class="bi bi-pencil-square"></i>
-									</a>
-									<a href="#" class="btn btn-sm btn-danger" title="Delete">
-										<i class="bi bi-x-square"></i>
-									</a>
+								<td class="text-end action">
+									<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
+									<a href="#" class="link-danger" title="Delete"><i class="bi bi-x-square"></i></a>
 								</td>
 							</tr>
 							<tr>
 								<td>02.</td>
 								<td>31 August, 2022</td>
+								<td><a href="#" class="link-primary">00000155</a></td>
 								<td>পিয়া</td>
-								<td>00000155</td>
 								<td class="text-end">0.00</td>
 								<td class="text-end">0.00</td>
-								<td class="text-end">
-									<a href="#" class="btn btn-sm btn-primary" title="Details">
-										<i class="bi bi-folder"></i>
-									</a>
-									<a href="#" class="btn btn-sm btn-success" title="Edit">
-										<i class="bi bi-pencil-square"></i>
-									</a>
-									<a href="#" class="btn btn-sm btn-danger" title="Delete">
-										<i class="bi bi-x-square"></i>
-									</a>
+								<td class="text-end action">
+									<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
+									<a href="#" class="link-danger" title="Delete"><i class="bi bi-x-square"></i></a>
 								</td>
 							</tr>
 							<tr>
 								<td>03.</td>
 								<td>29 August, 2022</td>
+								<td><a href="#" class="link-primary">00000154</a></td>
 								<td>লক্ষী ইন্ডাস্ট্রিজ </td>
-								<td>00000154</td>
 								<td class="text-end">0.00</td>
 								<td class="text-end">0.00</td>
-								<td class="text-end">
-									<a href="#" class="btn btn-sm btn-primary" title="Details">
-										<i class="bi bi-folder"></i>
-									</a>
-									<a href="#" class="btn btn-sm btn-success" title="Edit">
-										<i class="bi bi-pencil-square"></i>
-									</a>
-									<a href="#" class="btn btn-sm btn-danger" title="Delete">
-										<i class="bi bi-x-square"></i>
-									</a>
+								<td class="text-end action">
+									<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
+									<a href="#" class="link-danger" title="Delete"><i class="bi bi-x-square"></i></a>
 								</td>
 							</tr>
 						</tbody>
@@ -354,7 +424,7 @@
 
 				<div class="card-footer py-3">
 					<nav class="text-end">
-						<ul class="pagination">
+						<ul class="pagination pagination-sm">
 							<li class="page-item disabled">
 								<a class="page-link" href="#">
 									<i class="bi bi-chevron-left"></i>
@@ -372,7 +442,7 @@
 					</nav>
 				</div>
 			</div>
-		</div>
+		</section>
 	</main>
 	<!-- main content end -->
 
