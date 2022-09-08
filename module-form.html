@@ -37,15 +37,15 @@
 				<i class="bi bi-gear"></i>
 			</button>
 
-			<button type="button" onclick="asideToggle()">
-				<i class="bi bi-list"></i>
+			<button type="button">
+				<i class="bi bi-box-arrow-right"></i>
 			</button>
 		</nav>
 
 		<div class="tab-content">
 			<nav class="tab-pane fade show active" id="home-tab">
 				<h3>Home</h3>
-				<ul class="accordion open" id="home-accordion">
+				<ul class="accordion">
 					<li>
 						<a href="dashboard.html">
 							<i class="bi bi-speedometer2"></i>
@@ -53,36 +53,108 @@
 						</a>
 					</li>
 					<li>
+						<a href="#">
+							<i class="bi bi-cast"></i>
+							<span>Media</span>
+						</a>
+					</li>
+				</ul>
+
+				<strong>Pages</strong>
+				<ul class="accordion">
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Starter</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages">
+							<i class="bi bi-input-cursor-text"></i>
+							<span>Pages</span>
+						</a>
+						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">Faq</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Empty page</a></li>
+							<li><a href="#">Notifications</a></li>
+							<li><a href="#">Members</a></li>
+							<li><a href="#">Mail templates</a></li>
+							<li><a href="#">Under construction</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#errors" aria-expanded="true">
+							<i class="bi bi-input-cursor-text"></i>
+							<span>Errors</span>
+						</a>
+						<ul id="errors" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">404</a></li>
+							<li><a href="#">500</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<strong>Modules</strong>
+				<ul class="accordion">
+					<li>
 						<a href="#" class="accordion-button active" data-bs-toggle="collapse" data-bs-target="#module">
 							<i class="bi bi-menu-app"></i>
 							<span>Module</span>
 						</a>
-						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-accordion">
+
+						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-tab">
 							<li><a href="module-records.html">Records</a></li>
-							<li><a href="module-form.html" class="active">Form</a></li>
 							<li><a href="module-search.html">Search</a></li>
+							<li><a href="module-form.html" class="active">Form</a></li>
 							<li><a href="module-trash.html">Trash</a></li>
 						</ul>
 					</li>
+				</ul>
+
+				<strong>Documentation</strong>
+				<ul class="accordion">
 					<li>
-						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages" aria-expanded="true">
-							<i class="bi bi-input-cursor-text"></i>
-							<span>Pages</span>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Getting started</span>
 						</a>
-						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#home-accordion">
-							<li><a href="#">Empty page</a></li>
-							<li><a href="#">Mail templates</a></li>
-							<li><a href="#">Copyright</a></li>
-							<li><a href="#">License</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">Under construction</a></li>
-							<li><a href="#">Error page</a></li>
+					</li>
+
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#customization">
+							<i class="bi bi-menu-app"></i>
+							<span>Customization</span>
+						</a>
+						<ul id="customization" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">Styling</a></li>
+							<li><a href="#">Plugin</a></li>
 						</ul>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Support</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Change log</span>
+						</a>
 					</li>
 					<li>
 						<a href="#">
-							<i class="bi bi-cast"></i>
-							<span>Media</span>
+							<i class="bi bi-speedometer2"></i>
+							<span>License</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Copyright</span>
 						</a>
 					</li>
 				</ul>
@@ -140,18 +212,15 @@
 	<main class="main">
 		<!-- main header -->
 		<header class="header">
+			<!-- main navigation -->
 			<nav class="navigation">
 				<ul>
 					<li>
-						<a href="#">
-							<i class="bi bi-binoculars"></i>
+						<a href="#" onclick="asideToggle()">
+							<i class="bi bi-list"></i>
 						</a>
 					</li>
 				</ul>
-			</nav>
-			
-			<!-- main navigation -->
-			<nav class="navigation">
 				<ul>
 					<li>
 						<a href="#">
@@ -166,15 +235,14 @@
 						</a>
 					</li>
 
-					<li class="dropdown user">
-						<a href="#" class="user" data-bs-toggle="dropdown">
+					<li class="dropdown">
+						<a href="#" data-bs-toggle="dropdown">
 							<img src="images/avatar.jpg" alt="User avatar">
-							<!-- <i class="bi bi-person-circle"></i> -->
 						</a>
 
 						<ul class="dropdown-menu">
 							<li>
-								<a href="./profile.html">
+								<a href="./profile.html" class="user">
 									<img src="./assets/images/avatar.jpg" alt="">
 									<div>
 										<strong>Baky billah khan pathan</strong>
@@ -189,15 +257,15 @@
 
 							<li>
 								<a href="./profile.html">
-									<i class="bi bi-person"></i>
+									<i class="bi bi-fingerprint"></i>
 									<span>My details</span>
 								</a>
 							</li>
 
 							<li>
 								<a href="#">
-									<i class="bi bi-person-bounding-box"></i>
-									<span>Switch account</span>
+									<i class="bi bi-people"></i>
+									<span>User manager</span>
 								</a>
 							</li>
 
@@ -225,6 +293,13 @@
 
 							<li>
 								<a href="#">
+									<i class="bi bi-blockquote-left"></i>
+									<span>About</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
 									<i class="bi bi-info-circle"></i>
 									<span>Help</span>
 								</a>
@@ -245,79 +320,134 @@
 
 		<!-- main section -->
 		<section class="section">
-			<!-- page navigation start -->
-			<nav class="d-flex justify-content-between">
-				<div class="btn-group">
-					<a href="module-form.html" class="btn btn-outline-primary active">
-						<i class="bi bi-plus-circle"></i>
-						<span>Create</span>
-					</a>
-					<a href="module-search.html" class="btn btn-outline-primary">
-						<i class="bi bi-search"></i>
-						<span>Search</span>
-					</a>
-					<a href="module-records.html" class="btn btn-outline-primary">
-						<i class="bi bi-table"></i>
-						<span>Records</span>
-					</a>
-				</div>
-				
-				<div class="btn-group">
-					<a href="#" class="btn">
-						<i class="bi bi-arrow-clockwise"></i>
-						<span>Reload</span>
-					</a>
-					<a href="module-trash.html" class="btn btn-outline-primary">
-						<i class="bi bi-trash"></i>
-						<span>Trash box</span>
-					</a>
-				</div>
-			</nav>
-			<!-- page navigation end -->
+			<!-- module details start -->
+			<article class="module">
+				<h2 class="mb-0">Module Form</h2>
+				<p class="text-muted">Module short description goes to here.</p>
+			</article>
+			<!-- module details end -->
 
 			<!-- card -->
 			<div class="card">
 				<div class="card-header">
-					<!-- module details -->
-					<article>
-						<h3>Create new</h3>
-						<p class="text-muted">Module short description goes to here.</p>
-					</article>
-					<!-- module details end -->
+					<strong>Card header</strong>
 
 					<nav class="btn-toolbar">
 						<div class="btn-group me-2">
-							<a href="#" class="btn"><i class="bi bi-printer"></i></a>
-							<button type="button" class="btn" data-bs-toggle="collapse" data-bs-target="#formCard">
+							<a href="module-form.html" class="btn btn-outline-primary btn-sm active" title="Create">
+								<i class="bi bi-plus-circle"></i>
+							</a>
+
+							<a href="module-records.html" class="btn btn-outline-primary btn-sm" title="List">
+								<i class="bi bi-view-list"></i>
+							</a>
+
+							<a href="#" class="btn btn-outline-primary btn-sm">
+								<i class="bi bi-printer"></i>
+							</a>
+						</div>
+
+						<div class="btn-group">
+							<button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#cardToggle">
 								<i class="bi bi-chevron-expand"></i>
 							</button>
 						</div>
 					</nav>
 				</div>
 
-				<div class="card-body collapse show" id="formCard">
-					<form action="" method="post" class="row">
-						<div class="col-6">
-							<label for="first-name" class="form-label">First name</label>
-							<input type="text" class="form-control" id="first-name">
+				<div class="card-body collapse show" id="cardToggle">
+					<form action="#" method="get">
+						<div class="row mb-3">
+							<label for="date" class="col-2 col-form-label">
+								<span class="required">Investment date</span>
+							</label>
+							<div class="col-4">
+								<input type="date" class="form-control" id="date">
+							</div>
 						</div>
 
-						<div class="col-4 mb-3">
-							<label for="exampleFormControlInput1" class="form-label required">Email address</label>
-							<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+						<div class="row mb-3">
+							<label for="investor" class="col-2 col-form-label">
+								<span class="required">Investor</span>
+							</label>
+							<div class="col-4">
+								<select class="form-select" id="investor">
+									<option selected disabled>Select one</option>
+									<option value="1">লক্ষী ইন্ডাস্ট্রিজ</option>
+									<option value="2">পিয়া</option>
+								</select>
+							</div>
 						</div>
 
-						<div class="col-10 mb-3">
-							<label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+						<div class="row mb-3">
+							<label for="amount" class="col-2 col-form-label">
+								<span class="required">Amount</span>
+							</label>
+							<div class="col-4">
+								<div class="input-group">
+									<span class="input-group-text">BDT</span>
+									<input type="number" step="any" class="form-control" id="amount">
+								</div>
+							</div>
 						</div>
 
-						
+						<div class="row mb-3">
+							<label for="duration" class="col-2 col-form-label">
+								<span class="required">Duration</span>
+							</label>
+							<div class="col-4">
+								<select class="form-select" id="duration">
+									<option selected disabled>Select one</option>
+										<option value="6">6 month</option>
+										<option value="12">1 year</option>
+										<option value="18">1.5 year</option>
+										<option value="24">2 year</option>
+										<option value="36">3 year</option>
+										<option value="48">4 year</option>
+										<option value="60">5 year</option>
+										<option value="72">6 year</option>
+										<option value="84">7 year</option>
+										<option value="96">8 year</option>
+										<option value="108">9 year</option>
+										<option value="120">10 year</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="row mb-3">
+							<label for="interest" class="col-2 col-form-label">
+								<span class="required">Interest (%)</span>
+							</label>
+							<div class="col-4">
+								<div class="input-group">
+									<input type="number" step="any" class="form-control" id="interest">
+									<span class="input-group-text">Percentage (%)</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="row mb-3">
+							<label for="note" class="col-2 col-form-label">
+								<span>Note</span>
+							</label>
+							<div class="col-4">
+								<textarea class="form-control" id="note" rows="4" placeholder="Optional"></textarea>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-6 text-end">
+								<button class="btn btn-success">
+									<i class="bi bi-plus-square me-2"></i>
+									<span>Add Investment</span>
+								</button>
+							</div>
+						</div>
 					</form>
 				</div>
 
-				<div class="card-footer py-3">
-					This is footer.
+				<div class="card-footer">
+					<p>Any special instruction goes to here.</p>
 				</div>
 			</div>
 		</section>

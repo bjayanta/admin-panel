@@ -88,6 +88,10 @@ body a {
   font-size: 24px;
 }
 
+input, textarea, select, button, .input-group-text {
+  border-radius: 0 !important;
+}
+
 .btn-group button, .btn-group a, .btn-group .btn {
   border-radius: 0;
 }
@@ -253,7 +257,7 @@ svg.maxsop.dark path {
   position: relative;
 }
 .main .header, .main .footer, .main .section {
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .aside-toggle .main {
@@ -377,6 +381,23 @@ svg.maxsop.dark path {
     display: none;
   }
 }
+.module {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.module article p {
+  margin-bottom: 0;
+}
+.module nav a {
+  margin-left: 1.25rem;
+  padding-bottom: 5px;
+  line-height: 2;
+}
+.module nav a.active {
+  border-bottom: 2px solid #566af2;
+}
+
 .authentication {
   display: flex;
   flex-direction: column;
