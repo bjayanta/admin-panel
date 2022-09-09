@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Records | Module | Admin Panel | MaxSOP</title>
+    <title>Trash | Module | Admin Panel | MaxSOP</title>
     <link rel="shortcut icon" href="images/logo_symbol.svg" type="image/x-icon">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -104,10 +104,10 @@
 						</a>
 
 						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-tab">
-							<li><a href="module-records.html" class="active">Records</a></li>
+							<li><a href="module-records.html">Records</a></li>
 							<li><a href="module-form.html">Form</a></li>
-							<li><a href="module-search.html">Search</a></li>
-							<li><a href="module-trash.html">Trash</a></li>
+                            <li><a href="module-search.html">Search</a></li>
+							<li><a href="module-trash.html" class="active">Trash</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -322,12 +322,12 @@
 		<section class="section mb-3">
 			<div class="module">
 				<article >
-					<h2 class="mb-0">Module Records</h2>
+					<h2 class="mb-0">Module Trash</h2>
 					<p class="lead text-muted">Module short description goes to here.</p>
 				</article>
 
 				<nav>
-					<a href="module-records.html" class="active">
+					<a href="module-records.html">
 						<i class="bi bi-view-list"></i>
 						<span>Records</span>
 					</a>
@@ -335,7 +335,7 @@
 						<i class="bi bi-plus-circle"></i>
 						<span>Create</span>
 					</a>
-					<a href="module-trash.html">
+					<a href="module-trash.html" class="active">
 						<i class="bi bi-trash"></i>
 						<span>Trash</span>
 					</a>
@@ -347,147 +347,145 @@
 		<!-- main section -->
 		<section class="section">
 			<!-- card -->
-			<div class="card">
-				<div class="card-header">
-					<strong>About 1,820,000 results.</strong>
-					<nav class="btn-toolbar">
-						<div class="btn-group me-2">
-							<button type="button" data-bs-toggle="collapse" data-bs-target="#recordsFilter" class="btn btn-sm btn-outline-primary">
-								<i class="bi bi-funnel"></i>
-								<span>Advanced Filter</span>
-							</button>
-						</div>
+            <div class="card mb-3">
+                <div class="card-header">
+                    <strong>Asterisk field is required.</strong>
+                    <nav class="btn-toolbar">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#trashCard">
+                                <i class="bi bi-chevron-expand"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
 
-						<div class="btn-group">
-							<a href="#" class="btn btn-sm btn-outline-secondary">
-								<i class="bi bi-file-earmark-spreadsheet"></i>
-							</a>
+                <div class="card-body collapse show" id="trashCard">
+                    <form action="#" method="get">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox"/>
+                                            <span class="ms-2">SL</span>
+                                        </label>
+                                    </th>
+                                    <th>Voucher no.</th>
+                                    <th>Date</th>
+                                    <th>Supplier</th>
+                                    <th class="text-end">Total</th>
+                                    <th class="text-end">Paid</th>
+                                    <th class="text-end">Actions</th>
+                                </tr>
+                            </thead>
 
-							<a href="#" class="btn btn-sm btn-outline-secondary">
-								<i class="bi bi-filetype-pdf"></i>
-							</a>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox"/>
+                                            <span class="ms-2">01.</span>
+                                        </label>
+                                    </td>
+                                    <td><a href="#" target="_blank" class="link-primary">00000156</a></td>
+                                    <td>1 September, 2022</td>
+                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end action">
+                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+                                    </td>
+                                </tr>
 
-							<a href="#" class="btn btn-sm btn-outline-secondary">
-								<i class="bi bi-printer"></i>
-							</a>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox"/>
+                                            <span class="ms-2">02.</span>
+                                        </label>
+                                    </td>
+                                    <td><a href="#" target="_blank" class="link-primary">00000155</a></td>
+                                    <td>2 September, 2022</td>
+                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end action">
+                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+                                    </td>
+                                </tr>
 
-							<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#recordsCard">
-								<i class="bi bi-chevron-expand"></i>
-							</button>
-						</div>
-					</nav>
-				</div>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox"/>
+                                            <span class="ms-2">03.</span>
+                                        </label>
+                                    </td>
+                                    <td><a href="#" target="_blank" class="link-primary">00000154</a></td>
+                                    <td>3 September, 2022</td>
+                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end action">
+                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+                                    </td>
+                                </tr>
 
-				<div class="card-body collapse show" id="recordsCard">
-					<form action="#" method="get" class="row collapse" id="recordsFilter">
-						<div class="col-4">
-							<label class="form-label">Date range</label>
-							<div class="input-group input-group-sm">
-								<input type="date" class="form-control">
-								<span class="input-group-text">-</span>
-								<input type="date" class="form-control">
-							</div>
-						</div>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox"/>
+                                            <span class="ms-2">04.</span>
+                                        </label>
+                                    </td>
+                                    <td><a href="#" target="_blank" class="link-primary">00000153</a></td>
+                                    <td>4 September, 2022</td>
+                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end action">
+                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+                                    </td>
+                                </tr>
 
-						<div class="col-2">
-							<label for="voucher" class="form-label">Voucher</label>
-							<input type="text" class="form-control form-control-sm" id="voucher">
-						</div>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox"/>
+                                            <span class="ms-2">05.</span>
+                                        </label>
+                                    </td>
+                                    <td><a href="#" target="_blank" class="link-primary">00000153</a></td>
+                                    <td>5 September, 2022</td>
+                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end action">
+                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-						<div class="col-2">
-							<label for="supplier" class="form-label">Supplier</label>
-							<select class="form-select form-select-sm" id="supplier">
-								<option selected disabled>Select one</option>
-								<option value="1">লক্ষী ইন্ডাস্ট্রিজ</option>
-								<option value="2">পিয়া</option>
-							</select>
-						</div>
-
-						<div class="col-2" style="margin-top: 32px;">
-							<button class="btn btn-sm btn-primary">
-								Search
-							</button>
-						</div>
-					</form>
-					<table class="table table-hover mt-3">
-						<thead>
-							<tr>
-								<th>SL</th>
-								<th>Date</th>
-								<th>Voucher no.</th>
-								<th>Supplier</th>
-								<th class="text-end">Total</th>
-								<th class="text-end">Paid</th>
-								<th class="text-end">Actions</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>01.</td>
-								<td>1 September, 2022</td>
-								<td><a href="#" target="_blank" class="link-primary">00000156</a></td>
-								<td>লক্ষী ইন্ডাস্ট্রিজ</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end action">
-									<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
-									<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
-								</td>
-							</tr>
-							<tr>
-								<td>02.</td>
-								<td>31 August, 2022</td>
-								<td><a href="#" target="_blank" class="link-primary">00000155</a></td>
-								<td>পিয়া</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end action">
-									<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
-									<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
-								</td>
-							</tr>
-							<tr>
-								<td>03.</td>
-								<td>29 August, 2022</td>
-								<td><a href="#" target="_blank" class="link-primary">00000154</a></td>
-								<td>লক্ষী ইন্ডাস্ট্রিজ </td>
-								<td class="text-end">0.00</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end action">
-									<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
-									<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
-								</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<th colspan="4" class="text-end">Total</th>
-								<th class="text-end">0.00</th>
-								<th class="text-end">0.00</th>
-								<th>&nbsp;</th>
-							</tr>
-						</tfoot>
-					</table>
-
-					<nav class="text-end">
-						<ul class="pagination pagination-sm">
-							<li class="page-item disabled">
-								<a class="page-link" href="#">
-									<i class="bi bi-chevron-left"></i>
-								</a>
-							</li>
-							<li class="page-item active"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item">
-								<a class="page-link" href="#">
-									<i class="bi bi-chevron-right"></i>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
+                        <div class="text-end">
+                            <button class="btn btn-danger me-2">
+                                <i class="bi bi-x-square me-2"></i>
+                                <span>Delete all permanently</span>
+                            </button>
+        
+                            <button class="btn btn-success">
+                                <i class="bi bi-save me-2"></i>
+                                <span>Restore all</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
 		</section>
 	</main>
 	<!-- main content end -->

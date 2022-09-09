@@ -105,8 +105,8 @@
 
 						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-tab">
 							<li><a href="module-records.html">Records</a></li>
-							<li><a href="module-search.html">Search</a></li>
 							<li><a href="module-form.html" class="active">Form</a></li>
+							<li><a href="module-search.html">Search</a></li>
 							<li><a href="module-trash.html">Trash</a></li>
 						</ul>
 					</li>
@@ -318,46 +318,50 @@
 			<!-- main navigation end -->
 		</header>
 
+		<!-- module details start -->
+		<section class="section mb-3">
+			<div class="module">
+				<article >
+					<h2 class="mb-0">Module Form</h2>
+					<p class="lead text-muted">Module short description goes to here.</p>
+				</article>
+
+				<nav>
+					<a href="module-records.html">
+						<i class="bi bi-view-list"></i>
+						<span>Records</span>
+					</a>
+					<a href="module-form.html" class="active">
+						<i class="bi bi-plus-circle"></i>
+						<span>Create</span>
+					</a>
+					<a href="module-trash.html">
+						<i class="bi bi-trash"></i>
+						<span>Trash</span>
+					</a>
+				</nav>
+			</div>
+		</section>
+		<!-- module details end -->
+
 		<!-- main section -->
 		<section class="section">
-			<!-- module details start -->
-			<article class="module">
-				<h2 class="mb-0">Module Form</h2>
-				<p class="text-muted">Module short description goes to here.</p>
-			</article>
-			<!-- module details end -->
-
 			<!-- card -->
 			<div class="card">
 				<div class="card-header">
-					<strong>Card header</strong>
-
+					<strong>Asterisk field is required.</strong>
 					<nav class="btn-toolbar">
-						<div class="btn-group me-2">
-							<a href="module-form.html" class="btn btn-outline-primary btn-sm active" title="Create">
-								<i class="bi bi-plus-circle"></i>
-							</a>
-
-							<a href="module-records.html" class="btn btn-outline-primary btn-sm" title="List">
-								<i class="bi bi-view-list"></i>
-							</a>
-
-							<a href="#" class="btn btn-outline-primary btn-sm">
-								<i class="bi bi-printer"></i>
-							</a>
-						</div>
-
 						<div class="btn-group">
-							<button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#cardToggle">
+							<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#formCard">
 								<i class="bi bi-chevron-expand"></i>
 							</button>
 						</div>
 					</nav>
 				</div>
 
-				<div class="card-body collapse show" id="cardToggle">
+				<div class="card-body collapse show" id="formCard">
 					<form action="#" method="get">
-						<div class="row mb-3">
+						<div class="row mb-2">
 							<label for="date" class="col-2 col-form-label">
 								<span class="required">Investment date</span>
 							</label>
@@ -366,7 +370,7 @@
 							</div>
 						</div>
 
-						<div class="row mb-3">
+						<div class="row mb-2">
 							<label for="investor" class="col-2 col-form-label">
 								<span class="required">Investor</span>
 							</label>
@@ -379,7 +383,7 @@
 							</div>
 						</div>
 
-						<div class="row mb-3">
+						<div class="row mb-2">
 							<label for="amount" class="col-2 col-form-label">
 								<span class="required">Amount</span>
 							</label>
@@ -388,10 +392,11 @@
 									<span class="input-group-text">BDT</span>
 									<input type="number" step="any" class="form-control" id="amount">
 								</div>
+								<small>Some text goes to here.</small>
 							</div>
 						</div>
 
-						<div class="row mb-3">
+						<div class="row mb-2">
 							<label for="duration" class="col-2 col-form-label">
 								<span class="required">Duration</span>
 							</label>
@@ -414,7 +419,7 @@
 							</div>
 						</div>
 
-						<div class="row mb-3">
+						<div class="row mb-2">
 							<label for="interest" class="col-2 col-form-label">
 								<span class="required">Interest (%)</span>
 							</label>
@@ -426,12 +431,12 @@
 							</div>
 						</div>
 
-						<div class="row mb-3">
+						<div class="row mb-2">
 							<label for="note" class="col-2 col-form-label">
 								<span>Note</span>
 							</label>
 							<div class="col-4">
-								<textarea class="form-control" id="note" rows="4" placeholder="Optional"></textarea>
+								<textarea class="form-control" id="note" rows="3" placeholder="Optional"></textarea>
 							</div>
 						</div>
 
@@ -444,10 +449,6 @@
 							</div>
 						</div>
 					</form>
-				</div>
-
-				<div class="card-footer">
-					<p>Any special instruction goes to here.</p>
 				</div>
 			</div>
 		</section>
