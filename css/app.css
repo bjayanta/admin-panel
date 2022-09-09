@@ -92,10 +92,10 @@ input, textarea, select, button, .input-group-text {
   border-radius: 0 !important;
 }
 
-.btn-group button, .btn-group a, .btn-group .btn {
+button, a, .btn {
   border-radius: 0;
 }
-.btn-group button span, .btn-group a span, .btn-group .btn span {
+button span, a span, .btn span {
   margin-left: 5px;
 }
 
@@ -257,6 +257,9 @@ svg.maxsop.dark path {
   position: relative;
 }
 .main .header, .main .footer, .main .section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 0 2rem;
 }
 
@@ -393,6 +396,8 @@ svg.maxsop.dark path {
   margin-left: 1.25rem;
   padding-bottom: 5px;
   line-height: 2;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 .module nav a.active {
   border-bottom: 2px solid #566af2;
@@ -577,6 +582,28 @@ svg.maxsop.dark path {
   .services > section > div.container nav {
     grid-template-columns: auto auto;
   }
+}
+.profile .module figure {
+  display: flex;
+  margin: 0;
+}
+.profile .module figure img {
+  width: 128px;
+  border: 5px solid #ffffff;
+  margin-right: 1rem;
+}
+.profile .module figure figcaption h2 {
+  font-weight: 800;
+}
+.profile form .row {
+  align-items: center;
+  border-bottom: 1px solid #e0e0e3;
+}
+.profile form .row a {
+  color: #566af2;
+}
+.profile form .row a:hover {
+  color: #0e24bb;
 }
 
 /*# sourceMappingURL=app.css.map */

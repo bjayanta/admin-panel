@@ -1,0 +1,31 @@
+.profile {
+    .module {
+        figure {
+            display: flex;
+            margin: 0;
+            img {
+                width: 128px;
+                border: 5px solid $white-color;
+                margin-right: 1rem;
+            }
+            figcaption {
+                h2 {
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+
+    form {
+        .row {
+            align-items: center;
+            border-bottom: 1px solid lighten($color: $black-color, $amount: 75%);
+            a {
+                color: $primary-light;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

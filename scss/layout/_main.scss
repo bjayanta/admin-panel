@@ -3,6 +3,9 @@
     min-height: 100vh;
     position: relative;
     .header, .footer, .section {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         padding: 0 2rem;
     }
 }

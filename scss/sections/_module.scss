@@ -12,6 +12,8 @@
             margin-left: 1.25rem;
             padding-bottom: 5px;
             line-height: 2;
+            font-weight: 500;
+            text-transform: uppercase;
             &.active {
                 border-bottom: 2px solid $primary-light;
             }
