@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Records | Module | Admin Panel | MaxSOP</title>
+    <title>Profile | Admin Panel | MaxSOP</title>
     <link rel="shortcut icon" href="images/logo_symbol.svg" type="image/x-icon">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -47,7 +47,7 @@
 				<h3>Home</h3>
 				<ul class="accordion">
 					<li>
-						<a href="dashboard.html">
+						<a href="dashboard.html" class="active">
 							<i class="bi bi-speedometer2"></i>
 							<span>Dashboard</span>
 						</a>
@@ -98,15 +98,14 @@
 				<strong>Modules</strong>
 				<ul class="accordion">
 					<li>
-						<a href="#" class="accordion-button active" data-bs-toggle="collapse" data-bs-target="#module">
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#module">
 							<i class="bi bi-menu-app"></i>
 							<span>Module</span>
 						</a>
-
-						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-tab">
-							<li><a href="module-records.html" class="active">Records</a></li>
-							<li><a href="module-form.html">Form</a></li>
+						<ul id="module" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="module-records.html">Records</a></li>
 							<li><a href="module-search.html">Search</a></li>
+							<li><a href="module-form.html">Form</a></li>
 							<li><a href="module-trash.html">Trash</a></li>
 						</ul>
 					</li>
@@ -209,7 +208,7 @@
 	<!-- app aside navigation end -->
 
 	<!-- main content start -->
-	<main class="main">
+	<main class="main profile">
 		<!-- main header -->
 		<header class="header">
 			<!-- main navigation -->
@@ -242,8 +241,8 @@
 
 						<ul class="dropdown-menu">
 							<li>
-								<a href="./profile.html" class="user">
-									<img src="./assets/images/avatar.jpg" alt="">
+								<a href="profile.html" class="user">
+									<img src="images/avatar.jpg" alt="">
 									<div>
 										<strong>Baky billah khan pathan</strong>
 										<p>Adminstrator</p>
@@ -326,175 +325,207 @@
 		</header>
 
 		<!-- module details start -->
-		<section class="section mb-3">
+		<section class="section mb-3 py-3" style="background-image: url('images/profile_backbround.jpg');">
 			<div class="module">
-				<article >
-					<h2 class="mb-0">Module Records</h2>
-					<p class="lead text-muted">Module short description goes to here.</p>
-				</article>
+                <figure>
+                    <img src="images/avatar.jpg" alt="Avatar photo" />
+                    <figcaption>
+                        <h2>Baky billah khan pathan</h2>
+                        <p class="lead">UI/UX designer + Frontend Developer</p>
+                        <a href="profile-settings.html" class="btn btn-sm btn-warning">Update profile</a>
+                    </figcaption>
+                </figure>
 
-				<nav>
-					<a href="module-records.html" class="active">
-						<i class="bi bi-view-list"></i>
-						<span>Records</span>
-					</a>
-					<a href="module-form.html">
-						<i class="bi bi-plus-circle"></i>
-						<span>Create</span>
-					</a>
-					<a href="module-trash.html">
-						<i class="bi bi-trash"></i>
-						<span>Trash</span>
-					</a>
-				</nav>
+                <nav>
+                    <a href="profile.html" class="active">
+                        <i class="bi bi-person"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="profile-photo.html">
+                        <i class="bi bi-images"></i>
+                        <span>Photos</span>
+                    </a>
+
+                    <a href="profile-settings.html">
+                        <i class="bi bi-sliders"></i>
+                        <span>Settings</span>
+                    </a>
+                </nav>
 			</div>
 		</section>
 		<!-- module details end -->
 
 		<!-- main section -->
 		<section class="section">
-			<!-- card -->
-			<div class="card">
-				<div class="card-header">
-					<strong>About 1,820,000 results.</strong>
-					<nav class="btn-toolbar">
-						<div class="btn-group me-2">
-							<button type="button" data-bs-toggle="collapse" data-bs-target="#recordsFilter" class="btn btn-sm btn-outline-primary">
-								<i class="bi bi-funnel"></i>
-								<span>Advanced Filter</span>
-							</button>
-						</div>
+            <form action="" method="post">
+				<!-- Parents -->
+                <div class="row pb-2 border-bottom">
+					<div class="col-3"></div>
+                    <div class="col-2">
+						<strong>Mr. Abdul-al Momin</strong>
+						<div>Father name</div>
+                    </div>
 
-						<div class="btn-group">
-							<a href="#" class="btn btn-sm btn-outline-secondary">
-								<i class="bi bi-file-earmark-spreadsheet"></i>
-							</a>
+					<div class="col-2">
+						<strong>Mrs. Fatema Aktar</strong>
+						<div>Mother name</div>
+                    </div>
+                </div>
 
-							<a href="#" class="btn btn-sm btn-outline-secondary">
-								<i class="bi bi-filetype-pdf"></i>
-							</a>
+				<!-- dob -->
+				<div class="row border-bottom py-2">
+                    <label class="col-3 col-form-label text-end">Birthdate</span></label>
+                    <div class="col-1">
+						<select name="day" class="form-select form-select-sm">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+						</select>
+					</div>
+					<div class="col-1">
+						<select name="month" class="form-select form-select-sm">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</div>
 
-							<a href="#" class="btn btn-sm btn-outline-secondary">
-								<i class="bi bi-printer"></i>
-							</a>
+					<div class="col-2">
+						<select name="day" class="form-select form-select-sm">
+							<option value="1990">1990</option>
+							<option value="1991">1991</option>
+							<option value="1992">1992</option>
+							<option value="1993">1993</option>
+							<option value="1994">1994</option>
+						</select>
+                    </div>
+                </div>
 
-							<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#recordsCard">
-								<i class="bi bi-chevron-expand"></i>
-							</button>
-						</div>
-					</nav>
+				<!-- gender -->
+				<div class="row border-bottom">
+                    <label class="col-3 col-form-label text-end">Gender</label>
+                    <div class="col-3 ps-3">
+						<label class="me-3">
+							<input type="radio" name="gender" value="male" checked/>
+							<span>Male</span>
+						</label>
+
+						<label class="me-3">
+							<input type="radio" name="gender" value="female"/>
+							<span>Female</span>
+						</label>
+
+						<label>
+							<input type="radio" name="gender" value="other"/>
+							<span>Other</span>
+						</label>
+                    </div>
+                </div>
+
+				<!-- mobile numbers -->
+				<div class="row py-2 border-bottom">
+                    <label class="col-3 col-form-label text-end">
+                        <span>Mobile number</span>
+                    </label>
+
+                    <div class="col-2">
+						<strong>+880 1775 219457</strong>
+						<div>Personal <a href="#" class="ms-2">+ Edit</a></div>
+                    </div>
+
+					<div class="col-2">
+						<strong>N/A</strong>
+						<div>Home <a href="#" class="ms-2">+ Add number</a></div>
+                    </div>
+
+					<div class="col-2">
+						<strong>N/A</strong>
+						<div>Office <a href="#" class="ms-2">+ Add number</a></div>
+                    </div>
 				</div>
 
-				<div class="card-body collapse show" id="recordsCard">
-					<form action="#" method="get" class="row collapse" id="recordsFilter">
-						<div class="col-4">
-							<label class="form-label">Date range</label>
-							<div class="input-group input-group-sm">
-								<input type="date" class="form-control">
-								<span class="input-group-text">-</span>
-								<input type="date" class="form-control">
-							</div>
-						</div>
+				<!-- address -->
+				<div class="row py-2 border-bottom">
+                    <label class="col-3 col-form-label text-end">Address</label>
+                    <div class="col-3">
+						<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
+						<div>Present address<a href="#" class="ms-2">+ Edit</a></div>
+                    </div>
 
-						<div class="col-2">
-							<label for="voucher" class="form-label">Voucher</label>
-							<input type="text" class="form-control form-control-sm" id="voucher">
-						</div>
+					<div class="col-3">
+						<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
+						<div>Permanent address<a href="#" class="ms-2">+ Edit</a></div>
+                    </div>
 
-						<div class="col-2">
-							<label for="supplier" class="form-label">Supplier</label>
-							<select class="form-select form-select-sm" id="supplier">
-								<option selected disabled>Select one</option>
-								<option value="1">লক্ষী ইন্ডাস্ট্রিজ</option>
-								<option value="2">পিয়া</option>
-							</select>
-						</div>
-
-						<div class="col-2" style="margin-top: 32px;">
-							<button class="btn btn-sm btn-primary">
-								Search
-							</button>
-						</div>
-					</form>
-					<table class="table table-hover mt-3">
-						<thead>
-							<tr>
-								<th>SL</th>
-								<th>Date</th>
-								<th>Voucher no.</th>
-								<th>Supplier</th>
-								<th class="text-end">Total</th>
-								<th class="text-end">Paid</th>
-								<th class="text-end">Actions</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>01.</td>
-								<td>1 September, 2022</td>
-								<td><a href="#" target="_blank" class="link-primary">00000156</a></td>
-								<td>লক্ষী ইন্ডাস্ট্রিজ</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end action">
-									<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
-									<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
-								</td>
-							</tr>
-							<tr>
-								<td>02.</td>
-								<td>31 August, 2022</td>
-								<td><a href="#" target="_blank" class="link-primary">00000155</a></td>
-								<td>পিয়া</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end action">
-									<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
-									<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
-								</td>
-							</tr>
-							<tr>
-								<td>03.</td>
-								<td>29 August, 2022</td>
-								<td><a href="#" target="_blank" class="link-primary">00000154</a></td>
-								<td>লক্ষী ইন্ডাস্ট্রিজ </td>
-								<td class="text-end">0.00</td>
-								<td class="text-end">0.00</td>
-								<td class="text-end action">
-									<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
-									<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
-								</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<th colspan="4" class="text-end">Total</th>
-								<th class="text-end">0.00</th>
-								<th class="text-end">0.00</th>
-								<th>&nbsp;</th>
-							</tr>
-						</tfoot>
-					</table>
-
-					<nav class="text-end">
-						<ul class="pagination pagination-sm">
-							<li class="page-item disabled">
-								<a class="page-link" href="#">
-									<i class="bi bi-chevron-left"></i>
-								</a>
-							</li>
-							<li class="page-item active"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item">
-								<a class="page-link" href="#">
-									<i class="bi bi-chevron-right"></i>
-								</a>
-							</li>
-						</ul>
-					</nav>
+					<div class="col-3">
+						<strong>N/A</strong>
+						<div>Billing address<a href="#" class="ms-2">+ Add address</a></div>
+                    </div>
 				</div>
-			</div>
+
+				<!-- email address -->
+				<div class="row border-bottom">
+                    <label class="col-3 col-form-label text-end">Email address</label>
+                    <div class="col-2">
+						<span>bakybillab@gmail.com</span>
+						<a href="#" class="ms-2">+ Edit</a>
+                    </div>
+				</div>
+
+				<div class="row border-bottom py-2">
+                    <label for="date" class="col-3 col-form-label text-end">About me</label>
+                    <div class="col-8">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam fugiat tempora distinctio ducimus nulla quibusdam cum a tempore ab veniam quis aspernatur dignissimos eius, incidunt molestias impedit assumenda esse ipsa at. Necessitatibus alias eos fuga iure non fugit doloremque saepe rerum, reprehenderit eveniet magnam laborum? Cupiditate est fugit architecto suscipit.<br/>
+                        <a href="#">+ Add description</a>
+                    </div>
+                </div>
+
+				<div class="row pt-2">
+                    <label class="col-3 col-form-label text-end">Facebook</label>
+                    <div class="col-3">
+						<input type="text" class="form-control form-control-sm" placeholder="@username">
+                    </div>
+                </div>
+
+				<div class="row">
+                    <label class="col-3 col-form-label text-end">Website</label>
+                    <div class="col-3">
+						<input type="text" class="form-control form-control-sm" placeholder="https://www.example.com">
+                    </div>
+                </div>
+
+                <div class="row pb-2 border-bottom">
+                    <label for="language" class="col-3 col-form-label text-end">
+                        <span>Language</span>
+                    </label>
+                    <div class="col-3">
+						<select class="form-select form-select-sm" id="language">
+							<option value="Bangla">Bangla</option>
+							<option value="English">English</option>
+						</select>
+                    </div>
+                </div>
+
+                <div class="row border-bottom py-3">
+                    <div class="col-3"></div>
+                    <div class="col-9">
+                        <button type="reset" class="btn btn-warning me-3">Set as default</b>
+                        <button type="submit" class="btn btn-success">Update</button>
+                    </div>
+                </div>
+
+            </form>
 		</section>
 	</main>
 	<!-- main content end -->
@@ -504,6 +535,8 @@
 
 	<!-- bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- app js -->
+	<!-- <script src="js/app.js"></script> -->
 	<script src="js/aside.js"></script>
 </body>
 </html>

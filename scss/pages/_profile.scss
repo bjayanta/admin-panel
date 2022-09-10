@@ -15,11 +15,9 @@
             }
         }
     }
-
     form {
         .row {
             align-items: center;
-            border-bottom: 1px solid lighten($color: $black-color, $amount: 75%);
             a {
                 color: $primary-light;
                 &:hover {

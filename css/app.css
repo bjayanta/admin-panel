@@ -82,7 +82,7 @@ body a {
 .required::after {
   content: "*";
   position: absolute;
-  right: -10px;
+  right: -12px;
   top: -5px;
   color: #FF0000;
   font-size: 24px;
@@ -597,7 +597,6 @@ svg.maxsop.dark path {
 }
 .profile form .row {
   align-items: center;
-  border-bottom: 1px solid #e0e0e3;
 }
 .profile form .row a {
   color: #566af2;
