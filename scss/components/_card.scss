@@ -1,5 +1,5 @@
 .card {
-    border-radius: 0;
+    // border-radius: 0;
     box-shadow: $shadow;
     .card-header {
         display: flex;
@@ -10,7 +10,7 @@
             font-weight: 500;
         }
     }
-    .card-body {}
+    // .card-body {}
     .card-footer {
         background-color: $body-color;
         border-top-color: lighten($color: $black-color, $amount: 75%);

@@ -52,7 +52,6 @@ body a {
 }
 
 .card {
-  border-radius: 0;
   box-shadow: 0 5px 5px -3px rgba(32, 33, 36, 0.1);
 }
 .card .card-header {
@@ -88,22 +87,12 @@ body a {
   font-size: 24px;
 }
 
-input, textarea, select, button, .input-group-text {
-  border-radius: 0 !important;
-}
-
-button, a, .btn {
-  border-radius: 0;
-}
 button span, a span, .btn span {
   margin-left: 5px;
 }
 
 .pagination {
   display: inline-flex;
-}
-.pagination li a {
-  border-radius: 0 !important;
 }
 
 svg.maxsop path {
