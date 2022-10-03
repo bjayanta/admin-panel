@@ -13,69 +13,68 @@
 </head>
 <body class="app">
 
-	<main class="authentication">
-		<section>
-			<div class="container">
-				<article>
-					<img src="images/logo.svg" alt="MaxSOP Logo">
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque laudantium at blanditiis reprehenderit doloremque, ab veritatis?</p>
-					<span class="lead">New to the system? <a href="#">Create an account</a>.</span>
+	<main class="d-flex justify-content-center align-items-center">
+		<div class="authentication">
+			<form action="services.html" class="p-5 mb-3">
+				<article class="text-center">
+					<img src="images/logo.svg" alt="MaxSOP Logo" class="mb-3"/>
+					<p class="lead">Sign in</p>
 				</article>
-
-				<form action="services.html">
-					<div class="mb-3">
-						<h3>Sign in</h3>
+				
+				<div class="mb-3">
+					<label for="username" class="form-label required">Email address</label>
+					<div class="input-group">
+						<span class="input-group-text">
+							<i class="bi bi-person"></i>
+						</span>
+						<input type="email" class="form-control" name="username" placeholder="example@maxsop.com" id="username" required>
 					</div>
-					
-					<div class="mb-3">
-						<label for="username" class="form-label required">Username</label>
-						<div class="input-group">
-							<span class="input-group-text">
-								<i class="bi bi-person"></i>
-							</span>
-							<input type="email" class="form-control" name="username" placeholder="example@maxsop.com" id="username" required>
-						</div>
+				</div>
+				
+				<div class="mb-3">
+					<label for="password" class="form-label required">Password</label>
+					<div class="input-group">
+						<span class="input-group-text">
+							<i class="bi bi-shield-lock"></i>
+						</span>
+						<input type="password" class="form-control" placeholder="&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;" name="password" id="password" required>
+						<button type="button" onclick="passwordViewer(event, password)"><i class="bi bi-eye"></i></button>
 					</div>
-					
-					<div class="mb-3">
-						<label for="password" class="form-label required">Password</label>
-						<div class="input-group">
-							<span class="input-group-text">
-								<i class="bi bi-shield-lock"></i>
-							</span>
-							<input type="password" class="form-control" placeholder="&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;" name="password" id="password" required>
-							<button type="button" onclick="passwordViewer(event, password)"><i class="bi bi-eye"></i></button>
-						</div>
+				</div>
+
+				<div class="mb-3">
+					<div class="form-check">
+						<input type="checkbox" name="remember" class="form-check-input" id="remember">
+						<label class="form-check-label" for="remember">Remember me</label>
 					</div>
+				</div>
 
-					<div class="mb-3">
-						<div class="form-check">
-							<input type="checkbox" name="remember" class="form-check-input" id="remember">
-							<label class="form-check-label" for="remember">Remember me</label>
-						</div>
+				<div>
+					<button class="btn btn-primary btn-lg mb-3" type="submit">
+						<i class="bi bi-box-arrow-in-right"></i> 
+						<span>Sign in</span>
+					</button>
+
+					<div class="text-center mb-3">
+						<a href="forgot-password.html">Forgotten password?</a>
 					</div>
+				</div>
+			</form>
 
-					<div>
-						<button class="btn btn-primary btn-lg mb-3" type="submit">
-							<i class="bi bi-box-arrow-in-right"></i> 
-							<span>Sign in</span>
-						</button>
+			<footer class="text-center">
+				<nav>
+					<a href="#" class="me-3">Help</a>
+					<a href="#" class="me-3">Privacy</a>
+					<a href="#">Terms & Condition</a>
+				</nav>
 
-						<div class="text-center mb-3">
-							<a href="auth_forgot_pass.html">Forgotten password?</a>
-						</div>
-					</div>
-				</form>
-			</div>
-		</section>
-
-		<footer>
-			<div class="container">
-				<p>&copy; 2018 - <script>document.write(new Date().getFullYear())</script> 
+				<p>
+					&copy; 2018 - <script>document.write(new Date().getFullYear())</script>
 					<a href="https://maxsop.com/" target="_blank">MaxSOP</a>. 
-					All rights reserved.</p>
-			</div>
-		</footer>
+					All rights reserved.
+				</p>
+			</footer>
+		</div>
 	</main>
 
 	<!-- Javascript -->
