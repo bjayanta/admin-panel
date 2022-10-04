@@ -393,34 +393,28 @@ svg.maxsop.dark path {
 }
 
 main {
-  height: 100vh;
-}
-main .authentication {
-  max-width: 480px;
-  width: 100%;
+  height: 85vh;
 }
 main .authentication form {
+  width: 480px;
+  margin-left: auto;
   box-shadow: 0 5px 5px -3px rgba(32, 33, 36, 0.1);
   background-color: #ffffff;
 }
-main .authentication form article img {
-  max-width: 256px;
-  width: 100%;
-}
-main .authentication form div .input-group-text, main .authentication form div input, main .authentication form div .btn {
+main .authentication form .input-group-text, main .authentication form input, main .authentication form .btn {
   border-radius: 0;
 }
-main .authentication form div .btn {
+main .authentication form .btn {
   width: 100%;
 }
-main .authentication form div a {
+main .authentication form a {
   font-weight: 400;
   color: #0e24bb;
 }
-main .authentication form div a:hover {
+main .authentication form a:hover {
   text-decoration: underline;
 }
-main .authentication form div .input-group .input-group-text, main .authentication form div .input-group button {
+main .authentication form .input-group .input-group-text, main .authentication form .input-group button {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -428,45 +422,44 @@ main .authentication form div .input-group .input-group-text, main .authenticati
   border: none;
   background-color: transparent;
 }
-main .authentication form div .input-group .input-group-text i, main .authentication form div .input-group button i {
+main .authentication form .input-group .input-group-text i, main .authentication form .input-group button i {
   font-size: 20px;
   color: #747883;
 }
-main .authentication form div .input-group .input-group-text {
+main .authentication form .input-group .input-group-text {
   left: 0;
 }
-main .authentication form div .input-group button {
+main .authentication form .input-group button {
   right: 0;
   padding: 0 0.8rem;
 }
-main .authentication form div .input-group input {
+main .authentication form .input-group input {
   padding-left: 42px;
   letter-spacing: 1px;
   font-size: 18px;
 }
-main .authentication footer a:hover {
+
+footer a:hover {
   text-decoration: underline;
 }
 
 @media (max-width: 992px) {
-  .authentication > section > div.container {
-    display: flex;
+  .authentication {
     flex-direction: column;
-    align-items: center;
   }
-  .authentication > section > div.container article {
-    margin-bottom: 2rem;
+  .authentication .col:first-child {
+    padding-bottom: 1rem !important;
   }
-  .authentication > section > div.container article p {
-    font-size: 1.3rem;
-  }
-  .authentication > section > div.container form {
-    max-width: 100%;
+  .authentication form {
+    width: 100% !important;
   }
 }
 @media (max-width: 768px) {
-  .authentication > section > div.container {
-    max-width: 100%;
+  footer .row {
+    flex-direction: column;
+  }
+  footer .row .col {
+    text-align: center !important;
   }
 }
 .services {

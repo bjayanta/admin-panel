@@ -1,97 +1,81 @@
 main {
-    height: 100vh;
+    height: 85vh;
     .authentication {
-        max-width: 480px;
-        width: 100%;
         form {
+            width: 480px;
+            margin-left: auto;
             box-shadow: $shadow;
             background-color: $white-color;
-            article {
-                img {
-                    max-width: 256px;
-                    width: 100%;
-                }
+            .input-group-text, input, .btn {
+                border-radius: 0;
             }
-            div {
-                .input-group-text, input, .btn {
-                    border-radius: 0;
-                }
-                .btn {
-                    width: 100%;
-                }
-                a {
-                    font-weight: 400;
-                    color: $primary-color;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-                .input-group {
-                    .input-group-text, button {
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        z-index: 999;
-                        border: none;
-                        background-color: transparent;
-                        i {
-                            font-size: 20px;
-                            color: lighten($color: $black-color, $amount: 35%);
-                        }
-                    }
-                    .input-group-text {
-                        left: 0;
-                    }
-                    button {
-                        right: 0;
-                        padding: 0 0.8rem;
-                    }
-                    input {
-                        padding-left: 42px;
-                        letter-spacing: 1px;
-                        font-size: 18px;
-                    }
-                    
-                }
+            .btn {
+                width: 100%;
             }
-        }
-        footer {
             a {
+                font-weight: 400;
+                color: $primary-color;
                 &:hover {
                     text-decoration: underline;
                 }
+            }
+            .input-group {
+                .input-group-text, button {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    z-index: 999;
+                    border: none;
+                    background-color: transparent;
+                    i {
+                        font-size: 20px;
+                        color: lighten($color: $black-color, $amount: 35%);
+                    }
+                }
+                .input-group-text {
+                    left: 0;
+                }
+                button {
+                    right: 0;
+                    padding: 0 0.8rem;
+                }
+                input {
+                    padding-left: 42px;
+                    letter-spacing: 1px;
+                    font-size: 18px;
+                }
+                
             }
         }
     }
 }
 
+footer {
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
 
 @media (max-width: 992px) {
     .authentication {
-        & > section {
-            & > div.container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                article {
-                    margin-bottom: 2rem;
-                    p {
-                        font-size: 1.3rem;
-                    }
-                }
-                form {
-                    max-width: 100%;
-                }
-            }
+        flex-direction: column;
+        .col:first-child {
+            padding-bottom: 1rem !important;
+        }
+        form {
+            width: 100% !important;
         }
     }
 }
 
 @media (max-width: 768px) {
-    .authentication {
-        & > section {
-            & > div.container {
-                max-width: 100%;
+    footer {
+        .row {
+            flex-direction: column;
+            .col {
+                text-align: center !important;
             }
         }
     }
