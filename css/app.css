@@ -395,6 +395,9 @@ svg.maxsop.dark path {
 main {
   height: 85vh;
 }
+main .authentication.signup form {
+  width: 100%;
+}
 main .authentication form {
   width: 480px;
   margin-left: auto;

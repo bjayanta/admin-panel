@@ -390,208 +390,207 @@
 			<!-- main navigation end -->
 		</header>
 
-		<!-- module details start -->
-		<section class="section mb-3 py-3" style="background-image: url('images/profile_backbround.jpg');">
-			<div class="module">
-                <figure>
-                    <img src="images/avatar.jpg" alt="Avatar photo" />
+		<section class="py-5">
+			<div class="container mb-5">
+				<figure class="d-flex">
+                    <img src="images/avatar.jpg" style="width: 128px;" class="me-5 rounded" alt="Avatar photo" />
                     <figcaption>
                         <h2>Baky billah khan pathan</h2>
-                        <p class="lead">UI/UX designer + Frontend Developer</p>
-                        <a href="profile-settings.html" class="btn btn-sm btn-warning">Update profile</a>
+                        <p>UI/UX designer + Frontend Developer</p>
+                        <a href="profile-settings.html" class="btn btn-sm btn-warning">
+							<i class="bi bi-sliders"></i>
+							<span>Update Profile</span>
+						</a>
                     </figcaption>
                 </figure>
-
-                <nav>
-                    <a href="profile.html" class="active">
-                        <i class="bi bi-person"></i>
-                        <span>About</span>
-                    </a>
-                    <a href="profile-photo.html">
-                        <i class="bi bi-images"></i>
-                        <span>Photos</span>
-                    </a>
-
-                    <a href="profile-settings.html">
-                        <i class="bi bi-sliders"></i>
-                        <span>Settings</span>
-                    </a>
-                </nav>
 			</div>
-		</section>
-		<!-- module details end -->
 
-		<!-- main section -->
-		<section class="section">
-            <form action="" method="post">
-				<!-- Parents -->
-                <div class="row pb-2 border-bottom">
-					<div class="col-3"></div>
-                    <div class="col-2">
-						<strong>Mr. Abdul-al Momin</strong>
-						<div>Father name</div>
-                    </div>
+			<div class="container">
+				<nav>
+					<div class="nav nav-tabs" role="tablist">
+					  	<button class="nav-link active" id="nav-personal-tab" data-bs-toggle="tab" data-bs-target="#nav-personal" type="button" role="tab" aria-controls="nav-personal" aria-selected="true">
+							Personal
+						</button>
 
-					<div class="col-2">
-						<strong>Mrs. Fatema Aktar</strong>
-						<div>Mother name</div>
-                    </div>
-                </div>
-
-				<!-- dob -->
-				<div class="row border-bottom py-2">
-                    <label class="col-3 col-form-label text-end">Birthdate</span></label>
-                    <div class="col-1">
-						<select name="day" class="form-select form-select-sm">
-							<option value="01">01</option>
-							<option value="02">02</option>
-							<option value="03">03</option>
-							<option value="04">04</option>
-							<option value="05">05</option>
-						</select>
+					  	<button class="nav-link" id="nav-hr-tab" data-bs-toggle="tab" data-bs-target="#nav-hr" type="button" role="tab" aria-controls="nav-hr" aria-selected="false">
+							HR Details
+						</button>
 					</div>
-					<div class="col-1">
-						<select name="month" class="form-select form-select-sm">
-							<option value="01">01</option>
-							<option value="02">02</option>
-							<option value="03">03</option>
-							<option value="04">04</option>
-							<option value="05">05</option>
-							<option value="06">06</option>
-							<option value="07">07</option>
-							<option value="08">08</option>
-							<option value="09">09</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
-						</select>
+				</nav>
+
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="nav-personal" role="tabpanel" aria-labelledby="nav-personal-tab" tabindex="0">
+						<form action="" method="post">
+							<!-- Parents -->
+							<div class="row border-bottom py-3">
+								<div class="col-2">&nbsp;</div>
+								<div class="col-2">
+									<strong>Mr. Abdul-al Momin</strong>
+									<div>Father name</div>
+								</div>
+
+								<div class="col-2">
+									<strong>Mrs. Fatema Aktar</strong>
+									<div>Mother name</div>
+								</div>
+							</div>
+
+							<!-- dob -->
+							<div class="row border-bottom py-3">
+								<label class="col-2 col-form-label text-end">Birthdate</span></label>
+								<div class="col-1">
+									<select name="day" class="form-select form-select-sm">
+										<option value="01">01</option>
+										<option value="02">02</option>
+										<option value="03">03</option>
+										<option value="04">04</option>
+										<option value="05">05</option>
+									</select>
+								</div>
+								<div class="col-1">
+									<select name="month" class="form-select form-select-sm">
+										<option value="01">01</option>
+										<option value="02">02</option>
+										<option value="03">03</option>
+										<option value="04">04</option>
+										<option value="05">05</option>
+										<option value="06">06</option>
+										<option value="07">07</option>
+										<option value="08">08</option>
+										<option value="09">09</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									</select>
+								</div>
+
+								<div class="col-2">
+									<select name="day" class="form-select form-select-sm">
+										<option value="1990">1990</option>
+										<option value="1991">1991</option>
+										<option value="1992">1992</option>
+										<option value="1993">1993</option>
+										<option value="1994">1994</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- gender -->
+							<div class="row border-bottom py-3">
+								<label class="col-2 col-form-label text-end">Gender</label>
+								<div class="col-3 ps-3">
+									<label class="me-3">
+										<input type="radio" name="gender" value="male" checked/>
+										<span>Male</span>
+									</label>
+
+									<label class="me-3">
+										<input type="radio" name="gender" value="female"/>
+										<span>Female</span>
+									</label>
+
+									<label>
+										<input type="radio" name="gender" value="other"/>
+										<span>Other</span>
+									</label>
+								</div>
+							</div>
+
+							<!-- mobile numbers -->
+							<div class="row border-bottom py-3">
+								<label class="col-2 col-form-label text-end">
+									<span>Mobile number</span>
+								</label>
+
+								<div class="col-2">
+									<strong>+880 1775 219457</strong>
+									<div>Personal <a href="#" class="ms-2">+ Edit</a></div>
+								</div>
+
+								<div class="col-2">
+									<strong>N/A</strong>
+									<div>Home <a href="#" class="ms-2">+ Add number</a></div>
+								</div>
+
+								<div class="col-2">
+									<strong>N/A</strong>
+									<div>Office <a href="#" class="ms-2">+ Add number</a></div>
+								</div>
+							</div>
+
+							<!-- email address -->
+							<div class="row border-bottom py-3">
+								<label class="col-2 col-form-label text-end">Email address</label>
+								<div class="col-9">
+									<span>bakybillab@gmail.com</span>
+									<a href="#" class="ms-2">+ Edit</a>
+								</div>
+							</div>
+
+							<!-- address -->
+							<div class="row border-bottom py-3">
+								<label class="col-2 col-form-label text-end">Address</label>
+								<div class="col-3">
+									<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
+									<div>Present address<a href="#" class="ms-2">+ Edit</a></div>
+								</div>
+
+								<div class="col-3">
+									<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
+									<div>Permanent address<a href="#" class="ms-2">+ Edit</a></div>
+								</div>
+
+								<div class="col-3">
+									<strong>N/A</strong>
+									<div>Billing address<a href="#" class="ms-2">+ Add address</a></div>
+								</div>
+							</div>
+
+							<div class="row border-bottom py-3">
+								<label class="col-2 col-form-label text-end">About me</label>
+								<div class="col-9">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam fugiat tempora distinctio ducimus nulla quibusdam cum a tempore ab veniam quis aspernatur dignissimos eius, incidunt molestias impedit assumenda esse ipsa at. Necessitatibus alias eos fuga iure non fugit doloremque saepe rerum, reprehenderit eveniet magnam laborum? Cupiditate est fugit architecto suscipit.<br/>
+									<a href="#">+ Add description</a>
+								</div>
+							</div>
+
+							<div class="row border-bottom py-3">
+								<label class="col-2 col-form-label text-end">Social media</label>
+
+								<div class="col-3">
+									<input type="text" class="form-control form-control-sm" placeholder="Facebook" />
+								</div>
+
+								<div class="col-3">
+									<input type="text" class="form-control form-control-sm" placeholder="Website" />
+								</div>
+							</div>
+			
+							<div class="row border-bottom py-3">
+								<label for="language" class="col-2 col-form-label text-end">Language</label>
+								<div class="col-3">
+									<select class="form-select form-select-sm" id="language">
+										<option value="Bangla">Bangla</option>
+										<option value="English">English</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row py-5">
+								<div class="col-2">&nbsp;</div>
+								<div class="col-9">
+									<button type="reset" class="btn btn-warning me-3">Set as default</b>
+									<button type="submit" class="btn btn-success">Save & change</button>
+								</div>
+							</div>
+						</form>
 					</div>
 
-					<div class="col-2">
-						<select name="day" class="form-select form-select-sm">
-							<option value="1990">1990</option>
-							<option value="1991">1991</option>
-							<option value="1992">1992</option>
-							<option value="1993">1993</option>
-							<option value="1994">1994</option>
-						</select>
-                    </div>
-                </div>
-
-				<!-- gender -->
-				<div class="row border-bottom">
-                    <label class="col-3 col-form-label text-end">Gender</label>
-                    <div class="col-3 ps-3">
-						<label class="me-3">
-							<input type="radio" name="gender" value="male" checked/>
-							<span>Male</span>
-						</label>
-
-						<label class="me-3">
-							<input type="radio" name="gender" value="female"/>
-							<span>Female</span>
-						</label>
-
-						<label>
-							<input type="radio" name="gender" value="other"/>
-							<span>Other</span>
-						</label>
-                    </div>
-                </div>
-
-				<!-- mobile numbers -->
-				<div class="row py-2 border-bottom">
-                    <label class="col-3 col-form-label text-end">
-                        <span>Mobile number</span>
-                    </label>
-
-                    <div class="col-2">
-						<strong>+880 1775 219457</strong>
-						<div>Personal <a href="#" class="ms-2">+ Edit</a></div>
-                    </div>
-
-					<div class="col-2">
-						<strong>N/A</strong>
-						<div>Home <a href="#" class="ms-2">+ Add number</a></div>
-                    </div>
-
-					<div class="col-2">
-						<strong>N/A</strong>
-						<div>Office <a href="#" class="ms-2">+ Add number</a></div>
-                    </div>
+					<div class="tab-pane fade" id="nav-hr" role="tabpanel" aria-labelledby="nav-hr-tab" tabindex="0">
+						2
+					</div>
 				</div>
-
-				<!-- address -->
-				<div class="row py-2 border-bottom">
-                    <label class="col-3 col-form-label text-end">Address</label>
-                    <div class="col-3">
-						<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
-						<div>Present address<a href="#" class="ms-2">+ Edit</a></div>
-                    </div>
-
-					<div class="col-3">
-						<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
-						<div>Permanent address<a href="#" class="ms-2">+ Edit</a></div>
-                    </div>
-
-					<div class="col-3">
-						<strong>N/A</strong>
-						<div>Billing address<a href="#" class="ms-2">+ Add address</a></div>
-                    </div>
-				</div>
-
-				<!-- email address -->
-				<div class="row border-bottom">
-                    <label class="col-3 col-form-label text-end">Email address</label>
-                    <div class="col-2">
-						<span>bakybillab@gmail.com</span>
-						<a href="#" class="ms-2">+ Edit</a>
-                    </div>
-				</div>
-
-				<div class="row border-bottom py-2">
-                    <label for="date" class="col-3 col-form-label text-end">About me</label>
-                    <div class="col-8">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam fugiat tempora distinctio ducimus nulla quibusdam cum a tempore ab veniam quis aspernatur dignissimos eius, incidunt molestias impedit assumenda esse ipsa at. Necessitatibus alias eos fuga iure non fugit doloremque saepe rerum, reprehenderit eveniet magnam laborum? Cupiditate est fugit architecto suscipit.<br/>
-                        <a href="#">+ Add description</a>
-                    </div>
-                </div>
-
-				<div class="row pt-2">
-                    <label class="col-3 col-form-label text-end">Facebook</label>
-                    <div class="col-3">
-						<input type="text" class="form-control form-control-sm" placeholder="@username">
-                    </div>
-                </div>
-
-				<div class="row">
-                    <label class="col-3 col-form-label text-end">Website</label>
-                    <div class="col-3">
-						<input type="text" class="form-control form-control-sm" placeholder="https://www.example.com">
-                    </div>
-                </div>
-
-                <div class="row pb-2 border-bottom">
-                    <label for="language" class="col-3 col-form-label text-end">
-                        <span>Language</span>
-                    </label>
-                    <div class="col-3">
-						<select class="form-select form-select-sm" id="language">
-							<option value="Bangla">Bangla</option>
-							<option value="English">English</option>
-						</select>
-                    </div>
-                </div>
-
-                <div class="row border-bottom py-3">
-                    <div class="col-3"></div>
-                    <div class="col-9">
-                        <button type="reset" class="btn btn-warning me-3">Set as default</b>
-                        <button type="submit" class="btn btn-success">Update</button>
-                    </div>
-                </div>
-
-            </form>
+			</div>
 		</section>
 	</main>
 	<!-- main content end -->

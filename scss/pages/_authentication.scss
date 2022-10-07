@@ -1,6 +1,11 @@
 main {
     height: 85vh;
     .authentication {
+        &.signup {
+            form {
+                width: 100%;
+            }
+        }
         form {
             width: 480px;
             margin-left: auto;

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in | Admin Panel | MaxSOP</title>
+    <link rel="shortcut icon" href="images/logo_symbol.svg" type="image/x-icon">
+    <!-- Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="app">
+
+	<main class="d-flex justify-content-center align-items-center">
+		<section class="container">
+			<div class="row d-flex justify-content-center authentication signup">
+				<div class="col-8">
+					<figure class="text-center">
+						<img src="images/logo.svg" alt="MaxSOP Logo" class="w-50 mb-3"/>
+						<figcaption></figcaption>
+					</figure>
+
+					<form action="services.html" class="p-5">
+						<h2>Sign up</h2>
+						<p>Already have an account? <a href="signin.html" class="text-decoration-underline">Sign in</a></p>
+
+						<div class="row mb-3">
+							<div class="col">
+								<label for="first-name" class="form-label required">First name</label>
+								<input type="text" class="form-control" id="first-name" required/>
+							</div>
+
+							<div class="col">
+								<label for="last-name" class="form-label required">Last name</label>
+								<input type="text" class="form-control" id="last-name" required/>
+							</div>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col">
+								<label for="company-name" class="form-label required">Company name</label>
+								<input type="text" class="form-control" id="company-name" required/>
+							</div>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col">
+								<label for="email-address" class="form-label required">Email address</label>
+								<div class="input-group">
+									<span class="input-group-text">
+										<i class="bi bi-at"></i>
+									</span>
+									<input type="email" class="form-control" placeholder="example@maxsop.com" id="email-address" required/>
+								</div>
+							</div>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col">
+								<label for="password" class="form-label required">Password</label>
+								<div class="input-group">
+									<span class="input-group-text">
+										<i class="bi bi-shield-lock"></i>
+									</span>
+									<input type="password" class="form-control" placeholder="&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;" id="password" required/>
+									<button type="button" onclick="passwordViewer(event, password)">
+										<i class="bi bi-eye"></i>
+									</button>
+								</div>
+							</div>
+
+							<div class="col">
+								<label for="confirm-password" class="form-label required">Password</label>
+								<div class="input-group">
+									<span class="input-group-text">
+										<i class="bi bi-shield-lock"></i>
+									</span>
+									<input type="password" class="form-control" placeholder="&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;&#8902;" id="confirm-password" required/>
+									<button type="button" onclick="passwordViewer(event, password)">
+										<i class="bi bi-eye"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+		
+						<div class="mb-3">
+							<div class="form-check">
+								<input type="checkbox" name="remember" class="form-check-input" id="remember">
+								<label class="form-check-label" for="remember">Remember me</label>
+							</div>
+						</div>
+		
+						<div>
+							<button class="btn btn-primary btn-lg mb-3" type="submit">
+								<span>Sign up</span>
+								<i class="bi bi-arrow-right ms-2"></i>
+							</button>
+		
+							<div class="text-center mb-3">
+								<a href="forgot-password.html">Forgotten password?</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<nav class="py-2">
+						<a href="#" class="me-3">Help</a>
+						<a href="#" class="me-3">Privacy</a>
+						<a href="#">Terms & Condition</a>
+					</nav>
+				</div>
+
+				<div class="col text-end">
+					<p>
+						&copy; 2018 - <script>document.write(new Date().getFullYear())</script>
+						<a href="https://maxsop.com/" target="_blank">MaxSOP</a>. 
+						All rights reserved.
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
