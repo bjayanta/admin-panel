@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | MaxSOP</title>
+    <link rel="shortcut icon" href="images/logo_symbol.svg" type="image/x-icon">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- app stylesheet -->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="app">
+    
+    <!-- app aside navigation -->
+	<aside class="aside" id="aside">
+		<nav class="nav nav-tabs">
+			<a class="brand" href="dashboard.html">
+				<img src="images/logo_symbol.svg" alt="MaxSOP" />
+			</a>
+
+			<button class="active" data-bs-toggle="tab" data-bs-target="#home-tab" type="button">
+				<i class="bi bi-tv"></i>
+			</button>
+
+			<button data-bs-toggle="tab" data-bs-target="#message-tab" type="button">
+				<i class="bi bi-envelope"></i>
+			</button>
+
+			<button data-bs-toggle="tab" data-bs-target="#info-tab" type="button">
+				<i class="bi bi-info-square"></i>
+			</button>
+
+			<button class="tab-bottom" data-bs-toggle="tab" data-bs-target="#settings-tab" type="button">
+				<i class="bi bi-gear"></i>
+			</button>
+
+			<button type="button">
+				<i class="bi bi-box-arrow-right"></i>
+			</button>
+		</nav>
+
+		<div class="tab-content">
+			<nav class="tab-pane fade show active" id="home-tab">
+				<h3>Home</h3>
+				<ul class="accordion">
+					<li>
+						<a href="dashboard.html" class="active">
+							<i class="bi bi-speedometer2"></i>
+							<span>Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="bi bi-cast"></i>
+							<span>Media</span>
+						</a>
+					</li>
+				</ul>
+
+				<strong>Pages</strong>
+				<ul class="accordion">
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Starter</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages">
+							<i class="bi bi-input-cursor-text"></i>
+							<span>Pages</span>
+						</a>
+						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">Faq</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Empty page</a></li>
+							<li><a href="#">Notifications</a></li>
+							<li><a href="#">Members</a></li>
+							<li><a href="#">Mail templates</a></li>
+							<li><a href="#">Under construction</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#errors" aria-expanded="true">
+							<i class="bi bi-input-cursor-text"></i>
+							<span>Errors</span>
+						</a>
+						<ul id="errors" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">404</a></li>
+							<li><a href="#">500</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<strong>Modules</strong>
+				<ul class="accordion">
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#module">
+							<i class="bi bi-menu-app"></i>
+							<span>Module</span>
+						</a>
+						<ul id="module" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="module-records.html">Records</a></li>
+							<li><a href="module-search.html">Search</a></li>
+							<li><a href="module-form.html">Form</a></li>
+							<li><a href="module-trash.html">Trash</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<strong>Documentation</strong>
+				<ul class="accordion">
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Getting started</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#customization">
+							<i class="bi bi-menu-app"></i>
+							<span>Customization</span>
+						</a>
+						<ul id="customization" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">Styling</a></li>
+							<li><a href="#">Plugin</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Support</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Change log</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>License</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Copyright</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="tab-pane fade" id="message-tab">
+				<h3>Message</h3>
+			</nav>
+
+			<nav class="tab-pane fade" id="info-tab">
+				<h3>Info</h3>
+			</nav>
+
+			<nav class="tab-pane fade" id="account-tab">
+				<h3>Account</h3>
+				<ul>
+					<li>
+						<a href="#">
+							<i class="bi bi-person"></i>
+							<span>My details</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-bell"></i>
+							<span>Notifications</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-gear"></i>
+							<span>Settings</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-box-arrow-right"></i>
+							<span>Sign Out</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="tab-pane fade" id="settings-tab">
+				<h3>Settings</h3>
+			</nav>
+		</div>
+	</aside>
+	<!-- app aside navigation end -->
+
+	<!-- main content start -->
+	<main class="main">
+		<!-- main header -->
+		<header class="header">
+			<!-- main navigation -->
+			<nav class="navigation">
+				<ul>
+					<li>
+						<a href="#" onclick="asideToggle()">
+							<i class="bi bi-layout-sidebar"></i>
+						</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#">
+							<i class="bi bi-binoculars"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-bell"></i>
+							<span class="highlight"></span>
+						</a>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" data-bs-toggle="dropdown">
+							<img src="images/avatar.jpg" alt="User avatar">
+						</a>
+
+						<ul class="dropdown-menu">
+							<li>
+								<a href="account-preferences.html" class="user">
+									<img src="images/avatar.jpg" alt="">
+									<div>
+										<strong>Baky billah khan pathan</strong>
+										<p>Adminstrator</p>
+									</div>
+								</a>
+							</li>
+
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<li>
+								<a href="profile.html">
+									<i class="bi bi-eyeglasses"></i>
+									<span>My details</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="sign-in-and-security.html">
+									<i class="bi bi-fingerprint"></i>
+									<span>Change password</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-people"></i>
+									<span>User manager</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-box-arrow-left"></i>
+									<span>Sign out</span>
+								</a>
+							</li>
+
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<li>
+								<a href="account-preferences.html">
+									<i class="bi bi-gear"></i>
+									<span>Settings & Privacy</span>
+								</a>
+							</li>
+
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-blockquote-left"></i>
+									<span>About</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-info-circle"></i>
+									<span>Help</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-send-exclamation"></i>
+									<span>Send feedback</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!-- main navigation end -->
+		</header>
+
+		<!-- module details start -->
+		<section class="section mb-3">
+			<div class="module">
+				<article >
+					<h2 class="mb-0">Dashboard</h2>
+					<p class="lead text-muted">Module short description goes to here.</p>
+				</article>
+			</div>
+		</section>
+		<!-- module details end -->
+
+		<!-- main section -->
+		<section class="section">
+			<!-- widget start -->
+			<div>
+				Widget goes to here.
+			</div>
+			<!-- widget start -->
+		</div>
+	</main>
+	<!-- main content end -->
+
+	<!-- overlay -->
+	<div class="overlay" onclick="asideToggle()"></div>
+
+	<!-- bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- app js -->
+	<!-- <script src="js/app.js"></script> -->
+	<script src="js/aside.js"></script>
+</body>
+</html>

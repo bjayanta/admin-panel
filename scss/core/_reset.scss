@@ -1,36 +1,11 @@
 *, *::after, *::before {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 *:focus {
 	box-shadow: none !important;
-}
-
-*, html {
-    // Scrollbar for Firefox
-	scroll-behavior: smooth;
-    scrollbar-color: $primary-color transparent;
-    scrollbar-width: thin;
-}
-
-::selection { 
-    background: $primary-color; 
-    color: $white-color;
-}
-
-// Scroll
-::-webkit-scrollbar { // Width
-    width: 5px;
-}
-::-webkit-scrollbar-track { // Track
-    background-color: transparent;
-}
-::-webkit-scrollbar-thumb { // Handle
-    background-color: transparent;
-    &:hover {
-        background-color: $primary-color;
-    }
 }
 
 ul, ol {
@@ -39,4 +14,7 @@ ul, ol {
     padding: 0;
 }
 
-// bootstrap reset
+// a {
+//     color: $text-color !important;
+//     text-decoration: none;
+// }

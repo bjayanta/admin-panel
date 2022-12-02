@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-    font-size: 1rem;
     font-family: "Assistant", "Noto Sans Bengali", sans-serif;
     background-color: $body-color;
-    color: $black-color;
-    a {
-        color: $black-color;
-        text-decoration: none;
-    }
 }
