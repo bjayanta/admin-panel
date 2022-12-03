@@ -26,6 +26,9 @@
                     line-height: 40px;
                     padding: 0 15px;
                     color: $text-color;
+                    span {
+                        margin-left: 8px;
+                    }
                     &:hover {
                         color: $primary-color;
                         background-color: lighten($color: $black-color, $amount: 82%);

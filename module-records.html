@@ -27,7 +27,7 @@
 			<div>
 				<ul>
 					<li>
-						<a href="dashboard.html" class="active">
+						<a href="dashboard.html">
 							<i class="bi bi-speedometer2"></i>
 							<span>Dashboard</span>
 						</a>
@@ -83,12 +83,12 @@
 				<strong class="my-2">Modules</strong>
 				<ul class="accordion">
 					<li>
-						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#module">
+						<a href="#" class="accordion-button active" data-bs-toggle="collapse" data-bs-target="#module">
 							<i class="bi bi-menu-app"></i>
 							<span>Module</span>
 						</a>
-						<ul id="module" class="accordion-collapse collapse" data-bs-parent="#sidebar">
-							<li><a href="module-records.html">Records</a></li>
+						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#sidebar">
+							<li><a href="module-records.html" class="active">Records</a></li>
 							<li><a href="module-search.html">Search</a></li>
 							<li><a href="module-form.html">Form</a></li>
 							<li><a href="module-trash.html">Trash</a></li>
@@ -161,17 +161,27 @@
 				<div class="container-fluid">
 					<ul class="navbar-nav me-auto">
 						<li class="nav-item">
-							<a href="#" class="nav-link" onclick="asideToggle(this)" aria-current="page">
+							<a href="#" class="nav-link ps-0" onclick="asideToggle(this)" aria-current="page">
 								<i class="bi bi-layout-sidebar"></i>
 								<span>Collapse</span>
 							</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="#">Website</a>
+							<a href="#" class="nav-link" aria-current="page">
+								<i class="bi bi-grid-fill"></i>
+								<span>Services</span>
+							</a>
+						</li>
+
+						<!--
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="bi bi-globe"></i>
+								<span>Website</span>
+							</a>
 						</li>
 						
-						<!--
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
 							<ul class="dropdown-menu">
@@ -196,6 +206,13 @@
 					</form>
 
 					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="bi bi-gear"></i>
+								<span>Settings</span>
+							</a>
+						</li>
+
 						<li class="nav-item">
 							<a class="nav-link" href="#">
 								<i class="bi bi-bell"></i>
@@ -312,165 +329,128 @@
 
 			<!-- main content -->
 			<section class="section">
-				<div class="container-fluid">
-
-					<nav>
-						<a href="module-records.html" class="active">
-							<i class="bi bi-view-list"></i>
-							<span>Records</span>
-						</a>
-						<a href="module-form.html">
-							<i class="bi bi-plus-circle"></i>
-							<span>Create</span>
-						</a>
-						<a href="module-trash.html">
-							<i class="bi bi-trash"></i>
-							<span>Trash</span>
-						</a>
-					</nav>
-
-					<div class="card">
-						<div class="card-header">
+				<div class="container">
+					<div class="card mb-5">
+						<div class="card-header pb-0">
 							<article>
-								<h2>Module Records</h2>
-								<p class="lead text-muted">Module short description goes to here.</p>
+								<h5 class="mb-0">Module Records</h5>
+								<p class="text-muted">Module short description goes to here.</p>
 							</article>
-						</div>
 
-						<div class="card-body">
-							
-						</div>
-					</div>
+							<nav>
+								<a href="module-create.html" class="btn btn-primary px-4 me-2">
+									<i class="bi bi-plus-circle"></i>
+									<span>Create new</span>
+								</a>
 
-					
-
-					
-
-					<div class="card">
-						<div class="card-header">
-							<strong>About 1,820,000 results.</strong>
-							<nav class="btn-toolbar">
-								<div class="btn-group me-2">
-									<button type="button" data-bs-toggle="collapse" data-bs-target="#recordsFilter" class="btn btn-sm btn-outline-primary">
-										<i class="bi bi-funnel"></i>
-										<span>Advanced Filter</span>
-									</button>
-								</div>
-		
 								<div class="btn-group">
-									<a href="#" class="btn btn-sm btn-outline-secondary">
+									<a href="module-create.html" class="btn btn-outline-primary">
 										<i class="bi bi-file-earmark-spreadsheet"></i>
+										<!-- <span>Import</span> -->
 									</a>
-		
-									<a href="#" class="btn btn-sm btn-outline-secondary">
+	
+									<a href="module-create.html" class="btn btn-outline-primary">
 										<i class="bi bi-filetype-pdf"></i>
+										<!-- <span>Export</span> -->
 									</a>
-		
-									<a href="#" class="btn btn-sm btn-outline-secondary">
+
+									<a href="module-create.html" class="btn btn-outline-primary">
 										<i class="bi bi-printer"></i>
+										<!-- <span>Print</span> -->
 									</a>
-		
-									<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#recordsCard">
-										<i class="bi bi-chevron-expand"></i>
-									</button>
 								</div>
 							</nav>
 						</div>
-		
-						<div class="card-body collapse show" id="recordsCard">
-							<form action="#" method="get" class="row collapse" id="recordsFilter">
-								<div class="col-4">
-									<label class="form-label">Date range</label>
-									<div class="input-group input-group-sm">
-										<input type="date" class="form-control">
-										<span class="input-group-text">-</span>
-										<input type="date" class="form-control">
+
+						<div class="card-body py-0">
+							<div class="table-responsive">
+								<div class="d-flex justify-content-between search">
+									<div>
+										<select class="form-control">
+											<option value="25" selected>25 - Rows per page</option>
+											<option value="50">50 - Rows per page</option>
+											<option value="75">75 - Rows per page</option>
+											<option value="100">100 - Rows per page</option>
+											<option value="all">All - Rows per page</option>
+										</select>
+									</div>
+
+									<div class="d-flex justify-content-end">
+										<input type="text" class="form-control me-2" placeholder="Search...">
+										<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#advancedFilter" title="Advanced Filter">
+											<i class="bi bi-funnel"></i>
+										</button>
 									</div>
 								</div>
-		
-								<div class="col-2">
-									<label for="voucher" class="form-label">Voucher</label>
-									<input type="text" class="form-control form-control-sm" id="voucher">
-								</div>
-		
-								<div class="col-2">
-									<label for="supplier" class="form-label">Supplier</label>
-									<select class="form-select form-select-sm" id="supplier">
-										<option selected disabled>Select one</option>
-										<option value="1">লক্ষী ইন্ডাস্ট্রিজ</option>
-										<option value="2">পিয়া</option>
-									</select>
-								</div>
-		
-								<div class="col-2" style="margin-top: 32px;">
-									<button class="btn btn-sm btn-primary">
-										Search
-									</button>
-								</div>
-							</form>
+								
+								<table class="table table-hover my-3">
+									<thead>
+										<tr>
+											<th>SL</th>
+											<th>Date</th>
+											<th>Voucher no.</th>
+											<th>Supplier</th>
+											<th class="text-end">Total</th>
+											<th class="text-end">Paid</th>
+											<th class="text-end">Actions</th>
+										</tr>
+									</thead>
 
-							<table class="table table-hover mt-3">
-								<thead>
-									<tr>
-										<th>SL</th>
-										<th>Date</th>
-										<th>Voucher no.</th>
-										<th>Supplier</th>
-										<th class="text-end">Total</th>
-										<th class="text-end">Paid</th>
-										<th class="text-end">Actions</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>01.</td>
-										<td>1 September, 2022</td>
-										<td><a href="#" target="_blank" class="link-primary">00000156</a></td>
-										<td>লক্ষী ইন্ডাস্ট্রিজ</td>
-										<td class="text-end">0.00</td>
-										<td class="text-end">0.00</td>
-										<td class="text-end action">
-											<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
-											<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
-										</td>
-									</tr>
-									<tr>
-										<td>02.</td>
-										<td>31 August, 2022</td>
-										<td><a href="#" target="_blank" class="link-primary">00000155</a></td>
-										<td>পিয়া</td>
-										<td class="text-end">0.00</td>
-										<td class="text-end">0.00</td>
-										<td class="text-end action">
-											<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
-											<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
-										</td>
-									</tr>
-									<tr>
-										<td>03.</td>
-										<td>29 August, 2022</td>
-										<td><a href="#" target="_blank" class="link-primary">00000154</a></td>
-										<td>লক্ষী ইন্ডাস্ট্রিজ </td>
-										<td class="text-end">0.00</td>
-										<td class="text-end">0.00</td>
-										<td class="text-end action">
-											<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
-											<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
-										</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<th colspan="4" class="text-end">Total</th>
-										<th class="text-end">0.00</th>
-										<th class="text-end">0.00</th>
-										<th>&nbsp;</th>
-									</tr>
-								</tfoot>
-							</table>
-		
-							<nav class="text-end">
-								<ul class="pagination pagination-sm">
+									<tbody>
+										<tr>
+											<td>01.</td>
+											<td>1 September, 2022</td>
+											<td><a href="#" target="_blank" class="link-primary">00000156</a></td>
+											<td>লক্ষী ইন্ডাস্ট্রিজ</td>
+											<td class="text-end">0.00</td>
+											<td class="text-end">0.00</td>
+											<td class="text-end action">
+												<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
+												<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>02.</td>
+											<td>31 August, 2022</td>
+											<td><a href="#" target="_blank" class="link-primary">00000155</a></td>
+											<td>পিয়া</td>
+											<td class="text-end">0.00</td>
+											<td class="text-end">0.00</td>
+											<td class="text-end action">
+												<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
+												<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>03.</td>
+											<td>29 August, 2022</td>
+											<td><a href="#" target="_blank" class="link-primary">00000154</a></td>
+											<td>লক্ষী ইন্ডাস্ট্রিজ </td>
+											<td class="text-end">0.00</td>
+											<td class="text-end">0.00</td>
+											<td class="text-end action">
+												<a href="#" class="link-success" title="Edit"><i class="bi bi-pencil-square"></i></a>
+												<a href="#" class="link-danger" title="Delete"><i class="bi bi-trash"></i></a>
+											</td>
+										</tr>
+									</tbody>
+
+									<tfoot>
+										<tr>
+											<th colspan="4" class="text-end">Total</th>
+											<th class="text-end">0.00</th>
+											<th class="text-end">0.00</th>
+											<th>&nbsp;</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</div>
+
+						<div class="card-footer pt-0">
+							<div>About 1,820,000 results.</div>
+							<nav>
+								<ul class="pagination">
 									<li class="page-item disabled">
 										<a class="page-link" href="#">
 											<i class="bi bi-chevron-left"></i>
@@ -496,6 +476,65 @@
 
 		<!-- Overlay -->
 		<div class="overlay" onclick="asideToggle()"></div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="advancedFilter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="advancedFilterLabel" aria-hidden="true" aria-labelledby="advancedFilterLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header pb-0">
+						<h1 class="modal-title fs-5" id="advancedFilterLabel">Advanced Filter</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+
+					<div class="modal-body">
+						<form action="#" method="get">
+							<div class="row">
+								<div class="col-md-6 mb-3">
+									<label class="form-label">Date range</label>
+									<div class="row">
+										<div class="col">
+											<input type="date" class="form-control" />
+										</div>
+
+										<div class="col">
+											<input type="date" class="form-control" />
+										</div>
+									</div>
+								</div>
+		
+								<div class="col-md-6 mb-3">
+									<label for="supplier" class="form-label">Supplier</label>
+									<select class="form-select form-select" id="supplier">
+										<option selected disabled>Select one</option>
+										<option value="1">লক্ষী ইন্ডাস্ট্রিজ</option>
+										<option value="2">পিয়া</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<div class="col-md-4">
+									<label class="form-label">Voucher no.</label>
+									<input type="text" class="form-control" placeholder="YY-0000" />
+								</div>
+							</div>
+
+							<div class="row text-end">
+								<div class="col">
+									<button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">
+										<span>Close</span>
+									</button>
+
+									<button type="submit" class="btn btn-warning">
+										<span>Filter by parameters</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- Main wrapper end -->
 

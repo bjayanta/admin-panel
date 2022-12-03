@@ -4,8 +4,11 @@
         align-items: center;
         .nav-item {
             .nav-link {
-                font-size: 1.25rem;
                 position: relative;
+                i, svg {
+                    font-size: 1.25rem;
+                    margin-right: 2px;
+                }
                 .blink {
                     display: block;
                     width: 10px;
@@ -60,6 +63,11 @@
             width: 270px;
             left: auto;
             right: 0;
+            .dropdown-item {
+                i, svg {
+                    margin-right: 8px;
+                }
+            }
             .dropdown-divider {
                 margin: 0;
             }
@@ -83,13 +91,21 @@
 }
 
 @media (max-width: 992px) {
-    .navbar-expand-lg .navbar-nav {
-        flex-direction: row;
-        .nav-link {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
+    .navbar-expand-lg {
+        form[role="search"] {
+            display: none !important;
         }
-        
-    }
+        .navbar-nav {
+            flex-direction: row;
+            .nav-link {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                span {
+                    display: none;
+                }
+            }
+            
+        }
+    } 
 
 }

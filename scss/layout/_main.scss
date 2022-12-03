@@ -11,6 +11,7 @@
     }
     .main {
         height: 100vh;
+        padding: 0 1rem;
         transition: margin 100ms ease-in;
     }
     .overlay {
@@ -43,6 +44,7 @@
         }
         .main {
             margin-left: 0;
+            padding: 0;
         }
         .overlay {
             display: none;
