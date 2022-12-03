@@ -1,19 +1,12 @@
 .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0.5rem 0;
-    & > ul {
-        display: flex;
-        li {
-            position: relative;
-            a {
-                display: inline-block;
-                padding: 0 10px;
+    padding: 0;
+    .navbar-nav {
+        align-items: center;
+        .nav-item {
+            .nav-link {
+                font-size: 1.25rem;
                 position: relative;
-                i {font-size: 1.375rem;}
-                .highlight {
+                .blink {
                     display: block;
                     width: 10px;
                     height: 10px;
@@ -21,98 +14,82 @@
                     color: $black-color;
                     background-color: $secondary-color;
                     position: absolute;
-                    top: 0;
-                    right: 10px;
+                    top: 8px;
+                    right: 8px;
                     animation: blinker 1.5s linear infinite;
                     @keyframes blinker {  
-                        50% { opacity: 0; }
+                        50% { 
+                            opacity: 0; 
+                        }
                     }
                 }
-                img {
-                    width: 32px;
+            }
+            .nav-link.active {
+                color: $primary-color;
+            }
+            &.account {
+                .avatar {
+                    width: 36px;
+                    height: 36px;
+                    // border: 1px solid $primary-color;
                     border-radius: 50%;
                 }
-            }
-            &.dropdown {
-                .dropdown-menu {
-                    width: 320px;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    border-radius: 0;
-                    box-shadow: $shadow;
-                    top: 15px !important;
-                    li {
-                        a {
-                            display: flex;
-                            align-items: center;
-                            padding: 0.2rem 1rem;
-                            img {
-                                width: 48px;
-                                height: 48px;
-                            }
-                            img, i {
-                                margin-right: 12px;
-                            }
-                            &:hover {
-                                color: $white-color;
-                                background-color: $primary-light !important;
-                            }
-                            &.user {
-                                padding-top: 1rem;
-                                padding-bottom: 1rem;
-                                p {margin: 0;}
-                            }
+                .user-account {
+                    a {
+                        padding: 8px 15px;
+                        display: flex;
+                        white-space: normal;
+                        .avatar {
+                            width: 64px;
+                            height: 64px;
+                            border-radius: 4px;
+                            margin-right: 10px;
                         }
-                        .dropdown-divider {
-                            margin: 0;
-                        }
-                    }
-                    &::after {
-                        content: "";
-                        display: block;
-                        width: 20px;
-                        height: 20px;
-                        position: absolute;
-                        top: -10px;
-                        right: 15px;
-                        transform: rotate(45deg);
-                        border: 1px solid lighten($color: $black-color, $amount: 65%);
-                        border-right: none;
-                        border-bottom: none;
-                        background-color: $white-color;
-                        z-index: -1;
                     }
                 }
             }
-            &:first-child, &:last-child {
-                a {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
+            
+        }
+    }
+    .dropdown {
+        .dropdown-toggle::after {
+            display: none;
+        }
+        .dropdown-menu[data-bs-popper] {
+            position: absolute;
+            width: 270px;
+            left: auto;
+            right: 0;
+            .dropdown-divider {
+                margin: 0;
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                top: -8px;
+                right: 18px;
+                transform: rotate(45deg);
+                border: 1px solid lighten($color: $black-color, $amount: 65%);
+                border-right: none;
+                border-bottom: none;
+                background-color: $white-color;
+                z-index: -1;
             }
         }
     }
 }
 
-@media (max-width: 768px) {
-	.navigation {
-        & > ul {
-            li {
-                &.dropdown {
-                    position: static;
-                    .dropdown-menu {
-                        max-width: calc(100vw - 64px);
-                        width: 100%;
-                        height: 100vh;
-                        transform: translate(0, 0) !important;
-                        inset: 0 !important;
-                        border: none;
-                        &::after {
-                            display: none;
-                        }
-                    }
-                }
-            }
+@media (max-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        .nav-link {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
         }
+        
     }
+
 }

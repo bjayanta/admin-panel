@@ -6,19 +6,18 @@
         top: 0;
         left: -300px;
         height: 100vh;
-        background-color: $white-color;
         transition: left 100ms ease-in;
         z-index: 1;
     }
     .main {
         height: 100vh;
-        margin: 0 15px;
         transition: margin 100ms ease-in;
     }
     .overlay {
         width: 100%;
         height: 100vh;
-        background-color: lighten($color: $black-color, $amount: 25%);
+        background-color: lighten($color: $black-color, $amount: 5%);
+        opacity: 0.5;
         position: absolute;
         top: 0;
         left: 0;
@@ -29,7 +28,7 @@
             left: 0;
         }
         .main {
-            margin-left: 315px;
+            margin-left: 300px;
         }
         .overlay {
             display: none;
@@ -43,7 +42,7 @@
             left: -300px;
         }
         .main {
-            margin-left: 15px;
+            margin-left: 0;
         }
         .overlay {
             display: none;
@@ -53,7 +52,7 @@
                 left: 0;
             }
             .main {
-                margin-left: 15px;
+                margin-left: 0;
             }
             .overlay {
                 display: block;
@@ -61,48 +60,3 @@
         }
     }
 }
-
-// .main {
-//     margin-left: 320px;
-//     min-height: 100vh;
-//     position: relative;
-//     .header, .footer, .section {
-//         background-repeat: no-repeat;
-//         background-size: cover;
-//         background-position: center;
-//         padding: 0 2rem;
-//     }
-// }
-
-// .brand {
-//     height: 50px;
-// }
-
-// .aside-toggle {
-//     .aside {
-//         width: 65px;
-//         .aside-menu {}
-//         .aside-submenu {
-//             transform: translateX(-255px);
-//             transition: transform 0.4s ease-in;
-//         }
-//         // width: 65px;
-//         // .aside-content {
-//         //     
-//         //     // width: 0;
-//         //     // opacity: 0;
-//         //     // visibility: hidden;
-//         // }
-//     }
-//     .main {
-//         transform: translateX(-255px);
-//         transition: transform 0.4s ease-in;
-//         // margin-left: 64px;
-//     }
-// }
-
-// @media (max-width: 992px) {
-//     .main {
-//         margin-left: 64px;
-//     }
-// }
