@@ -221,13 +221,13 @@
 	
 						<li class="nav-item dropdown account">
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								<img src="images/avatar.jpg" class="avatar" alt="User avatar">
+								<img src="images/baky.jpg" class="avatar" alt="User avatar">
 							</a>
 	
 							<ul class="dropdown-menu">
 								<li class="user-account">
 									<a href="profile.html" class="dropdown-item">
-										<img src="images/avatar.jpg" class="avatar" alt="Avatar" />
+										<img src="images/baky.jpg" class="avatar" alt="Avatar" />
 										<div>
 											<strong>Baky billah khan pathan</strong>
 											<p>Adminstrator</p>
@@ -327,10 +327,10 @@
 			<!-- main header end -->
 
 			<!-- main content -->
-			<section class="section">
+			<section class="section profile">
 				<div class="container">
 					<figure class="d-flex">
-						<img src="images/avatar.jpg" style="width: 128px;" class="me-5 rounded" alt="Avatar photo" />
+						<img src="images/baky.jpg" style="width: 128px;" class="rounded me-3" alt="Avatar photo" />
 						<figcaption>
 							<h2>Baky billah khan pathan</h2>
 							<p>UI/UX designer + Frontend Developer</p>
@@ -351,7 +351,7 @@
 
 					<div class="tab-content">
 						<!-- Personal -->
-						<div class="tab-pane fade" id="personal" tabindex="0">
+						<div class="tab-pane fade py-3" id="personal" tabindex="0">
 							<form action="" method="post">
 								<!-- Parents -->
 								<div class="row border-bottom py-3">
@@ -519,28 +519,24 @@
 						</div>
 						
 						<!-- HR -->
-						<div class="tab-pane fade" id="hr" tabindex="0">
+						<div class="tab-pane fade py-3" id="hr" tabindex="0">
 							2
 						</div>
 
-						<!-- HR -->
-						<div class="tab-pane fade show active" id="avatar" tabindex="0">
+						<!-- Avatar -->
+						<div class="tab-pane fade py-3 show active" id="avatar" tabindex="0">
 							<form action="#" method="post">
-								<div class="row">
-									<figure class="text-center">
-										<img src="./images/avatar.jpg" class="rounded" style="width: 256px;" alt="Avatar"/>
-										<figcaption>
-											<input type="file" />
-										</figcaption>
-									</figure>
+								<div class="change-avatar mb-3">
+									<img src="./images/avatar.jpg" class="rounded" id="avatar-img" alt="image not found!" />
+									<label for="avatar-input">
+										<input type="file" id="avatar-input"/>
+										<span>Select photo</span>
+									</label>
 								</div>
 
-								<div class="row justify-content-center py-5">
-									<div class="col-auto">
-										<button type="reset" class="btn btn-warning me-3">Set as default</button>
-										<button type="submit" class="btn btn-success">Upload & change</button>
-									</div>
-								</div>
+								<button type="submit" class="btn btn-outline-success" style="width: 256px;">
+									<span>Upload & change</span>
+								</button>
 							</form>
 						</div>
 					</div>
@@ -560,5 +556,26 @@
     <!-- app js -->
 	<!-- <script src="js/app.js"></script> -->
 	<script src="js/aside.js"></script>
+	<script>
+		// Initialize a empty FileReader
+		var reader = new FileReader();
+
+		// select the image 'on change' event
+		document.getElementById("avatar-input").addEventListener("change", (ev) => {
+			// get the file
+			var file = ev.target.files[0];
+
+			// set the file as data-url
+			if(file) {
+				reader.readAsDataURL(file);
+			}
+
+			// set the result reader on-load event
+			reader.addEventListener("load", () => {
+				// set the reader result into dom
+				document.getElementById("avatar-img").setAttribute('src', reader.result);
+			});
+		});
+	</script>
 </body>
 </html>

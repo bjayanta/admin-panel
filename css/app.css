@@ -551,26 +551,33 @@ footer a:hover {
     grid-template-columns: auto auto;
   }
 }
-.profile .module figure {
+.change-avatar {
+  width: 256px;
+  position: relative;
+  border: 1px dotted #0E24BB;
+}
+.change-avatar img {
+  width: 100%;
+}
+.change-avatar label[for=avatar-input] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  margin: 0;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
 }
-.profile .module figure img {
-  width: 128px;
-  border: 5px solid #FFFFFF;
-  margin-right: 1rem;
+.change-avatar label[for=avatar-input] input[type=file] {
+  visibility: hidden;
 }
-.profile .module figure figcaption h2 {
-  font-weight: 800;
-}
-.profile form .row {
-  align-items: center;
-}
-.profile form .row a {
-  color: #566af2;
-}
-.profile form .row a:hover {
+.change-avatar label[for=avatar-input] span {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
   color: #0E24BB;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=app.css.map */
