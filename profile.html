@@ -12,46 +12,27 @@
     <!-- app stylesheet -->
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body class="app">
+<body>
     
-    <!-- app aside navigation -->
-	<aside class="aside" id="aside">
-		<nav class="nav nav-tabs">
-			<a class="brand" href="dashboard.html">
+	<!-- Main wrapper -->
+	<div class="wrapper aside-open" id="wrapper">
+		<!-- Sidebar navigation -->
+		<aside class="sidebar" id="sidebar">
+			<!-- Brand -->
+			<a href="dashboard.html" class="brand">
 				<img src="images/logo_symbol.svg" alt="MaxSOP" />
+				<span class="ms-2">MaxSOP</span>
 			</a>
 
-			<button data-bs-toggle="tab" data-bs-target="#home-tab" type="button">
-				<i class="bi bi-tv"></i>
-			</button>
-
-			<button data-bs-toggle="tab" data-bs-target="#message-tab" type="button">
-				<i class="bi bi-envelope"></i>
-			</button>
-
-			<button data-bs-toggle="tab" data-bs-target="#info-tab" type="button">
-				<i class="bi bi-info-square"></i>
-			</button>
-
-			<button class="tab-bottom active" data-bs-toggle="tab" data-bs-target="#settings-tab" type="button">
-				<i class="bi bi-gear"></i>
-			</button>
-
-			<button type="button">
-				<i class="bi bi-box-arrow-right"></i>
-			</button>
-		</nav>
-
-		<div class="tab-content">
-			<nav class="tab-pane fade" id="home-tab">
-				<h3>Home</h3>
-				<ul class="accordion">
+			<div>
+				<ul>
 					<li>
 						<a href="dashboard.html" class="active">
 							<i class="bi bi-speedometer2"></i>
 							<span>Dashboard</span>
 						</a>
 					</li>
+
 					<li>
 						<a href="#">
 							<i class="bi bi-cast"></i>
@@ -59,8 +40,10 @@
 						</a>
 					</li>
 				</ul>
+			</div>
 
-				<strong>Pages</strong>
+			<div>
+				<strong class="my-2">Pages</strong>
 				<ul class="accordion">
 					<li>
 						<a href="#">
@@ -73,7 +56,7 @@
 							<i class="bi bi-input-cursor-text"></i>
 							<span>Pages</span>
 						</a>
-						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#sidebar">
 							<li><a href="#">Faq</a></li>
 							<li><a href="#">Pricing</a></li>
 							<li><a href="#">Empty page</a></li>
@@ -88,30 +71,33 @@
 							<i class="bi bi-input-cursor-text"></i>
 							<span>Errors</span>
 						</a>
-						<ul id="errors" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+						<ul id="errors" class="accordion-collapse collapse" data-bs-parent="#sidebar">
 							<li><a href="#">404</a></li>
 							<li><a href="#">500</a></li>
 						</ul>
 					</li>
 				</ul>
+			</div>
 
-				<strong>Modules</strong>
+			<div>
+				<strong class="my-2">Modules</strong>
 				<ul class="accordion">
 					<li>
 						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#module">
 							<i class="bi bi-menu-app"></i>
 							<span>Module</span>
 						</a>
-						<ul id="module" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+						<ul id="module" class="accordion-collapse collapse" data-bs-parent="#sidebar">
 							<li><a href="module-records.html">Records</a></li>
-							<li><a href="module-search.html">Search</a></li>
 							<li><a href="module-form.html">Form</a></li>
 							<li><a href="module-trash.html">Trash</a></li>
 						</ul>
 					</li>
 				</ul>
+			</div>
 
-				<strong>Documentation</strong>
+			<div class="last-child">
+				<strong class="my-2">Documentation</strong>
 				<ul class="accordion">
 					<li>
 						<a href="#">
@@ -125,7 +111,7 @@
 							<i class="bi bi-menu-app"></i>
 							<span>Customization</span>
 						</a>
-						<ul id="customization" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+						<ul id="customization" class="accordion-collapse collapse" data-bs-parent="#sidebar">
 							<li><a href="#">Styling</a></li>
 							<li><a href="#">Plugin</a></li>
 						</ul>
@@ -156,447 +142,418 @@
 							<span>Copyright</span>
 						</a>
 					</li>
-				</ul>
-			</nav>
-
-			<nav class="tab-pane fade" id="message-tab">
-				<h3>Message</h3>
-			</nav>
-
-			<nav class="tab-pane fade" id="info-tab">
-				<h3>Info</h3>
-			</nav>
-
-			<nav class="tab-pane fade" id="account-tab">
-				<h3>Account</h3>
-				<ul>
-					<li>
-						<a href="#">
-							<i class="bi bi-person"></i>
-							<span>My details</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<i class="bi bi-bell"></i>
-							<span>Notifications</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<i class="bi bi-gear"></i>
-							<span>Settings</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<i class="bi bi-box-arrow-right"></i>
-							<span>Sign Out</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-
-			<nav class="tab-pane fade show active" id="settings-tab">
-				<h3>Settings</h3>
-				<ul class="accordion">
-					<li>
-						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#account-preferences">
-							<i class="bi bi-person"></i>
-							<span>Account Preferences</span>
-						</a>
-						<ul id="account-preferences" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
-							<li><a href="#">Personal information</a></li>
-							<li><a href="#">Display</a></li>
-							<li><a href="#">Site preferences</a></li>
-							<li><a href="#">Syncing options</a></li>
-							<li><a href="#">Subscriptions & payments</a></li>
-							<li><a href="#">Partners & services</a></li>
-							<li><a href="#">Account management</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">
-							<i class="bi bi-cast"></i>
-							<span>Sign in & Security</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#visibility">
-							<i class="bi bi-person"></i>
-							<span>Visibility</span>
-						</a>
-						<ul id="visibility" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
-							<li><a href="#">Profile & network</a></li>
-							<li><a href="#">MaxSOP activity</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#communications">
-							<i class="bi bi-person"></i>
-							<span>Communications</span>
-						</a>
-						<ul id="communications" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
-							<li><a href="#">How you get your notifications</a></li>
-							<li><a href="#">Who can reach you</a></li>
-							<li><a href="#">Messaging experience</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#data-privacy">
-							<i class="bi bi-person"></i>
-							<span>Data Privacy</span>
-						</a>
-						<ul id="data-privacy" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
-							<li><a href="#">How MaxSOP use your data</a></li>
-							<li><a href="#">Job seeking preferences</a></li>
-							<li><a href="#">Other applications</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#advertising-data">
-							<i class="bi bi-person"></i>
-							<span>Advertising data</span>
-						</a>
-						<ul id="advertising-data" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
-							<li><a href="#">Advertising preferences</a></li>
-							<li><a href="#">Data collected on MaxSOP</a></li>
-							<li><a href="#">Third-pary data</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</aside>
-	<!-- app aside navigation end -->
-
-	<!-- main content start -->
-	<main class="main profile">
-		<!-- main header -->
-		<header class="header">
-			<!-- main navigation -->
-			<nav class="navigation">
-				<ul>
 					<li>
 						<a href="#" onclick="asideToggle()">
-							<i class="bi bi-layout-sidebar"></i>
+							<i class="bi bi-speedometer2"></i>
+							<span>Collapse</span>
 						</a>
 					</li>
 				</ul>
-				<ul>
-					<li>
-						<a href="#">
-							<i class="bi bi-binoculars"></i>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<i class="bi bi-bell"></i>
-							<span class="highlight"></span>
-						</a>
-					</li>
-
-					<li class="dropdown">
-						<a href="#" data-bs-toggle="dropdown">
-							<img src="images/avatar.jpg" alt="User avatar">
-						</a>
-
-						<ul class="dropdown-menu">
-							<li>
-								<a href="profile.html" class="user">
-									<img src="images/avatar.jpg" alt="">
-									<div>
-										<strong>Baky billah khan pathan</strong>
-										<p>Adminstrator</p>
-									</div>
-								</a>
-							</li>
-
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-
-							<li>
-								<a href="profile.html">
-									<i class="bi bi-eyeglasses"></i>
-									<span>My details</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="sign-in-and-security.html">
-									<i class="bi bi-fingerprint"></i>
-									<span>Change password</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-people"></i>
-									<span>User manager</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-box-arrow-left"></i>
-									<span>Sign out</span>
-								</a>
-							</li>
-
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-gear"></i>
-									<span>Settings & Privacy</span>
-								</a>
-							</li>
-
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-blockquote-left"></i>
-									<span>About</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-info-circle"></i>
-									<span>Help</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-send-exclamation"></i>
-									<span>Send feedback</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-			<!-- main navigation end -->
-		</header>
-
-		<section class="py-5">
-			<div class="container mb-5">
-				<figure class="d-flex">
-                    <img src="images/avatar.jpg" style="width: 128px;" class="me-5 rounded" alt="Avatar photo" />
-                    <figcaption>
-                        <h2>Baky billah khan pathan</h2>
-                        <p>UI/UX designer + Frontend Developer</p>
-                        <a href="profile-settings.html" class="btn btn-sm btn-warning">
-							<i class="bi bi-sliders"></i>
-							<span>Update Profile</span>
-						</a>
-                    </figcaption>
-                </figure>
 			</div>
+		</aside>
+		<!-- Sidebar navigation end -->
 
-			<div class="container">
-				<nav>
-					<div class="nav nav-tabs" role="tablist">
-					  	<button class="nav-link active" id="nav-personal-tab" data-bs-toggle="tab" data-bs-target="#nav-personal" type="button" role="tab" aria-controls="nav-personal" aria-selected="true">
-							Personal
+		<!-- Main content -->
+		<div class="main">
+			<!-- Main navigation -->
+			<nav class="navbar navbar-expand-lg bg-light navigation">
+				<div class="container-fluid">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a href="#" class="nav-link ps-0" onclick="asideToggle(this)" aria-current="page">
+								<i class="bi bi-layout-sidebar"></i>
+								<span>Collapse</span>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="#" class="nav-link" aria-current="page">
+								<i class="bi bi-grid-fill"></i>
+								<span>Services</span>
+							</a>
+						</li>
+						
+						<!--
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="bi bi-globe"></i>
+								<span>Website</span>
+							</a>
+						</li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Action</a></li>
+								<li><a class="dropdown-item" href="#">Another action</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="#">Something else here</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link disabled">Disabled</a>
+						</li>
+						-->
+					</ul>
+
+					<form class="d-flex me-3" role="search">
+						<input type="search" class="form-control me-2" placeholder="Search" aria-label="Search"/>
+						<button class="btn btn-outline-success" type="submit">
+							<i class="bi bi-search"></i>
 						</button>
+					</form>
 
-					  	<button class="nav-link" id="nav-hr-tab" data-bs-toggle="tab" data-bs-target="#nav-hr" type="button" role="tab" aria-controls="nav-hr" aria-selected="false">
-							HR Details
-						</button>
-					</div>
-				</nav>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="bi bi-gear"></i>
+								<span>Settings</span>
+							</a>
+						</li>
 
-				<div class="tab-content">
-					<div class="tab-pane fade show active" id="nav-personal" role="tabpanel" aria-labelledby="nav-personal-tab" tabindex="0">
-						<form action="" method="post">
-							<!-- Parents -->
-							<div class="row border-bottom py-3">
-								<div class="col-2">&nbsp;</div>
-								<div class="col-2">
-									<strong>Mr. Abdul-al Momin</strong>
-									<div>Father name</div>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="bi bi-bell"></i>
+								<span class="blink"></span>
+							</a>
+						</li>
+	
+						<li class="nav-item dropdown account">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="images/avatar.jpg" class="avatar" alt="User avatar">
+							</a>
+	
+							<ul class="dropdown-menu">
+								<li class="user-account">
+									<a href="profile.html" class="dropdown-item">
+										<img src="images/avatar.jpg" class="avatar" alt="Avatar" />
+										<div>
+											<strong>Baky billah khan pathan</strong>
+											<p>Adminstrator</p>
+										</div>
+									</a>
+								</li>
+	
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+	
+								<li>
+									<a href="profile.html" class="dropdown-item">
+										<i class="bi bi-eyeglasses"></i>
+										<span>My details</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="sign-in-and-security.html" class="dropdown-item">
+										<i class="bi bi-fingerprint"></i>
+										<span>Change password</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-people"></i>
+										<span>User manager</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-box-arrow-left"></i>
+										<span>Sign out</span>
+									</a>
+								</li>
+	
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+	
+								<li>
+									<a href="account-preferences.html" class="dropdown-item">
+										<i class="bi bi-gear"></i>
+										<span>Settings & Privacy</span>
+									</a>
+								</li>
+	
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-blockquote-left"></i>
+										<span>About</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-info-circle"></i>
+										<span>Help</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-send-exclamation"></i>
+										<span>Send feedback</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Main navigation end -->
+
+			<!-- main header -->
+			<header class="header mb-3">
+				<div class="container-fluid">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb mb-0">
+						  	<li class="breadcrumb-item"><a href="#">Home</a></li>
+						  	<li class="breadcrumb-item"><a href="#">Library</a></li>
+						  	<li class="breadcrumb-item active" aria-current="page">Data</li>
+						</ol>
+
+						<!-- Menu/page title -->
+						<strong>Dashboard</strong>
+					</nav>
+				</div>
+			</header>
+			<!-- main header end -->
+
+			<!-- main content -->
+			<section class="section">
+				<div class="container">
+					<figure class="d-flex">
+						<img src="images/avatar.jpg" style="width: 128px;" class="me-5 rounded" alt="Avatar photo" />
+						<figcaption>
+							<h2>Baky billah khan pathan</h2>
+							<p>UI/UX designer + Frontend Developer</p>
+							<!--
+							<a href="profile-settings.html" class="btn btn-sm btn-warning">
+								<i class="bi bi-sliders"></i>
+								<span>Update Profile</span>
+							</a>
+							-->
+						</figcaption>
+					</figure>
+
+					<nav class="nav">
+						<a href="#personal" class="nav-link ps-0" data-bs-toggle="tab">Personal</a>
+						<a href="#hr" class="nav-link" data-bs-toggle="tab">HR Details</a>
+						<a href="#avatar" class="nav-link active" data-bs-toggle="tab">Avatar</a>
+					</nav>
+
+					<div class="tab-content">
+						<!-- Personal -->
+						<div class="tab-pane fade" id="personal" tabindex="0">
+							<form action="" method="post">
+								<!-- Parents -->
+								<div class="row border-bottom py-3">
+									<div class="col-2">&nbsp;</div>
+									<div class="col-2">
+										<strong>Mr. Abdul-al Momin</strong>
+										<div>Father name <a href="#" class="ms-2">+ Edit</a></div>
+									</div>
+	
+									<div class="col-2">
+										<strong>N/A</strong>
+										<div>Mother name <a href="#" class="ms-2">+ Edit</a></div>
+									</div>
 								</div>
-
-								<div class="col-2">
-									<strong>Mrs. Fatema Aktar</strong>
-									<div>Mother name</div>
+	
+								<!-- dob -->
+								<div class="row align-items-center border-bottom py-3">
+									<label class="col-2 col-form-label text-end">Birthdate</span></label>
+									<div class="col-1">
+										<select name="day" class="form-select form-select-sm">
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+										</select>
+									</div>
+									<div class="col-1">
+										<select name="month" class="form-select form-select-sm">
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>
+									</div>
+	
+									<div class="col-2">
+										<select name="day" class="form-select form-select-sm">
+											<option value="1990">1990</option>
+											<option value="1991">1991</option>
+											<option value="1992">1992</option>
+											<option value="1993">1993</option>
+											<option value="1994">1994</option>
+										</select>
+									</div>
 								</div>
-							</div>
-
-							<!-- dob -->
-							<div class="row border-bottom py-3">
-								<label class="col-2 col-form-label text-end">Birthdate</span></label>
-								<div class="col-1">
-									<select name="day" class="form-select form-select-sm">
-										<option value="01">01</option>
-										<option value="02">02</option>
-										<option value="03">03</option>
-										<option value="04">04</option>
-										<option value="05">05</option>
-									</select>
+	
+								<!-- gender -->
+								<div class="row align-items-center border-bottom py-3">
+									<label class="col-2 col-form-label text-end">Gender</label>
+									<div class="col-3 ps-3">
+										<label class="me-3">
+											<input type="radio" name="gender" value="male" checked/>
+											<span>Male</span>
+										</label>
+	
+										<label class="me-3">
+											<input type="radio" name="gender" value="female"/>
+											<span>Female</span>
+										</label>
+	
+										<label>
+											<input type="radio" name="gender" value="other"/>
+											<span>Other</span>
+										</label>
+									</div>
 								</div>
-								<div class="col-1">
-									<select name="month" class="form-select form-select-sm">
-										<option value="01">01</option>
-										<option value="02">02</option>
-										<option value="03">03</option>
-										<option value="04">04</option>
-										<option value="05">05</option>
-										<option value="06">06</option>
-										<option value="07">07</option>
-										<option value="08">08</option>
-										<option value="09">09</option>
-										<option value="10">10</option>
-										<option value="11">11</option>
-										<option value="12">12</option>
-									</select>
-								</div>
-
-								<div class="col-2">
-									<select name="day" class="form-select form-select-sm">
-										<option value="1990">1990</option>
-										<option value="1991">1991</option>
-										<option value="1992">1992</option>
-										<option value="1993">1993</option>
-										<option value="1994">1994</option>
-									</select>
-								</div>
-							</div>
-
-							<!-- gender -->
-							<div class="row border-bottom py-3">
-								<label class="col-2 col-form-label text-end">Gender</label>
-								<div class="col-3 ps-3">
-									<label class="me-3">
-										<input type="radio" name="gender" value="male" checked/>
-										<span>Male</span>
+	
+								<!-- mobile numbers -->
+								<div class="row border-bottom py-3">
+									<label class="col-2 col-form-label text-end">
+										<span>Mobile number</span>
 									</label>
-
-									<label class="me-3">
-										<input type="radio" name="gender" value="female"/>
-										<span>Female</span>
-									</label>
-
-									<label>
-										<input type="radio" name="gender" value="other"/>
-										<span>Other</span>
-									</label>
+	
+									<div class="col-2">
+										<strong>+880 1775 219457</strong>
+										<div>Personal <a href="#" class="ms-2">+ Edit</a></div>
+									</div>
+	
+									<div class="col-2">
+										<strong>N/A</strong>
+										<div>Home <a href="#" class="ms-2">+ Add number</a></div>
+									</div>
+	
+									<div class="col-2">
+										<strong>N/A</strong>
+										<div>Office <a href="#" class="ms-2">+ Add number</a></div>
+									</div>
 								</div>
-							</div>
+	
+								<!-- email address -->
+								<div class="row align-items-center border-bottom py-3">
+									<label class="col-2 col-form-label text-end">Email address</label>
+									<div class="col-9">
+										<span>bakybillab@gmail.com</span>
+										<a href="#" class="ms-2">+ Edit</a>
+									</div>
+								</div>
+	
+								<!-- address -->
+								<div class="row border-bottom py-3">
+									<label class="col-2 col-form-label text-end">Address</label>
+									<div class="col-3">
+										<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
+										<div>Present address<a href="#" class="ms-2">+ Edit</a></div>
+									</div>
+	
+									<div class="col-3">
+										<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
+										<div>Permanent address<a href="#" class="ms-2">+ Edit</a></div>
+									</div>
+	
+									<div class="col-3">
+										<strong>N/A</strong>
+										<div>Billing address<a href="#" class="ms-2">+ Add address</a></div>
+									</div>
+								</div>
+	
+								<div class="row border-bottom py-3">
+									<label class="col-2 col-form-label text-end">About me</label>
+									<div class="col-9">
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam fugiat tempora distinctio ducimus nulla quibusdam cum a tempore ab veniam quis aspernatur dignissimos eius, incidunt molestias impedit assumenda esse ipsa at. Necessitatibus alias eos fuga iure non fugit doloremque saepe rerum, reprehenderit eveniet magnam laborum? Cupiditate est fugit architecto suscipit.<br/>
+										<a href="#">+ Add description</a>
+									</div>
+								</div>
+	
+								<div class="row align-items-center border-bottom py-3">
+									<label class="col-2 col-form-label text-end">Social media</label>
+	
+									<div class="col-3">
+										<input type="text" class="form-control form-control-sm" placeholder="Facebook" />
+									</div>
+	
+									<div class="col-3">
+										<input type="text" class="form-control form-control-sm" placeholder="Website" />
+									</div>
+								</div>
+				
+								<div class="row align-items-center border-bottom py-3">
+									<label for="language" class="col-2 col-form-label text-end">Language</label>
+									<div class="col-3">
+										<select class="form-select form-select-sm" id="language">
+											<option value="Bangla">Bangla</option>
+											<option value="English">English</option>
+										</select>
+									</div>
+								</div>
+	
+								<div class="row py-3">
+									<div class="col-2">&nbsp;</div>
+									<div class="col-9">
+										<button type="reset" class="btn btn-warning me-3">Set as default</b>
+										<button type="submit" class="btn btn-success">Save & change</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						
+						<!-- HR -->
+						<div class="tab-pane fade" id="hr" tabindex="0">
+							2
+						</div>
 
-							<!-- mobile numbers -->
-							<div class="row border-bottom py-3">
-								<label class="col-2 col-form-label text-end">
-									<span>Mobile number</span>
-								</label>
-
-								<div class="col-2">
-									<strong>+880 1775 219457</strong>
-									<div>Personal <a href="#" class="ms-2">+ Edit</a></div>
+						<!-- HR -->
+						<div class="tab-pane fade show active" id="avatar" tabindex="0">
+							<form action="#" method="post">
+								<div class="row">
+									<figure class="text-center">
+										<img src="./images/avatar.jpg" class="rounded" style="width: 256px;" alt="Avatar"/>
+										<figcaption>
+											<input type="file" />
+										</figcaption>
+									</figure>
 								</div>
 
-								<div class="col-2">
-									<strong>N/A</strong>
-									<div>Home <a href="#" class="ms-2">+ Add number</a></div>
+								<div class="row justify-content-center py-5">
+									<div class="col-auto">
+										<button type="reset" class="btn btn-warning me-3">Set as default</button>
+										<button type="submit" class="btn btn-success">Upload & change</button>
+									</div>
 								</div>
-
-								<div class="col-2">
-									<strong>N/A</strong>
-									<div>Office <a href="#" class="ms-2">+ Add number</a></div>
-								</div>
-							</div>
-
-							<!-- email address -->
-							<div class="row border-bottom py-3">
-								<label class="col-2 col-form-label text-end">Email address</label>
-								<div class="col-9">
-									<span>bakybillab@gmail.com</span>
-									<a href="#" class="ms-2">+ Edit</a>
-								</div>
-							</div>
-
-							<!-- address -->
-							<div class="row border-bottom py-3">
-								<label class="col-2 col-form-label text-end">Address</label>
-								<div class="col-3">
-									<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
-									<div>Present address<a href="#" class="ms-2">+ Edit</a></div>
-								</div>
-
-								<div class="col-3">
-									<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong>
-									<div>Permanent address<a href="#" class="ms-2">+ Edit</a></div>
-								</div>
-
-								<div class="col-3">
-									<strong>N/A</strong>
-									<div>Billing address<a href="#" class="ms-2">+ Add address</a></div>
-								</div>
-							</div>
-
-							<div class="row border-bottom py-3">
-								<label class="col-2 col-form-label text-end">About me</label>
-								<div class="col-9">
-									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam fugiat tempora distinctio ducimus nulla quibusdam cum a tempore ab veniam quis aspernatur dignissimos eius, incidunt molestias impedit assumenda esse ipsa at. Necessitatibus alias eos fuga iure non fugit doloremque saepe rerum, reprehenderit eveniet magnam laborum? Cupiditate est fugit architecto suscipit.<br/>
-									<a href="#">+ Add description</a>
-								</div>
-							</div>
-
-							<div class="row border-bottom py-3">
-								<label class="col-2 col-form-label text-end">Social media</label>
-
-								<div class="col-3">
-									<input type="text" class="form-control form-control-sm" placeholder="Facebook" />
-								</div>
-
-								<div class="col-3">
-									<input type="text" class="form-control form-control-sm" placeholder="Website" />
-								</div>
-							</div>
-			
-							<div class="row border-bottom py-3">
-								<label for="language" class="col-2 col-form-label text-end">Language</label>
-								<div class="col-3">
-									<select class="form-select form-select-sm" id="language">
-										<option value="Bangla">Bangla</option>
-										<option value="English">English</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="row py-5">
-								<div class="col-2">&nbsp;</div>
-								<div class="col-9">
-									<button type="reset" class="btn btn-warning me-3">Set as default</b>
-									<button type="submit" class="btn btn-success">Save & change</button>
-								</div>
-							</div>
-						</form>
-					</div>
-
-					<div class="tab-pane fade" id="nav-hr" role="tabpanel" aria-labelledby="nav-hr-tab" tabindex="0">
-						2
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-	</main>
-	<!-- main content end -->
+			</section>
+			<!-- main content end -->
+		</div>
+		<!-- Main content end -->
 
-	<!-- overlay -->
-	<div class="overlay" onclick="asideToggle()"></div>
+		<!-- Overlay -->
+		<div class="overlay" onclick="asideToggle()"></div>
+	</div>
+	<!-- Main wrapper end -->
 
 	<!-- bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
