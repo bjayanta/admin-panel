@@ -133,9 +133,21 @@ body {
     border-radius: 0;
   }
 }
+a[data-bs-toggle=tab].nav-link {
+  padding-bottom: 2px;
+  color: #8694f6;
+}
+a[data-bs-toggle=tab].nav-link.active {
+  color: #0E24BB;
+  border-bottom: 2px solid #0E24BB;
+}
+a[data-bs-toggle=tab].nav-link.disabled {
+  color: #747883;
+}
+
 .btn {
   text-transform: uppercase;
-  word-spacing: 5px;
+  word-spacing: 2px;
 }
 
 .pagination {

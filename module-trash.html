@@ -12,46 +12,27 @@
     <!-- app stylesheet -->
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body class="app">
-    
-    <!-- app aside navigation -->
-	<aside class="aside" id="aside">
-		<nav class="nav nav-tabs">
-			<a class="brand" href="dashboard.html">
+<body>
+
+	<!-- Main wrapper -->
+	<div class="wrapper aside-open" id="wrapper">
+		<!-- Sidebar navigation -->
+		<aside class="sidebar" id="sidebar">
+			<!-- Brand -->
+			<a href="dashboard.html" class="brand">
 				<img src="images/logo_symbol.svg" alt="MaxSOP" />
+				<span class="ms-2">MaxSOP</span>
 			</a>
 
-			<button class="active" data-bs-toggle="tab" data-bs-target="#home-tab" type="button">
-				<i class="bi bi-tv"></i>
-			</button>
-
-			<button data-bs-toggle="tab" data-bs-target="#message-tab" type="button">
-				<i class="bi bi-envelope"></i>
-			</button>
-
-			<button data-bs-toggle="tab" data-bs-target="#info-tab" type="button">
-				<i class="bi bi-info-square"></i>
-			</button>
-
-			<button class="tab-bottom" data-bs-toggle="tab" data-bs-target="#settings-tab" type="button">
-				<i class="bi bi-gear"></i>
-			</button>
-
-			<button type="button">
-				<i class="bi bi-box-arrow-right"></i>
-			</button>
-		</nav>
-
-		<div class="tab-content">
-			<nav class="tab-pane fade show active" id="home-tab">
-				<h3>Home</h3>
-				<ul class="accordion">
+			<div>
+				<ul>
 					<li>
 						<a href="dashboard.html">
 							<i class="bi bi-speedometer2"></i>
 							<span>Dashboard</span>
 						</a>
 					</li>
+
 					<li>
 						<a href="#">
 							<i class="bi bi-cast"></i>
@@ -59,8 +40,10 @@
 						</a>
 					</li>
 				</ul>
+			</div>
 
-				<strong>Pages</strong>
+			<div>
+				<strong class="my-2">Pages</strong>
 				<ul class="accordion">
 					<li>
 						<a href="#">
@@ -73,7 +56,7 @@
 							<i class="bi bi-input-cursor-text"></i>
 							<span>Pages</span>
 						</a>
-						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#sidebar">
 							<li><a href="#">Faq</a></li>
 							<li><a href="#">Pricing</a></li>
 							<li><a href="#">Empty page</a></li>
@@ -88,31 +71,33 @@
 							<i class="bi bi-input-cursor-text"></i>
 							<span>Errors</span>
 						</a>
-						<ul id="errors" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+						<ul id="errors" class="accordion-collapse collapse" data-bs-parent="#sidebar">
 							<li><a href="#">404</a></li>
 							<li><a href="#">500</a></li>
 						</ul>
 					</li>
 				</ul>
+			</div>
 
-				<strong>Modules</strong>
+			<div>
+				<strong class="my-2">Modules</strong>
 				<ul class="accordion">
 					<li>
 						<a href="#" class="accordion-button active" data-bs-toggle="collapse" data-bs-target="#module">
 							<i class="bi bi-menu-app"></i>
 							<span>Module</span>
 						</a>
-
-						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#home-tab">
+						<ul id="module" class="accordion-collapse collapse show" data-bs-parent="#sidebar">
 							<li><a href="module-records.html">Records</a></li>
 							<li><a href="module-form.html">Form</a></li>
-                            <li><a href="module-search.html">Search</a></li>
 							<li><a href="module-trash.html" class="active">Trash</a></li>
 						</ul>
 					</li>
 				</ul>
+			</div>
 
-				<strong>Documentation</strong>
+			<div class="last-child">
+				<strong class="my-2">Documentation</strong>
 				<ul class="accordion">
 					<li>
 						<a href="#">
@@ -126,7 +111,7 @@
 							<i class="bi bi-menu-app"></i>
 							<span>Customization</span>
 						</a>
-						<ul id="customization" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+						<ul id="customization" class="accordion-collapse collapse" data-bs-parent="#sidebar">
 							<li><a href="#">Styling</a></li>
 							<li><a href="#">Plugin</a></li>
 						</ul>
@@ -157,345 +142,356 @@
 							<span>Copyright</span>
 						</a>
 					</li>
-				</ul>
-			</nav>
-
-			<nav class="tab-pane fade" id="message-tab">
-				<h3>Message</h3>
-			</nav>
-
-			<nav class="tab-pane fade" id="info-tab">
-				<h3>Info</h3>
-			</nav>
-
-			<nav class="tab-pane fade" id="account-tab">
-				<h3>Account</h3>
-				<ul>
-					<li>
-						<a href="#">
-							<i class="bi bi-person"></i>
-							<span>My details</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<i class="bi bi-bell"></i>
-							<span>Notifications</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<i class="bi bi-gear"></i>
-							<span>Settings</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<i class="bi bi-box-arrow-right"></i>
-							<span>Sign Out</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-
-			<nav class="tab-pane fade" id="settings-tab">
-				<h3>Settings</h3>
-			</nav>
-		</div>
-	</aside>
-	<!-- app aside navigation end -->
-
-	<!-- main content start -->
-	<main class="main">
-		<!-- main header -->
-		<header class="header">
-			<!-- main navigation -->
-			<nav class="navigation">
-				<ul>
 					<li>
 						<a href="#" onclick="asideToggle()">
-							<i class="bi bi-layout-sidebar"></i>
+							<i class="bi bi-speedometer2"></i>
+							<span>Collapse</span>
 						</a>
 					</li>
 				</ul>
-				<ul>
-					<li>
-						<a href="#">
-							<i class="bi bi-binoculars"></i>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<i class="bi bi-bell"></i>
-							<span class="highlight"></span>
-						</a>
-					</li>
-
-					<li class="dropdown">
-						<a href="#" data-bs-toggle="dropdown">
-							<img src="images/avatar.jpg" alt="User avatar">
-						</a>
-
-						<ul class="dropdown-menu">
-							<li>
-								<a href="./profile.html" class="user">
-									<img src="./assets/images/avatar.jpg" alt="">
-									<div>
-										<strong>Baky billah khan pathan</strong>
-										<p>Adminstrator</p>
-									</div>
-								</a>
-							</li>
-
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-
-							<li>
-								<a href="profile.html">
-									<i class="bi bi-eyeglasses"></i>
-									<span>My details</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="profile-settings.html">
-									<i class="bi bi-fingerprint"></i>
-									<span>Change password</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-people"></i>
-									<span>User manager</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-box-arrow-left"></i>
-									<span>Sign out</span>
-								</a>
-							</li>
-
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-gear"></i>
-									<span>Settings & Privacy</span>
-								</a>
-							</li>
-
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-blockquote-left"></i>
-									<span>About</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-info-circle"></i>
-									<span>Help</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#">
-									<i class="bi bi-send-exclamation"></i>
-									<span>Send feedback</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-			<!-- main navigation end -->
-		</header>
-
-		<!-- module details start -->
-		<section class="section mb-3">
-			<div class="module">
-				<article >
-					<h2 class="mb-0">Module Trash</h2>
-					<p class="lead text-muted">Module short description goes to here.</p>
-				</article>
-
-				<nav>
-					<a href="module-records.html">
-						<i class="bi bi-view-list"></i>
-						<span>Records</span>
-					</a>
-					<a href="module-form.html">
-						<i class="bi bi-plus-circle"></i>
-						<span>Create</span>
-					</a>
-					<a href="module-trash.html" class="active">
-						<i class="bi bi-trash"></i>
-						<span>Trash</span>
-					</a>
-				</nav>
 			</div>
-		</section>
-		<!-- module details end -->
+		</aside>
+		<!-- Sidebar navigation end -->
 
-		<!-- main section -->
-		<section class="section">
-			<!-- card -->
-            <div class="card mb-3">
-                <div class="card-header">
-                    <strong>Asterisk field is required.</strong>
-                    <nav class="btn-toolbar">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#trashCard">
-                                <i class="bi bi-chevron-expand"></i>
-                            </button>
-                        </div>
-                    </nav>
-                </div>
+		<!-- Main content -->
+		<div class="main">
+			<!-- Main navigation -->
+			<nav class="navbar navbar-expand-lg bg-light navigation">
+				<div class="container-fluid">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a href="#" class="nav-link ps-0" onclick="asideToggle(this)" aria-current="page">
+								<i class="bi bi-layout-sidebar"></i>
+								<span>Collapse</span>
+							</a>
+						</li>
 
-                <div class="card-body collapse show" id="trashCard">
-                    <form action="#" method="get">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <label>
-                                            <input type="checkbox"/>
-                                            <span class="ms-2">SL</span>
-                                        </label>
-                                    </th>
-                                    <th>Voucher no.</th>
-                                    <th>Date</th>
-                                    <th>Supplier</th>
-                                    <th class="text-end">Total</th>
-                                    <th class="text-end">Paid</th>
-                                    <th class="text-end">Actions</th>
-                                </tr>
-                            </thead>
+						<li class="nav-item">
+							<a href="#" class="nav-link" aria-current="page">
+								<i class="bi bi-grid-fill"></i>
+								<span>Services</span>
+							</a>
+						</li>
 
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <label>
-                                            <input type="checkbox"/>
-                                            <span class="ms-2">01.</span>
-                                        </label>
-                                    </td>
-                                    <td><a href="#" target="_blank" class="link-primary">00000156</a></td>
-                                    <td>1 September, 2022</td>
-                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end action">
-                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
-                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
-                                    </td>
-                                </tr>
+						<!--
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="bi bi-globe"></i>
+								<span>Website</span>
+							</a>
+						</li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Action</a></li>
+								<li><a class="dropdown-item" href="#">Another action</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="#">Something else here</a></li>
+							</ul>
+						</li>
 
-                                <tr>
-                                    <td>
-                                        <label>
-                                            <input type="checkbox"/>
-                                            <span class="ms-2">02.</span>
-                                        </label>
-                                    </td>
-                                    <td><a href="#" target="_blank" class="link-primary">00000155</a></td>
-                                    <td>2 September, 2022</td>
-                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end action">
-                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
-                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
-                                    </td>
-                                </tr>
+						<li class="nav-item">
+							<a class="nav-link disabled">Disabled</a>
+						</li>
+						-->
+					</ul>
 
-                                <tr>
-                                    <td>
-                                        <label>
-                                            <input type="checkbox"/>
-                                            <span class="ms-2">03.</span>
-                                        </label>
-                                    </td>
-                                    <td><a href="#" target="_blank" class="link-primary">00000154</a></td>
-                                    <td>3 September, 2022</td>
-                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end action">
-                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
-                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
-                                    </td>
-                                </tr>
+					<form class="d-flex me-3" role="search">
+						<input type="search" class="form-control me-2" placeholder="Search" aria-label="Search"/>
+						<button class="btn btn-outline-success" type="submit">
+							<i class="bi bi-search"></i>
+						</button>
+					</form>
 
-                                <tr>
-                                    <td>
-                                        <label>
-                                            <input type="checkbox"/>
-                                            <span class="ms-2">04.</span>
-                                        </label>
-                                    </td>
-                                    <td><a href="#" target="_blank" class="link-primary">00000153</a></td>
-                                    <td>4 September, 2022</td>
-                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end action">
-                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
-                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
-                                    </td>
-                                </tr>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="bi bi-gear"></i>
+								<span>Settings</span>
+							</a>
+						</li>
 
-                                <tr>
-                                    <td>
-                                        <label>
-                                            <input type="checkbox"/>
-                                            <span class="ms-2">05.</span>
-                                        </label>
-                                    </td>
-                                    <td><a href="#" target="_blank" class="link-primary">00000153</a></td>
-                                    <td>5 September, 2022</td>
-                                    <td>লক্ষী ইন্ডাস্ট্রিজ</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end">0.00</td>
-                                    <td class="text-end action">
-                                        <a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
-                                        <a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="bi bi-bell"></i>
+								<span class="blink"></span>
+							</a>
+						</li>
+	
+						<li class="nav-item dropdown account">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="images/avatar.jpg" class="avatar" alt="User avatar">
+							</a>
+	
+							<ul class="dropdown-menu">
+								<li class="user-account">
+									<a href="profile.html" class="dropdown-item">
+										<img src="images/avatar.jpg" class="avatar" alt="Avatar" />
+										<div>
+											<strong>Baky billah khan pathan</strong>
+											<p>Adminstrator</p>
+										</div>
+									</a>
+								</li>
+	
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+	
+								<li>
+									<a href="profile.html" class="dropdown-item">
+										<i class="bi bi-eyeglasses"></i>
+										<span>My details</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="sign-in-and-security.html" class="dropdown-item">
+										<i class="bi bi-fingerprint"></i>
+										<span>Change password</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-people"></i>
+										<span>User manager</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-box-arrow-left"></i>
+										<span>Sign out</span>
+									</a>
+								</li>
+	
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+	
+								<li>
+									<a href="account-preferences.html" class="dropdown-item">
+										<i class="bi bi-gear"></i>
+										<span>Settings & Privacy</span>
+									</a>
+								</li>
+	
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-blockquote-left"></i>
+										<span>About</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-info-circle"></i>
+										<span>Help</span>
+									</a>
+								</li>
+	
+								<li>
+									<a href="#" class="dropdown-item">
+										<i class="bi bi-send-exclamation"></i>
+										<span>Send feedback</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Main navigation end -->
 
-                        <div class="text-end">
-                            <button class="btn btn-danger me-2">
-                                <i class="bi bi-x-square me-2"></i>
-                                <span>Delete all permanently</span>
-                            </button>
-        
-                            <button class="btn btn-success">
-                                <i class="bi bi-save me-2"></i>
-                                <span>Restore all</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-		</section>
-	</main>
-	<!-- main content end -->
+			<!-- main header -->
+			<header class="header mb-3">
+				<div class="container-fluid">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb mb-0">
+						  	<li class="breadcrumb-item"><a href="#">Home</a></li>
+						  	<li class="breadcrumb-item"><a href="#">Library</a></li>
+						  	<li class="breadcrumb-item active" aria-current="page">Data</li>
+						</ol>
+
+						<!-- Menu/page title -->
+						<strong>Module trash</strong>
+					</nav>
+				</div>
+			</header>
+			<!-- main header end -->
+
+			<!-- main content -->
+			<section class="section">
+				<div class="container">
+					<div class="card mb-5">
+						<div class="card-header pb-0">
+							<article>
+								<h5 class="mb-0">Module Trash</h5>
+								<p class="text-muted">Module short description goes to here.</p>
+							</article>
+
+							<!-- 
+							<nav>
+								<a href="#" class="btn btn-danger px-4 me-2">
+									<i class="bi bi-x-square"></i>
+									<span>Delete all permanently</span>
+								</a>
+
+								<a href="#" class="btn btn-success px-4">
+									<i class="bi bi-save"></i>
+									<span>Restore all</span>
+								</a>
+							</nav> 
+							-->
+						</div>
+
+						<div class="card-body pt-0">
+							<div class="table-responsive">
+								<form action="#" method="get">
+									<table class="table table-hover my-3">
+										<caption>About 1,820,000 results.</caption>
+
+										<thead>
+											<tr>
+												<th>
+													<label>
+														<input type="checkbox"/>
+														<span class="ms-2">SL</span>
+													</label>
+												</th>
+												<th>Voucher no.</th>
+												<th>Date</th>
+												<th>Supplier</th>
+												<th class="text-end">Total</th>
+												<th class="text-end">Paid</th>
+												<th class="text-end">Actions</th>
+											</tr>
+										</thead>
+			
+										<tbody>
+											<tr>
+												<td>
+													<label>
+														<input type="checkbox"/>
+														<span class="ms-2">01.</span>
+													</label>
+												</td>
+												<td><a href="#" target="_blank" class="link-primary">00000156</a></td>
+												<td>1 September, 2022</td>
+												<td>লক্ষী ইন্ডাস্ট্রিজ</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end action">
+													<a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+													<a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+												</td>
+											</tr>
+			
+											<tr>
+												<td>
+													<label>
+														<input type="checkbox"/>
+														<span class="ms-2">02.</span>
+													</label>
+												</td>
+												<td><a href="#" target="_blank" class="link-primary">00000155</a></td>
+												<td>2 September, 2022</td>
+												<td>লক্ষী ইন্ডাস্ট্রিজ</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end action">
+													<a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+													<a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+												</td>
+											</tr>
+			
+											<tr>
+												<td>
+													<label>
+														<input type="checkbox"/>
+														<span class="ms-2">03.</span>
+													</label>
+												</td>
+												<td><a href="#" target="_blank" class="link-primary">00000154</a></td>
+												<td>3 September, 2022</td>
+												<td>লক্ষী ইন্ডাস্ট্রিজ</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end action">
+													<a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+													<a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+												</td>
+											</tr>
+			
+											<tr>
+												<td>
+													<label>
+														<input type="checkbox"/>
+														<span class="ms-2">04.</span>
+													</label>
+												</td>
+												<td><a href="#" target="_blank" class="link-primary">00000153</a></td>
+												<td>4 September, 2022</td>
+												<td>লক্ষী ইন্ডাস্ট্রিজ</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end action">
+													<a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+													<a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+												</td>
+											</tr>
+			
+											<tr>
+												<td>
+													<label>
+														<input type="checkbox"/>
+														<span class="ms-2">05.</span>
+													</label>
+												</td>
+												<td><a href="#" target="_blank" class="link-primary">00000153</a></td>
+												<td>5 September, 2022</td>
+												<td>লক্ষী ইন্ডাস্ট্রিজ</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end">0.00</td>
+												<td class="text-end action">
+													<a href="#" class="link-success" title="Restore"><i class="bi bi-save"></i></a>
+													<a href="#" class="link-danger" title="Delete permanently"><i class="bi bi-x-square"></i></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+			
+									<div class="text-end">
+										<button class="btn btn-danger disabled me-2">
+											<i class="bi bi-x-square"></i>
+											<span>Delete all rows</span>
+										</button>
+					
+										<button class="btn btn-success disabled">
+											<i class="bi bi-save"></i>
+											<span>Restore all rows</span>
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- main content end -->
+		</div>
+		<!-- Main content end -->
+
+		<!-- Overlay -->
+		<div class="overlay" onclick="asideToggle()"></div>
+	</div>
+	<!-- Main wrapper end -->
 
 	<!-- overlay -->
 	<div class="overlay" onclick="asideToggle()"></div>

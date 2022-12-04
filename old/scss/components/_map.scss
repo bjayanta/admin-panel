@@ -1,9 +1,0 @@
-svg{
-    path{
-        fill: var(--theme-darken);
-        transition: all ease .3s;
-        &:hover{
-            fill: var(--theme-color);
-        }
-    }
-}
