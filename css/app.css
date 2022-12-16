@@ -165,7 +165,7 @@ svg.maxsop.dark path {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  background-color: #FFFFFF;
+  background-color: #F8F9FA;
 }
 .sidebar .brand {
   display: flex;
@@ -187,16 +187,13 @@ svg.maxsop.dark path {
   line-height: 40px;
   padding: 0 15px;
   color: #050d44;
+  background-color: transparent;
 }
 .sidebar div ul li a span {
   margin-left: 8px;
 }
-.sidebar div ul li a:hover {
-  color: #0E24BB;
-  background-color: #f2f3f4;
-}
 .sidebar div ul li a.accordion-button:not(.collapsed) {
-  background-color: #f2f3f4;
+  background-color: transparent;
   color: #0E24BB;
   box-shadow: none;
 }
@@ -205,7 +202,6 @@ svg.maxsop.dark path {
 }
 .sidebar div ul li a.active, .sidebar div ul li a.accordion-button.active {
   color: #0E24BB;
-  background-color: #f2f3f4;
 }
 .sidebar div ul li a.active::after, .sidebar div ul li a.accordion-button.active::after {
   opacity: 1;
@@ -214,14 +210,15 @@ svg.maxsop.dark path {
 .sidebar div ul li ul li a {
   display: flex;
   align-items: center;
+  line-height: 30px;
   padding-left: 1rem;
   color: #8f929b;
 }
 .sidebar div ul li ul li a::before {
   content: "";
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   border: 1px solid #c5c6cb;
   margin-right: 10px;
@@ -388,6 +385,11 @@ svg.maxsop.dark path {
   }
   .navbar-expand-lg .navbar-nav .nav-link span {
     display: none;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 100% !important;
   }
 }
 .module {

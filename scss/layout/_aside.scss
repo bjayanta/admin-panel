@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    background-color: $white-color;
+    // background-color: $white-color;
+    background-color: $body-color;
     .brand {
         display: flex;
         padding: 0 15px;
@@ -26,16 +27,17 @@
                     line-height: 40px;
                     padding: 0 15px;
                     color: $text-color;
+                    background-color: transparent;
                     span {
                         margin-left: 8px;
                     }
-                    &:hover {
-                        color: $primary-color;
-                        background-color: lighten($color: $black-color, $amount: 82%);
-                    }
+                    // &:hover {
+                    //     color: $primary-color;
+                    //     background-color: lighten($color: $black-color, $amount: 82%);
+                    // }
                     &.accordion-button:not(.collapsed) {
-                        background-color: lighten($color: $black-color, $amount: 82%);
-                        // background-color: transparent;
+                        // background-color: lighten($color: $black-color, $amount: 82%);
+                        background-color: transparent;
                         color: $primary-color;
                         box-shadow: none;
                     }
@@ -45,7 +47,7 @@
                     &.active,
                     &.accordion-button.active {
                         color: $primary-color;
-                        background-color: lighten($color: $black-color, $amount: 82%);
+                        // background-color: lighten($color: $black-color, $amount: 82%);
                         &::after {
                             opacity: 1;
                             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230E24BB'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
@@ -57,13 +59,14 @@
                         a {
                             display: flex;
                             align-items: center;
+                            line-height: 30px;
                             padding-left: 1rem;
                             color: $text-disabled-color;
                             &::before {
                                 content: "";
                                 display: block;
-                                width: 12px;
-                                height: 12px;
+                                width: 8px;
+                                height: 8px;
                                 border-radius: 50%;
                                 border: 1px solid lighten($color: $black-color, $amount: 65%);
                                 margin-right: 10px;
