@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    padding: 0 15px;
     // background-color: $white-color;
     background-color: $body-color;
     .brand {
         display: flex;
-        padding: 0 15px;
+        // padding: 0 15px;
         img {
             width: 48px;
         }
@@ -81,6 +82,12 @@
                     }
                 }
             }
+            // a.active {
+            //     border: 1px solid $primary-color;
+            //     border-radius: 0.5rem;
+            //     background-color: $white-color !important;
+            //     box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+            // }
         }
         &.last-child {
             margin-top: auto;
