@@ -165,11 +165,11 @@ svg.maxsop.dark path {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  padding: 0 15px;
   background-color: #F8F9FA;
 }
 .sidebar .brand {
   display: flex;
-  padding: 0 15px;
 }
 .sidebar .brand img {
   width: 48px;
