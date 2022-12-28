@@ -1,0 +1,14 @@
+a[data-bs-toggle="tab"] {
+    &.nav-link {
+        padding-bottom: 2px;
+        color: lighten($color: $primary-color, $amount: 35%);
+        &.active {
+            color: $primary-color;
+            border-bottom: 2px solid $primary-color;
+        }
+        &.disabled {
+            color: lighten($color: $black-color, $amount: 35%);
+        }
+    }
+
+}

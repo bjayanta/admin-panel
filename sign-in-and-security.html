@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Admin Panel | MaxSOP</title>
+    <link rel="shortcut icon" href="images/logo_symbol.svg" type="image/x-icon">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- app stylesheet -->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="app">
+    
+    <!-- app aside navigation -->
+	<aside class="aside" id="aside">
+		<nav class="nav nav-tabs">
+			<a class="brand" href="dashboard.html">
+				<img src="images/logo_symbol.svg" alt="MaxSOP" />
+			</a>
+
+			<button data-bs-toggle="tab" data-bs-target="#home-tab" type="button">
+				<i class="bi bi-tv"></i>
+			</button>
+
+			<button data-bs-toggle="tab" data-bs-target="#message-tab" type="button">
+				<i class="bi bi-envelope"></i>
+			</button>
+
+			<button data-bs-toggle="tab" data-bs-target="#info-tab" type="button">
+				<i class="bi bi-info-square"></i>
+			</button>
+
+			<button class="tab-bottom active" data-bs-toggle="tab" data-bs-target="#settings-tab" type="button">
+				<i class="bi bi-gear"></i>
+			</button>
+
+			<button type="button">
+				<i class="bi bi-box-arrow-right"></i>
+			</button>
+		</nav>
+
+		<div class="tab-content">
+			<nav class="tab-pane fade" id="home-tab">
+				<h3>Home</h3>
+				<ul class="accordion">
+					<li>
+						<a href="dashboard.html" class="active">
+							<i class="bi bi-speedometer2"></i>
+							<span>Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="bi bi-cast"></i>
+							<span>Media</span>
+						</a>
+					</li>
+				</ul>
+
+				<strong>Pages</strong>
+				<ul class="accordion">
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Starter</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages">
+							<i class="bi bi-input-cursor-text"></i>
+							<span>Pages</span>
+						</a>
+						<ul id="pages" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">Faq</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Empty page</a></li>
+							<li><a href="#">Notifications</a></li>
+							<li><a href="#">Members</a></li>
+							<li><a href="#">Mail templates</a></li>
+							<li><a href="#">Under construction</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#errors" aria-expanded="true">
+							<i class="bi bi-input-cursor-text"></i>
+							<span>Errors</span>
+						</a>
+						<ul id="errors" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">404</a></li>
+							<li><a href="#">500</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<strong>Modules</strong>
+				<ul class="accordion">
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#module">
+							<i class="bi bi-menu-app"></i>
+							<span>Module</span>
+						</a>
+						<ul id="module" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="module-records.html">Records</a></li>
+							<li><a href="module-search.html">Search</a></li>
+							<li><a href="module-form.html">Form</a></li>
+							<li><a href="module-trash.html">Trash</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<strong>Documentation</strong>
+				<ul class="accordion">
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Getting started</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#customization">
+							<i class="bi bi-menu-app"></i>
+							<span>Customization</span>
+						</a>
+						<ul id="customization" class="accordion-collapse collapse" data-bs-parent="#home-tab">
+							<li><a href="#">Styling</a></li>
+							<li><a href="#">Plugin</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Support</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Change log</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>License</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="bi bi-speedometer2"></i>
+							<span>Copyright</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="tab-pane fade" id="message-tab">
+				<h3>Message</h3>
+			</nav>
+
+			<nav class="tab-pane fade" id="info-tab">
+				<h3>Info</h3>
+			</nav>
+
+			<nav class="tab-pane fade" id="account-tab">
+				<h3>Account</h3>
+				<ul>
+					<li>
+						<a href="#">
+							<i class="bi bi-person"></i>
+							<span>My details</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-bell"></i>
+							<span>Notifications</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-gear"></i>
+							<span>Settings</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-box-arrow-right"></i>
+							<span>Sign Out</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="tab-pane fade show active" id="settings-tab">
+				<h3>Settings</h3>
+				<ul class="accordion">
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#account-preferences">
+							<i class="bi bi-person"></i>
+							<span>Account Preferences</span>
+						</a>
+						<ul id="account-preferences" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
+							<li><a href="#">Personal information</a></li>
+							<li><a href="#">Display</a></li>
+							<li><a href="#">Site preferences</a></li>
+							<li><a href="#">Syncing options</a></li>
+							<li><a href="#">Subscriptions & payments</a></li>
+							<li><a href="#">Partners & services</a></li>
+							<li><a href="#">Account management</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="active">
+							<i class="bi bi-shield-lock"></i>
+							<span>Sign in & Security</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#visibility">
+							<i class="bi bi-person"></i>
+							<span>Visibility</span>
+						</a>
+						<ul id="visibility" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
+							<li><a href="#">Profile & network</a></li>
+							<li><a href="#">MaxSOP activity</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#communications">
+							<i class="bi bi-person"></i>
+							<span>Communications</span>
+						</a>
+						<ul id="communications" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
+							<li><a href="#">How you get your notifications</a></li>
+							<li><a href="#">Who can reach you</a></li>
+							<li><a href="#">Messaging experience</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#data-privacy">
+							<i class="bi bi-person"></i>
+							<span>Data Privacy</span>
+						</a>
+						<ul id="data-privacy" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
+							<li><a href="#">How MaxSOP use your data</a></li>
+							<li><a href="#">Job seeking preferences</a></li>
+							<li><a href="#">Other applications</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#advertising-data">
+							<i class="bi bi-person"></i>
+							<span>Advertising data</span>
+						</a>
+						<ul id="advertising-data" class="accordion-collapse collapse" data-bs-parent="#settings-tab">
+							<li><a href="#">Advertising preferences</a></li>
+							<li><a href="#">Data collected on MaxSOP</a></li>
+							<li><a href="#">Third-pary data</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+	<!-- app aside navigation end -->
+
+	<!-- main content start -->
+	<main class="main">
+		<!-- main header -->
+		<header class="header">
+			<!-- main navigation -->
+			<nav class="navigation">
+				<ul>
+					<li>
+						<a href="#" onclick="asideToggle()">
+							<i class="bi bi-layout-sidebar"></i>
+						</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#">
+							<i class="bi bi-binoculars"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="bi bi-bell"></i>
+							<span class="highlight"></span>
+						</a>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" data-bs-toggle="dropdown">
+							<img src="images/avatar.jpg" alt="User avatar">
+						</a>
+
+						<ul class="dropdown-menu">
+							<li>
+								<a href="profile.html" class="user">
+									<img src="images/avatar.jpg" alt="">
+									<div>
+										<strong>Baky billah khan pathan</strong>
+										<p>Adminstrator</p>
+									</div>
+								</a>
+							</li>
+
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<li>
+								<a href="profile.html">
+									<i class="bi bi-eyeglasses"></i>
+									<span>My details</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="profile-settings.html">
+									<i class="bi bi-fingerprint"></i>
+									<span>Change password</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-people"></i>
+									<span>User manager</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-box-arrow-left"></i>
+									<span>Sign out</span>
+								</a>
+							</li>
+
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-gear"></i>
+									<span>Settings & Privacy</span>
+								</a>
+							</li>
+
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-blockquote-left"></i>
+									<span>About</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-info-circle"></i>
+									<span>Help</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="bi bi-send-exclamation"></i>
+									<span>Send feedback</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!-- main navigation end -->
+		</header>
+
+		<!-- module details start -->
+		<section class="section mb-3">
+			<div class="module">
+				<article >
+					<h2 class="mb-0">Account access</h2>
+					<p class="lead text-muted">Module short description goes to here.</p>
+				</article>
+
+				<!-- 
+				<nav>
+					<a href="module-records.html" class="active">
+						<i class="bi bi-view-list"></i>
+						<span>Records</span>
+					</a>
+					<a href="module-form.html">
+						<i class="bi bi-plus-circle"></i>
+						<span>Create</span>
+					</a>
+					<a href="module-trash.html">
+						<i class="bi bi-trash"></i>
+						<span>Trash</span>
+					</a>
+				</nav> 
+				-->
+			</div>
+		</section>
+		<!-- module details end -->
+
+		<!-- main section -->
+		<section class="section">
+			<div class="accordion" id="accordionSigninAndSecurity">
+				<!-- email -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="emailHeading">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#emailCollapse" aria-expanded="true" aria-controls="emailCollapse">
+							Email address
+						</button>
+					</h2>
+
+					<div id="emailCollapse" class="accordion-collapse collapse show" aria-labelledby="emailHeading" data-bs-parent="#accordionSigninAndSecurity">
+						<div class="accordion-body">
+							<form action="" method="post">
+								<div>
+									<strong>bjayanta.neo@gmail.com</strong>
+									<i class="bi bi-check-circle ms-2"></i>
+									<p>Primary email</p>
+								</div>
+
+								<div class="row mb-3">
+									<div class="col-6">
+										<label for="email-address" class="form-label">
+											<span class="required">Add a new email address</span>
+										</label>
+										<input type="email" class="form-control" id="email-address" placeholder="name@example.com">
+										<small>A confirmation will be sent to this account. Click on the confirmation link to verify and add this email.</small>
+									</div>
+								</div>
+
+								<button type="submit" class="btn btn-primary">Verify and add</button>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<!-- phone -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="phoneHeading">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#phoneCollapse" aria-expanded="false" aria-controls="phoneCollapse">
+							Phone numbers
+						</button>
+					</h2>
+
+					<div id="phoneCollapse" class="accordion-collapse collapse" aria-labelledby="phoneHeading" data-bs-parent="#accordionSigninAndSecurity">
+						<div class="accordion-body">
+							<form action="" method="post">
+								<div>
+									<strong>+880 1775 219457</strong>
+									<i class="bi bi-check-circle ms-2"></i>
+									<p>Primary phone number</p>
+								</div>
+
+								<div class="row mb-3">
+									<div class="col-4">
+										<label for="phone-address" class="form-label">
+											<span class="required">Add a new phone number</span>
+										</label>
+										<input type="text" class="form-control" id="phone-address" required/>
+									</div>
+
+									<div class="col-4">
+										<label for="country" class="form-label">
+											<span class="required">Country</span>
+										</label>
+										<select id="country" class="form-select" required>
+											<option value="" selected disabled>Select one</option>
+											<option value="us">United States</option>
+											<option value="af">Afghanistan</option>
+											<option value="al">Albania</option>
+											<option value="dz">Algeria</option>
+											<option value="as">American Samoa</option>
+											<option value="ad">Andorra</option>
+											<option value="ao">Angola</option>
+											<option value="ai">Anguilla</option>
+											<option value="aq">Antarctica</option>
+										</select>
+									</div>
+								</div>
+
+								<button type="submit" class="btn btn-primary">Verify and add</button>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<!-- password -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="passwordHeading">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#passwordCollapse" aria-expanded="false" aria-controls="passwordCollapse">
+							Change password
+						</button>
+					</h2>
+
+					<div id="passwordCollapse" class="accordion-collapse collapse" aria-labelledby="passwordHeading" data-bs-parent="#accordionSigninAndSecurity">
+						<div class="accordion-body">
+							<form action="" method="post">
+								<p>Create a new password that is at least 8 characters long.</p>
+
+								<div class="row mb-3">
+									<div class="col-4">
+										<label for="current-password" class="form-label">
+											<span class="required">Current password</span>
+										</label>
+										<input type="password" class="form-control" id="current-password" placeholder="&#8902; &#8902; &#8902; &#8902; &#8902; &#8902; &#8902; &#8902;" required/>
+									</div>
+								</div>
+
+								<div class="row mb-3">
+									<div class="col-4">
+										<label for="new-password" class="form-label">
+											<span class="required">New password</span>
+										</label>
+										<input type="password" class="form-control" id="new-password" placeholder="&#8902; &#8902; &#8902; &#8902; &#8902; &#8902; &#8902; &#8902;" required/>
+									</div>
+
+									<div class="col-4">
+										<label for="retype-new-password" class="form-label">
+											<span class="required">Retype new password</span>
+										</label>
+										<input type="password" class="form-control" id="retype-new-password" placeholder="&#8902; &#8902; &#8902; &#8902; &#8902; &#8902; &#8902; &#8902;" required/>
+									</div>
+								</div>
+
+								<div class="mb-3">
+									<button type="submit" class="btn btn-primary">Save & Change</button>
+								</div>
+
+								<a href="#">
+									<span>Forgot password</span>
+									<i class="bi bi-arrow-right"></i>
+								</a>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<!-- where you're signed in -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="signedinHeading">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#signedinCollapse" aria-expanded="false" aria-controls="signedinCollapse">
+							Where you're signed in
+						</button>
+					</h2>
+
+					<div id="signedinCollapse" class="accordion-collapse collapse" aria-labelledby="signedinHeading" data-bs-parent="#accordionSigninAndSecurity">
+						<div class="accordion-body">
+							<p>Current Session details</p>
+
+							<address class="mt-3">
+								<p class="lead">
+									<strong>27/2 Ram Babu Rd, Mymensingh 2200, Bangladesh</strong><br/>
+									<small>(Approximate location)</small>
+								</p>
+								
+								<p class="lead">
+									<strong>Windows 10 on Chrome</strong><br/>
+									IP Address: 27.147.187.156
+								</p>
+
+								<p class="lead">
+									<strong>27.147.187.156</strong><br/>
+									IP Address
+								</p>
+							</address>
+						</div>
+					</div>
+				</div>
+
+				<!-- Devices that remember your password -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="devicesHeading">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deviceCollapse" aria-expanded="false" aria-controls="deviceCollapse">
+							Devices that remember your password
+						</button>
+					</h2>
+
+					<div id="deviceCollapse" class="accordion-collapse collapse" aria-labelledby="devicesHeading" data-bs-parent="#accordionSigninAndSecurity">
+						<div class="accordion-body">
+							<p>
+								<strong>Remembered devices</strong><br/>
+								3 device remembers your account
+							</p>
+
+							<p>
+								<a href="#">
+									<span>Remove all devices</span>
+									<i class="bi bi-arrow-right ms-2"></i>
+								</a>
+							</p>
+							
+							<div class="d-flex flex-wrap">
+								<div class="p-3 border me-3">
+									<strong>Android</strong>
+									<p>
+										27.147.187.156 <br/>
+										<small>15 May 2022</small>
+									</p>
+									<a href="#">Remove</a>
+								</div>
+
+								<div class="p-3 border me-3">
+									<strong>iOS</strong>
+									<p>
+										27.147.187.156 <br/>
+										<small>15 May 2022</small>
+									</p>
+									<a href="#">Remove</a>
+								</div>
+
+								<div class="p-3 border me-3">
+									<strong>Google Chrome</strong>
+									<p>
+										27.147.187.156 <br/>
+										<small>15 May 2022</small>
+									</p>
+									<a href="#">Remove</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Two-step verification -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="verificationHeading">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#verificationCollapse" aria-expanded="false" aria-controls="verificationCollapse">
+							Two-step verification
+						</button>
+					</h2>
+
+					<div id="verificationCollapse" class="accordion-collapse collapse" aria-labelledby="verificationHeading" data-bs-parent="#accordionSigninAndSecurity">
+						<div class="accordion-body">
+							<strong>Comming soon.</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- main content end -->
+
+	<!-- overlay -->
+	<div class="overlay" onclick="asideToggle()"></div>
+
+	<!-- bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- app js -->
+	<!-- <script src="js/app.js"></script> -->
+	<script src="js/aside.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.card {
+    border: none;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: $white-color;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    .card-header, .card-footer {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        background-color: transparent;
+        padding: 1.5rem;
+    }
+    .card-header {
+        border-bottom: none;
+    }
+    .card-footer {
+        border-top: none;
+    }
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        .card-header, .card-footer {
+            flex-direction: column;
+        }
+        .card-header {
+            margin-bottom: 1rem;
+            nav {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .card-body {
+            .search {
+                flex-direction: column;
+                div {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

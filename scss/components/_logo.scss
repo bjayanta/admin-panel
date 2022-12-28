@@ -1,0 +1,10 @@
+svg.maxsop {
+    path {
+        fill: $white-color;
+    }
+    &.dark {
+        path {
+            fill: $primary-color;
+        }
+    }
+}

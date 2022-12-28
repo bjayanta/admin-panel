@@ -1,0 +1,11 @@
+.required {
+    position: relative;
+    &::after {
+        content: "*";
+        position: absolute;
+        right: -12px;
+        top: -5px;
+        color: #FF0000;
+        font-size: 24px;
+    }
+}

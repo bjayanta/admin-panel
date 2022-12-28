@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Title -->
+    <title>Form | MaxSOP</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- Bootstrap icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Bootstrap css CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+
+<body>
+
+
+
+
+    <!-- Start aside =================================== -->
+    <aside id="page-aside">
+
+
+        <!-- Start aside button bar =================================== -->
+        <div class="left-icon-wrap">
+
+
+            <!-- Start logo =================================== -->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logos/icon-logo.svg" class="w-100" alt="Brand name">
+            </a>
+            <!-- End logo =================================== -->
+
+            <!-- Start tad buttons =================================== -->
+            <div class="nav nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+                <!-- Start page button =================================== -->
+                <button class="nav-link" title="Pages" id="v-pills-pages-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-pages" type="button" role="tab" aria-controls="v-pills-pages"
+                    aria-selected="false">
+                    <i class="bi bi-display"></i>
+                </button>
+                <!-- End page button =================================== -->
+
+
+                <!-- Start component button =================================== -->
+                <button class="nav-link" title="Components" id="v-pills-components-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-components" type="button" role="tab" aria-controls="v-pills-components"
+                    aria-selected="false">
+                    <i class="bi bi-code-square"></i>
+                </button>
+                <!-- End component button =================================== -->
+            </div>
+            <!-- End tad buttons =================================== -->
+
+
+            <!-- Start aside Expand & logout button =================================== -->
+            <div class="footer-button">
+                <button class="button" onclick="expandFunction()">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+                <button class="button">
+                    <i class="bi bi-box-arrow-left"></i>
+                </button>
+            </div>
+            <!-- End aside Expand & logout button =================================== -->
+
+
+        </div>
+        <!-- End aside button bar =================================== -->
+
+
+        <!-- Start aside menu bar =================================== -->
+        <div class="right-menu-wrap">
+            <div class="tab-content" id="v-pills-tabContent">
+
+
+                <!-- Start pages menu list =================================== -->
+                <div class="tab-pane fade" id="v-pills-pages" role="tabpanel" aria-labelledby="v-pills-pages-tab">
+
+
+                    <!-- Start fixt title =================================== -->
+                    <div class="fixt-title">
+                        <p>Pages</p>
+                    </div>
+                    <!-- End fixt title =================================== -->
+
+                    <!-- Start components single menus =================================== -->
+                    <ul class="accordion" id="page">
+                        <li class="accordion-item">
+                            <a href="../index.html" class="sigle-nav-link">
+                                <i class="bi bi-speedometer2"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="../empty_page.html" class="sigle-nav-link">
+                                <i class="bi bi-clipboard"></i>
+                                <span>Empty page</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="../pages/chatbox.html" class="sigle-nav-link">
+                                <i class="bi bi-chat-dots"></i>
+                                <span>chatbox</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="../pages/mail_template.html" class="sigle-nav-link">
+                                <i class="bi bi-envelope-paper"></i>
+                                <span>Mail template</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="../pages/screen_lock.html" class="sigle-nav-link">
+                                <i class="bi bi-file-earmark-lock"></i>
+                                <span>Screen lock</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="../pages/under_construction.html" class="sigle-nav-link">
+                                <i class="bi bi-tools"></i>
+                                <span>Under construction </span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="../pages/copyright.html" class="sigle-nav-link">
+                                <i class="bi bi-clipboard-check"></i>
+                                <span>Copyright</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="../pages/license.html" class="sigle-nav-link">
+                                <i class="bi bi-app"></i>
+                                <span>License</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="../pages/support.html" class="sigle-nav-link">
+                                <i class="bi bi-question-circle"></i>
+                                <span>Support</span>
+                            </a>
+                        </li>
+
+
+                        <li class="accordion-item">
+                            <span class="accordion-item-title mt-2">Dropdown</span>
+                        </li>
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#authentication" aria-expanded="false" aria-controls="authentication">
+                                <i class="bi bi-fingerprint"></i>
+                                <span class="me-auto">authentication</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="authentication" class="accordion-collapse collapse" data-bs-parent="#page">
+                                <li>
+                                    <a href="../pages/auth_login.html" class="nav-link"><span>Login</span></a>
+
+                                </li>
+                                <li>
+                                    <a href="../pages/auth_register.html" class="nav-link"><span>Register</span></a>
+                                </li>
+                                <li>
+                                    <a href="../pages/auth_varify_email.html" class="nav-link"><span>varify email</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../pages/auth_forgot_pass.html" class="nav-link"><span>forgot
+                                            password</span></a>
+                                </li>
+                                <li>
+                                    <a href="../pages/auth_reset_pass.html" class="nav-link"><span>reset
+                                            password</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#demo-item" aria-expanded="false" aria-controls="demo-item">
+                                <i class="bi bi-diagram-3"></i>
+                                <span class="me-auto">Demo item</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="demo-item" class="accordion-collapse collapse" data-bs-parent="#page">
+                                <li>
+                                    <a href="../pages/item_records.html" class="nav-link"><span>All records</span></a>
+                                </li>
+                                <li>
+                                    <a href="../pages/item_details.html" class="nav-link"><span>view single
+                                            item</span></a>
+                                </li>
+                                <li>
+                                    <a href="../pages/item_entry.html" class="nav-link"><span>New entry</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#media" aria-expanded="false" aria-controls="media">
+                                <i class="bi bi-images"></i>
+                                <span class="me-auto">Media</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="media" class="accordion-collapse collapse" data-bs-parent="#page">
+                                <li>
+                                    <a href="../pages/media_gallery.html" class="nav-link"><span>Media
+                                            gallery</span></a>
+                                </li>
+                                <li>
+                                    <a href="../pages/media_album.html" class="nav-link"><span>Media album</span></a>
+                                </li>
+                                <li>
+                                    <a href="../pages/media_upload.html" class="nav-link"><span>Media upload</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#receipt" aria-expanded="false" aria-controls="receipt">
+                                <i class="bi bi-receipt"></i>
+                                <span class="me-auto">receipt</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="receipt" class="accordion-collapse collapse" data-bs-parent="#page">
+
+                                <li>
+                                    <a href="../pages/invoice.html" class="nav-link"><span>Invoice</span></a>
+                                </li>
+                                <li>
+                                    <a href="../pages/money_receipt.html" class="nav-link"><span>Money
+                                            receipt</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="accordion-item">
+                            <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#error" aria-expanded="false" aria-controls="error">
+                                <i class="bi bi-exclamation-diamond"></i>
+                                <span class="me-auto">errors</span>
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+
+                            <ul id="error" class="accordion-collapse collapse" data-bs-parent="#page">
+                                <li>
+                                    <a href="../pages/error_404.html" class="nav-link"><span>404 error</span></a>
+                                </li>
+                                <li>
+                                    <a href="../pages/error_500.html" class="nav-link"><span>500 error</span></a>
+                                </li>
+                                <li>
+                                    <a href="../pages/error_503.html" class="nav-link"><span>503 error</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                    </ul>
+                    <!-- End components single menus =================================== -->
+
+
+                </div>
+                <!-- End pages menu list =================================== -->
+
+                <!-- Start components menu list =================================== -->
+                <div class="tab-pane fade" id="v-pills-components" role="tabpanel"
+                    aria-labelledby="v-pills-components-tab">
+
+                    <!-- Start fixt title =================================== -->
+                    <div class="fixt-title">
+                        <p>Components</p>
+                    </div>
+                    <!-- End fixt title =================================== -->
+
+
+
+                    <!-- Start menus =================================== -->
+                    <ul class="accordion">
+                        <li class="accordion-item">
+                            <a href="./table.html" class="sigle-nav-link">
+                                <i class="bi bi-table"></i>
+                                <span>Table</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./form.html" class="sigle-nav-link" id="is-menu-active">
+                                <i class="bi bi-input-cursor"></i>
+                                <span>Form</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./button.html" class="sigle-nav-link">
+                                <i class="bi bi-menu-button-fill"></i>
+                                <span>Button</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./accordion.html" class="sigle-nav-link">
+                                <i class="bi bi-view-list"></i>
+                                <span>Accordion</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./card.html" class="sigle-nav-link">
+                                <i class="bi bi-postcard"></i>
+                                <span>Card</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./alerts.html" class="sigle-nav-link">
+                                <i class="bi bi-exclamation-diamond"></i>
+                                <span>Alerts</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./breadcrumb.html" class="sigle-nav-link">
+                                <i class="bi bi-link"></i>
+                                <span>Breadcrumb</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./carousel.html" class="sigle-nav-link">
+                                <i class="bi bi-file-slides"></i>
+                                <span>Carousel</span>
+                            </a>
+                        </li>
+
+                        <li class="accordion-item">
+                            <a href="./List_group.html" class="sigle-nav-link">
+                                <i class="bi bi-card-checklist"></i>
+                                <span>List group</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./modal.html" class="sigle-nav-link">
+                                <i class="bi bi-aspect-ratio"></i>
+                                <span>Modal</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./pagination.html" class="sigle-nav-link">
+                                <i class="bi bi-123"></i>
+                                <span>Pagination</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./lazy_loader.html" class="sigle-nav-link">
+                                <i class="bi bi-arrow-clockwise"></i>
+                                <span>lazy loader</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./progressbar.html" class="sigle-nav-link">
+                                <i class="bi bi-kanban"></i>
+                                <span>Progressbar</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./tooltips.html" class="sigle-nav-link">
+                                <i class="bi bi-chat-square-dots"></i>
+                                <span>Tooltips</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./text_editor.html" class="sigle-nav-link">
+                                <i class="bi bi-postcard"></i>
+                                <span>Text editor</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./world_map.html" class="sigle-nav-link">
+                                <i class="bi bi-map"></i>
+                                <span>World map</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./country_map.html" class="sigle-nav-link">
+                                <i class="bi bi-map"></i>
+                                <span>Country map</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./Chart.html" class="sigle-nav-link">
+                                <i class="bi bi-bar-chart"></i>
+                                <span>Chart</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./calendar.html" class="sigle-nav-link">
+                                <i class="bi bi-calendar-date"></i>
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="./calculator.html" class="sigle-nav-link">
+                                <i class="bi bi-calculator"></i>
+                                <span>calculator</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End menus =================================== -->
+
+
+                </div>
+                <!-- End components menu list =================================== -->
+
+
+
+
+            </div>
+        </div>
+        <!-- End aside menu bar =================================== -->
+
+    </aside>
+    <!-- End aside =================================== -->
+
+
+    <!-- Start aside background Shadow =================================== -->
+    <div id="aside-layer" onclick="expandFunction()"></div>
+    <!-- End aside background Shadow =================================== -->
+
+
+    <!-- main-bar -->
+    <main class="main-bar" id="main-bar">
+
+        <!-- Start navigation =================================== -->
+        <nav class="navbar bg-color">
+            <div class="container-fluid">
+                <ul class="navbar-wrap ms-auto mb-2 mb-lg-0">
+
+                    <!-- Start search button =================================== -->
+                    <li class="nav-item" onclick="shearchFunction()">
+                        <a class="nav-link " href="#"><i class="bi bi-search"></i></a>
+                    </li>
+                    <!-- End search button =================================== -->
+
+
+
+
+                    <!-- Start translate button =================================== -->
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><i class="bi bi-translate"></i></a>
+                    </li>
+                    <!-- End translate button =================================== -->
+
+
+                    <!-- Start dark theme button =================================== -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="themeColorChange()"><i class="bi bi-moon-stars"
+                                id="bi-moon-stars"></i></a>
+                    </li>
+                    <!-- End dark theme button =================================== -->
+
+
+                    <!-- Start notification =================================== -->
+                    <li class="nav-item notification dropdown">
+
+
+                        <!-- Start notification button =================================== -->
+                        <a class="nav-link" href="#" id="notification-dropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="bi bi-bell"></i>
+                            <!-- badge -->
+                            <span class="badge badge-counter">1</span>
+                        </a>
+                        <!-- End notification button =================================== -->
+
+                        <!-- Start notification Dropdoun memu =================================== -->
+                        <ul class="dropdown-menu" aria-labelledby="notification-dropdown">
+                            <li>
+                                <a class="dropdown-item isseen" href="#">
+                                    <img src="../assets/images/user/baky.jpg" alt="baky">
+                                    <div>
+                                        <p><strong>Baky Billah Khan Pathan</strong></p>
+                                        <p><small>Admin</small></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item isseen" href="#">
+                                    <img src="../assets/icons/success.svg" alt="success">
+                                    <div>
+                                        <p><strong>Success notification</strong></p>
+                                        <p><small>Success</small></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="../assets/icons/warning.svg" alt="success">
+                                    <div>
+                                        <p><strong>Warning notification</strong></p>
+                                        <p><small>Warning</small></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item isseen" href="#">
+                                    <img src="../assets/icons/danger.svg" alt="success">
+                                    <div>
+                                        <p><strong>Danger notification </strong></p>
+                                        <p><small>Danger Danger Danger Danger Danger Danger Danger Danger Danger
+                                            </small></p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- End notification Dropdoun memu =================================== -->
+                    </li>
+                    <!-- End notification =================================== -->
+
+
+
+                    <!-- Start service =================================== -->
+                    <li class="nav-item service dropdown">
+
+
+
+                        <!-- Start service dropdown button =================================== -->
+                        <a class="nav-link dropdown-toggl" href="#" id="service-dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-grid"></i>
+                            <!-- badge-circle -->
+                            <span class="badge-circle"></span>
+                        </a>
+                        <!-- End service dropdown button =================================== -->
+
+
+                        <!-- Start service dropdown menus =================================== -->
+                        <ul class="dropdown-menu" aria-labelledby="service-dropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-speedometer"></i>
+                                    <span>Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-calculator"></i>
+                                    <span> POS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-people"></i>
+                                    <span>HR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-chat-left-dots"></i>
+                                    <span>SMS</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-speedometer"></i>
+                                    <span>Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-calculator"></i>
+                                    <span> POS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-people"></i>
+                                    <span>HR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-chat-left-dots"></i>
+                                    <span>SMS</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-speedometer"></i>
+                                    <span>Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-calculator"></i>
+                                    <span> POS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-people"></i>
+                                    <span>HR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-chat-left-dots"></i>
+                                    <span>SMS</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-speedometer"></i>
+                                    <span>Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-calculator"></i>
+                                    <span> POS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-people"></i>
+                                    <span>HR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-chat-left-dots"></i>
+                                    <span>SMS</span></a>
+                            </li>
+                        </ul>
+                        <!-- End service dropdown menus =================================== -->
+                    </li>
+                    <!-- End service =================================== -->
+
+
+                    <!-- Start full screen button =================================== -->
+                    <li class="nav-item d-md-inline d-none">
+                        <a class="nav-link" href="#" onclick="toggleFullScreen()">
+                            <i class="bi bi-arrows-fullscreen" id="bi-arrows-fullscreen"></i>
+                        </a>
+                    </li>
+                    <!-- End full screen button =================================== -->
+
+
+                    <!-- Start user  =================================== -->
+                    <li class="nav-item user dropdown">
+
+                        <!-- Start user dropdown button  =================================== -->
+                        <a class="nav-link dropdown-toggl" href="#" id="user-dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../assets/images/user/baky.jpg" alt="">
+
+                            <!-- badge-circle Active-->
+                            <span class="badge-circle active"></span>
+                        </a>
+                        <!-- End user dropdown button  =================================== -->
+
+                        <!-- Start user dropdown menu  =================================== -->
+                        <ul class="dropdown-menu" aria-labelledby="user-dropdown">
+                            <li>
+                                <a class="dropdown-item profile" href="../profile.html">
+                                    <img src="../assets/images/user/baky.jpg" alt="">
+                                    <div>
+                                        <h5>baky billah khan pathan</h5>
+                                        <p>Admin</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../settings.html">
+                                    <i class="bi bi-gear"></i>
+                                    <span>Settings & Privacy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../support.html">
+                                    <i class="bi bi-question-circle"></i>
+                                    <span>Help & Support</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-box-arrow-left"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- End user dropdown menu  =================================== -->
+
+                    </li>
+                    <!-- End user  =================================== -->
+
+                </ul>
+
+                <!-- Start search-bar =================================== -->
+                <div class="search-bar" id="search-bar">
+                    <form class="h-100">
+                        <input class="form-control" id="search-input" type="text" placeholder="Search">
+                        <button type="button" class="close-button" onclick="shearchFunction()"><i
+                                class="bi bi-x-lg"></i></button>
+                    </form>
+                </div>
+                <!-- End search-bar =================================== -->
+            </div>
+        </nav>
+        <!-- End navigation =================================== -->
+
+
+        <div class="container-fluid mt-3 mb-5">
+            <div class="row g-4">
+
+
+
+                <!-- Start basic form ================================ -->
+                <div class="col-md-6">
+                    <div class="widget">
+                        <div class="widget-body">
+
+                            <h5 class="border-bottom mb-4">Basic form</h5>
+
+
+                            <div class="mb-3">
+                                <label for="basic-text" class="form-label required">Text input</label>
+                                <input type="text" class="form-control is-valid" name="#" id="basic-text"
+                                    placeholder="@example" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-email" class="form-label">email input</label>
+                                <input type="email" class="form-control is-invalid" name="#" id="basic-email"
+                                    placeholder="name@example.com">
+                                <div class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-file" class="form-label">file input</label>
+                                <input type="file" class="form-control" name="#" id="basic-file">
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-select" class="form-label">select input</label>
+                                <select class="form-select" name="#" id="basic-select">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-datalist" class="form-label">datalist</label>
+                                <input class="form-control" list="datalistOptions" name="#" id="basic-datalist"
+                                    placeholder="Type to search...">
+                                <datalist id="datalistOptions">
+                                    <option value="San Francisco">
+                                    <option value="New York">
+                                    <option value="Seattle">
+                                    <option value="Los Angeles">
+                                    <option value="Chicago">
+                                </datalist>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-pass" class="form-label">basic password input</label>
+                                <input type="password" class="form-control" name="#" id="basic-pass"
+                                    placeholder="password">
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basicPassword" class="form-label">basic Password input with toggle
+                                    button</label>
+                                <div class="toggle-password-fill">
+                                    <input type="password" name="password" class="form-control" name="#"
+                                        id="basicPassword" placeholder="password">
+                                    <button type="button" class="pass-eye" onclick="show(event, basicPassword)"><i
+                                            class="bi bi-eye-fill"></i></button>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-disabled" class="form-label">disabled input</label>
+                                <input type="text" class="form-control" name="#" id="disabled-email"
+                                    placeholder="disabled" disabled>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-textarea" class="form-label">Example textarea</label>
+                                <textarea class="form-control" placeholder="Example textarea" name="#"
+                                    id="basic-textarea" rows="3"></textarea>
+                            </div>
+
+
+                            <div class="text-end">
+                                <button class="btn btn-danger me-3">Reset</button>
+                                <button class="btn btn-success">Save & change</button>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End basic form ================================ -->
+
+                <!-- Start basic form with icon ================================ -->
+                <div class="col-md-6">
+                    <div class="widget">
+                        <div class="widget-body">
+
+                            <h5 class="border-bottom mb-4">Basic form with icon</h5>
+
+
+                            <div class="mb-3">
+                                <label for="basic-icon-text" class="form-label">Text input</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="form-control is-valid" placeholder="Example"
+                                        name="#" id="basic-icon-text">
+                                    <div class="valid-tooltip">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-icon-email" class="form-label">Email input</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control is-invalid" placeholder="Example"
+                                        name="#" id="basic-icon-email">
+                                    <div class="invalid-tooltip">
+                                        Please choose a unique and valid username.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-icon-number" class="form-label">Number input</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                                    <input type="nimber" class="form-control" placeholder="xxxxxx" name="#"
+                                        id="basic-icon-number">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-icon-select" class="form-label">select menu</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-check2-all"></i></span>
+                                    <select class="form-select" name="#" id="basic-icon-select">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-icon-datalist" class="form-label">datalist</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-check2-all"></i></span>
+                                    <input class="form-control" list="datalistOptions" name="#"
+                                        id="basic-icon-datalist" placeholder="Type to search...">
+                                    <datalist id="datalistOptions">
+                                        <option value="San Francisco">
+                                        <option value="New York">
+                                        <option value="Seattle">
+                                        <option value="Los Angeles">
+                                        <option value="Chicago">
+                                    </datalist>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-icon-pass" class="form-label">password input</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-unlock"></i></span>
+                                    <input type="nimber" class="form-control" placeholder="password" name="#"
+                                        id="basic-icon-pass">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basicIconPassword" class="form-label">Password input with toggle
+                                    button</label>
+                                <div class="input-group toggle-password-fill">
+                                    <span class="input-group-text"><i class="bi bi-unlock"></i></span>
+                                    <input type="password" class="form-control" placeholder="password"
+                                        name="password" id="basicIconPassword">
+                                    <button type="button" class="pass-eye" onclick="show(event, basicIconPassword)"><i
+                                            class="bi bi-eye-fill"></i></button>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-icon-disabled" class="form-label">Disabled Input</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-unlock"></i></span>
+                                    <input type="nimber" class="form-control" placeholder="Disabled" name="#"
+                                        id="basic-icon-disabled" disabled>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="basic-icon-textarea" class="form-label">Example textarea</label>
+                                <textarea class="form-control" placeholder="Example textarea" name="#"
+                                    id="basic-icon-textarea" rows="3"></textarea>
+                            </div>
+
+
+                            <div class="text-end">
+                                <button class="btn btn-danger me-3"><i class="bi bi-trash"></i> Reset</button>
+                                <button class="btn btn-success"><i class="bi bi-check-circle"></i> Save &
+                                    change</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End basic form with icon ================================ -->
+
+
+                <!-- Start inline form ================================================ -->
+                <div class="col-md-6">
+                    <div class="widget">
+                        <div class="widget-body">
+
+                            <h5 class="border-bottom mb-4">Inline form</h5>
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-text" class="form-label required">Text Input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="#" id="inline-text"
+                                        placeholder="@example" required>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-email" class="form-label required">Email Input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="#" id="inline-email"
+                                        placeholder="name@example.com" required>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-file" class="form-label required">file Input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control" name="#" id="inline-file" required>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-select" class="form-label required">select input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <select class="form-select" name="#" id="inline-select">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-datalist" class="form-label required">datalist</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <input class="form-control" list="datalistOptions" name="#"
+                                        id="inline-datalist" placeholder="Type to search...">
+                                    <datalist id="datalistOptions">
+                                        <option value="San Francisco">
+                                        <option value="New York">
+                                        <option value="Seattle">
+                                        <option value="Los Angeles">
+                                        <option value="Chicago">
+                                    </datalist>
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-pass" class="form-label required">inline password</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" name="#" id="inline-pass"
+                                        placeholder="password">
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inlinePassword" class="form-label required">inline </label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="toggle-password-fill">
+                                        <input type="password" name="password" class="form-control" name="#"
+                                            id="inlinePassword" placeholder="password">
+                                        <button type="button" class="pass-eye" onclick="show(event, inlinePassword)"><i
+                                                class="bi bi-eye-fill"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-disabled" class="form-label">inline disabled</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="#" id="inline-disabled"
+                                        placeholder="disabled" disabled>
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row">
+                                <div class="col-sm-2">
+                                    <label for="inline-textarea" class="form-label">inline textarea</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" placeholder="Example textarea" name="#"
+                                        id="inline-textarea" rows="3"></textarea>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="text-end">
+                                <button class="btn btn-danger me-3">Reset</button>
+                                <button class="btn btn-success">Save & change</button>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End inline form ================================================ -->
+
+
+
+                <!-- Start Inline form with icon ================================================ -->
+                <div class="col-md-6">
+                    <div class="widget">
+                        <div class="widget-body">
+
+                            <h5 class="border-bottom mb-4">Inline form with icon</h5>
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-icon-text" class="form-label required">Text Input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                        <input type="text" class="form-control" placeholder="Example" name="#"
+                                            id="inline-icon-text">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-icon-email" class="form-label required">Email Input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" placeholder="Example" name="#"
+                                            id="inline-icon-email">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-icon-number" class="form-label required">Number Input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                                        <input type="nimber" class="form-control" placeholder="xxxxxx" name="#"
+                                            id="inline-icon-number">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-icon-select" class="form-label required">select Input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-check2-all"></i></span>
+                                        <select class="form-select" name="#" id="inline-icon-select">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-icon-datalist" class="form-label required">datalist</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-check2-all"></i></span>
+                                        <input class="form-control" list="datalistOptions" name="#"
+                                            id="inline-icon-datalist" placeholder="Type to search...">
+                                        <datalist id="datalistOptions">
+                                            <option value="San Francisco">
+                                            <option value="New York">
+                                            <option value="Seattle">
+                                            <option value="Los Angeles">
+                                            <option value="Chicago">
+                                        </datalist>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-icon-pass" class="form-label required">password input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-unlock"></i></span>
+                                        <input type="nimber" class="form-control" placeholder="password" name="#"
+                                            id="inline-icon-pass">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inlineIconPassword" class="form-label required">password input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="input-group toggle-password-fill">
+                                        <span class="input-group-text"><i class="bi bi-unlock"></i></span>
+                                        <input type="password" class="form-control" placeholder="password"
+                                            name="password" id="inlineIconPassword">
+                                        <button type="button" class="pass-eye"
+                                            onclick="show(event, inlineIconPassword)"><i
+                                                class="bi bi-eye-fill"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row align-items-center">
+                                <div class="col-sm-2">
+                                    <label for="inline-icon-disabled" class="form-label required">Disabled input</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-unlock"></i></span>
+                                        <input type="nimber" class="form-control" placeholder="Disabled" name="#"
+                                            id="inline-icon-disabled" disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="mb-3 row">
+                                <div class="col-sm-2">
+                                    <label for="inline-icon-textarea" class="form-label required">inline
+                                        textarea</label>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" placeholder="Example textarea" name="#"
+                                        id="inline-icon-textarea" rows="3"></textarea>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="text-end">
+                                <button class="btn btn-danger me-3"><i class="bi bi-trash"></i> Reset</button>
+                                <button class="btn btn-success"><i class="bi bi-check-circle"></i> Save &
+                                    change</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Inline form with icon ================================================ -->
+
+
+                <!-- Start Others ================================================ -->
+                <div class="col-md-6">
+                    <div class="widget">
+                        <div class="widget-body">
+
+                            <h5 class="border-bottom mb-4">Others</h5>
+                            <div class="mb-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="basicCheckbox1"
+                                        value="option1">
+                                    <label class="form-check-label" for="basicCheckbox1">basic checkbox 1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="basicCheckbox2"
+                                        value="option2">
+                                    <label class="form-check-label" for="basicCheckbox2">basic checkbox 2</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="basicRadio1" value="option1">
+                                    <label class="form-check-label" for="basicRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="basicRadio2" value="option2">
+                                    <label class="form-check-label" for="basicRadio2">2</label>
+                                </div>
+
+
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox
+                                        input</label>
+                                </div>
+
+
+                                <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btn-check-outlined">Single
+                                    toggle</label><br>
+
+
+                                <label for=Range1" class="form-label mt-3">Example range</label>
+                                <input type="range" class="form-range" id=Range1">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Others ================================================ -->
+
+
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+    <!-- Javascript -->
+    <!-- Bootstrap js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../js/aside.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
