@@ -1,8 +1,8 @@
 # Admin Panel
 
-Admin Panel
+Very simple project.
 
-## Demos
+## Follow
 
 https://demos.creative-tim.com/soft-ui-dashboard-pro/pages/dashboards/default.html
 https://excalidraw.com/
