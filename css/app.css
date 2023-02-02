@@ -111,6 +111,25 @@ body {
   font-size: 24px;
 }
 
+.modal.modal-right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  max-width: 768px;
+  width: 100%;
+  right: -768px;
+  transform: translate(0, 0);
+}
+.modal.modal-right .modal-dialog .modal-content {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  border-radius: 0;
+  border: none;
+}
+.modal.modal-right.show .modal-dialog {
+  right: 0;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
+}
 .modal .modal-dialog {
   max-width: 768px;
   width: 100%;
@@ -124,6 +143,9 @@ body {
 }
 
 @media (max-width: 992px) {
+  .modal.modal-right .modal-dialog {
+    max-width: 100vw;
+  }
   .modal .modal-dialog {
     margin: 0;
   }
