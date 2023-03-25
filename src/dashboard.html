@@ -8,32 +8,86 @@
 
     <!-- Stylesheet -->
     <link href="/dist/output.css" rel="stylesheet">
+	<!-- Material Symbols -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body x-data="{asideCollapse:false}">
     
     <!-- Wrapper -->
     <div class="relative">
         <!-- Sidebar navigation -->
-        <aside class="fixed top-0 left-0 h-screen px-4 overflow-hidden bg-white" :class="asideCollapse ? 'w-20' : 'w-80'">
+        <aside class="flex flex-col fixed top-0 left-0 h-screen overflow-x-hidden" :class="asideCollapse ? 'w-20' : 'w-80'">
             <!-- Brand -->
-			<a href="dashboard.html" class="flex items-center h-16">
+			<a href="dashboard.html" class="flex items-center px-4 py-4">
 				<img src="assets/images/logo.png" class="w-6 h-6" alt="JB Enterprise" />
 				<span class="text-xl font-semibold ml-2" :class="asideCollapse ? 'hidden' : ''">JB Enterprise</span>
 			</a>
 
             <!-- Basic -->
             <nav class="mb-2">
-				<ul>
+				<ul class="space-y-1">
 					<li>
-						<a href="dashboard.html">
-							<span :class="asideCollapse ? 'hidden' : ''">Dashboard</span>
+						<a href="dashboard.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">home</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Dashboard</span>
 						</a>
 					</li>
 
 					<li>
-						<a href="#">
-							<span :class="asideCollapse ? 'hidden' : ''">Media</span>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">widgets</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Widgets</span>
 						</a>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">bar_chart_4_bars</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Charts</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">category</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">UI Elements</span>
+							<span class="material-symbols-outlined ml-auto">chevron_right</span>
+						</a>
+
+						<ul class="space-y-1 hidden">
+							<li><a href="#">General</a></li>
+							<li><a href="#">Icons</a></li>
+							<li><a href="#">Buttons</a></li>
+							<li><a href="#">Sliders</a></li>
+							<li><a href="#">Modals & Alerts</a></li>
+							<li><a href="#">Navbar & Tabs</a></li>
+							<li><a href="#">Under construction</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">edit_square</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Forms</span>
+						</a>
+
+						<ul class="space-y-1 hidden">
+							<li><a href="#">General</a></li>
+							<li><a href="#">Editors</a></li>
+							<li><a href="#">Validation</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">table</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Tables</span>
+						</a>
+
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Simple Tables</a></li>
+							<li><a href="#">DataTabes</a></li>
+						</ul>
 					</li>
 				</ul>
 			</nav>
@@ -41,107 +95,243 @@
 
             <!-- Pages -->
             <nav class="mb-2">
-				<strong>Pages</strong>
-				<ul>
+				<h4 class="px-4 my-4" :class="asideCollapse ? 'hidden' : ''">Pages</h4>
+				<ul class="space-y-1">
 					<li>
-						<a href="#">
-							<span>Starter</span>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">lock_open</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Authentication</span>
 						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span>Pages</span>
-						</a>
-						<ul>
-							<li><a href="#">Faq</a></li>
-							<li><a href="#">Pricing</a></li>
-							<li><a href="#">Empty page</a></li>
-							<li><a href="#">Notifications</a></li>
-							<li><a href="#">Members</a></li>
-							<li><a href="#">Mail templates</a></li>
-							<li><a href="#">Under construction</a></li>
+
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Registration</a></li>
+							<li><a href="#">Forgot Password</a></li>
+							<li><a href="#">Forgot Password</a></li>
+							<li><a href="#">Lock Screen</a></li>
 						</ul>
 					</li>
+
 					<li>
-						<a href="#">
-							<span>Errors</span>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">engineering</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Maintenance</span>
 						</a>
-						<ul>
-							<li><a href="#">404</a></li>
-							<li><a href="#">500</a></li>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Error</a></li>
+							<li><a href="#">Comming Soon</a></li>
+							<li><a href="#">Offline UI</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">shopping_cart</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">E-Commerce</span>
+						</a>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Product</a></li>
+							<li><a href="#">Product List</a></li>
+							<li><a href="#">Product Edit</a></li>
+							<li><a href="#">Product Detail</a></li>
+							<li><a href="#">Product Card</a></li>
+							<li><a href="#">Credit Card Form</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">mail</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Email</span>
+						</a>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Compose Email</a></li>
+							<li><a href="#">Inbox</a></li>
+							<li><a href="#">Read Mail</a></li>
+							<li>
+								<a href="#">Email Template</a>
+								<ul class="space-y-1">
+									<li><a href="#">Welcome Email</a></li>
+									<li><a href="#">Reset Password</a></li>
+									<li><a href="#">Newsletter Email</a></li>
+									<li><a href="#">App Launch</a></li>
+									<li><a href="#">Activation Code</a></li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 				</ul>
 			</nav>
             <!-- Pages end -->
 
-            <!-- Modules -->
-            <nav class="mb-2">
-				<strong>Modules</strong>
-				<ul>
+            <!-- Apps -->
+			<nav class="mb-2">
+				<h4 class="px-4 my-4">Apps</h4>
+				<ul class="space-y-1">
 					<li>
-						<a href="#">
-							<span>Module</span>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">lock_open</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Authentication</span>
 						</a>
-						<ul>
-							<li><a href="module-records.html">Records</a></li>
-							<li><a href="module-form.html">Form</a></li>
-							<li><a href="module-trash.html">Trash</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-            <!-- Modules end -->
 
-            <!-- Company -->
-            <nav>
-				<strong>Company</strong>
-				<ul>
-					<li>
-						<a href="#">
-							<span>Getting started</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<span>Customization</span>
-						</a>
-						<ul>
-							<li><a href="#">Styling</a></li>
-							<li><a href="#">Plugin</a></li>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Registration</a></li>
+							<li><a href="#">Forgot Password</a></li>
+							<li><a href="#">Forgot Password</a></li>
+							<li><a href="#">Lock Screen</a></li>
 						</ul>
 					</li>
 
 					<li>
-						<a href="#">
-							<span>Support</span>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">engineering</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Maintenance</span>
+						</a>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Error</a></li>
+							<li><a href="#">Comming Soon</a></li>
+							<li><a href="#">Offline UI</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">shopping_cart</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">E-Commerce</span>
+						</a>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Product</a></li>
+							<li><a href="#">Product List</a></li>
+							<li><a href="#">Product Edit</a></li>
+							<li><a href="#">Product Detail</a></li>
+							<li><a href="#">Product Card</a></li>
+							<li><a href="#">Credit Card Form</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">mail</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Email</span>
+						</a>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Compose Email</a></li>
+							<li><a href="#">Inbox</a></li>
+							<li><a href="#">Read Mail</a></li>
+							<li>
+								<a href="#">Email Template</a>
+								<ul class="space-y-1">
+									<li><a href="#">Welcome Email</a></li>
+									<li><a href="#">Reset Password</a></li>
+									<li><a href="#">Newsletter Email</a></li>
+									<li><a href="#">App Launch</a></li>
+									<li><a href="#">Activation Code</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="mb-2">
+				<h4 class="px-4 my-4">Pages</h4>
+				<ul class="space-y-1">
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">lock_open</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Authentication</span>
+						</a>
+
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Registration</a></li>
+							<li><a href="#">Forgot Password</a></li>
+							<li><a href="#">Forgot Password</a></li>
+							<li><a href="#">Lock Screen</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">engineering</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Maintenance</span>
+						</a>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Error</a></li>
+							<li><a href="#">Comming Soon</a></li>
+							<li><a href="#">Offline UI</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">shopping_cart</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">E-Commerce</span>
+						</a>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Product</a></li>
+							<li><a href="#">Product List</a></li>
+							<li><a href="#">Product Edit</a></li>
+							<li><a href="#">Product Detail</a></li>
+							<li><a href="#">Product Card</a></li>
+							<li><a href="#">Credit Card Form</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="media.html" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">mail</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Email</span>
+						</a>
+						<ul class="space-y-1 hidden">
+							<li><a href="#">Compose Email</a></li>
+							<li><a href="#">Inbox</a></li>
+							<li><a href="#">Read Mail</a></li>
+							<li>
+								<a href="#">Email Template</a>
+								<ul class="space-y-1">
+									<li><a href="#">Welcome Email</a></li>
+									<li><a href="#">Reset Password</a></li>
+									<li><a href="#">Newsletter Email</a></li>
+									<li><a href="#">App Launch</a></li>
+									<li><a href="#">Activation Code</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+            <!-- Apps end -->
+
+            <!-- Support -->
+            <nav class="mt-auto">
+				<h4 class="px-4 my-4">Support</h4>
+				<ul class="space-y-1">
+					<li>
+						<a href="#" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">folder_open</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Documentation</span>
 						</a>
 					</li>
 
 					<li>
-						<a href="#">
-							<span>Change log</span>
+						<a href="#" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">contact_support</span>
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Submit Issue</span>
 						</a>
 					</li>
+
 					<li>
-						<a href="#">
-							<span>License</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span>Copyright</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" x-on:click="asideCollapse=!asideCollapse">
-							<span>Collapse</span>
+						<a href="#" class="flex items-center py-2 px-4 hover:text-indigo-500">
+							<span class="material-symbols-outlined">arrow_circle_left</span>
+							<!-- <span class="material-symbols-outlined">arrow_circle_right</span> -->
+							<span class="ml-2" :class="asideCollapse ? 'hidden' : ''">Collapse</span>
 						</a>
 					</li>
 				</ul>
 			</nav>
-            <!-- Company end -->
+            <!-- Support end -->
         </aside>
         <!-- Sidebar navigation end -->
 
