@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index | Admin panel</title>
+
+    <!-- Stylesheet -->
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Wrapper -->
+    <div class="flex" x-data="{collapse:false}">
+
+        <!-- Side navigation -->
+        <aside class="flex-none h-screen sm:w-20 lg:w-80 flex flex-col duration-200 z-10 text-gray-800 " :class="collapse ? 'w-20' : 'w-80'">
+            <!-- Basic -->
+            <nav class="flex flex-col px-2 mb-2">
+                <a href="#" class="flex items-center py-4 gap-2">
+                    <img src="assets/images/logo.jpg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" alt="Logo" />
+                    <span class="text-xl uppercase font-semibold whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 translate-x-28 collapse' : ''">Company name</span>
+                </a>
+
+                <a href="#" class="flex items-center py-2 gap-2 hover:text-blue-500">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+                            <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+                        </svg>
+                    </span>
+                    <span class="whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 translate-x-28 collapse' : ''">Dashboard</span>
+                </a>
+
+                <a href="#" class="flex items-center py-2 gap-2">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="m7.646 9.354-3.792 3.792a.5.5 0 0 0 .353.854h7.586a.5.5 0 0 0 .354-.854L8.354 9.354a.5.5 0 0 0-.708 0z"/>
+                            <path d="M11.414 11H14.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-13a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h3.086l-1 1H1.5A1.5 1.5 0 0 1 0 10.5v-7A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v7a1.5 1.5 0 0 1-1.5 1.5h-2.086l-1-1z"/>
+                        </svg>
+                    </span>
+                    <span class="whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 translate-x-28 collapse' : ''">Media</span>
+                </a>
+
+                <a href="#" class="flex items-center py-2 gap-2">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                        </svg>
+                    </span>
+                    <span class="whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 translate-x-28 collapse' : ''">User detail</span>
+                </a>
+
+                <a href="#" class="flex items-center py-2 gap-2">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                            <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z"/>
+                        </svg>
+                    </span>
+                    <span class="whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 translate-x-28 collapse' : ''">Privacy Policy</span>
+                </a>
+            </nav>
+
+            <!-- Modules -->
+            <nav class="px-2 mb-2">
+                <h3 class="flex items-end uppercase py-2">
+                    <span class="text-2xl font-bold">M</span>
+                    <span class="font-semibold whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 collapse' : ''">odules</span>
+                </h3>
+
+                <ul>
+                    <li x-data="accordion">
+                        <a href="#" class="flex items-center gap-2 py-2 hover:text-blue-500" x-on:click="toggle">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16">
+                                    <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                                </svg>
+                            </span>
+                            <span class="whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 translate-x-28 collapse' : ''">Components</span>
+                            <span class="ml-auto" :class="collapse ? 'hidden' : ''">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+
+                                <!-- 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                </svg> 
+                                -->
+                            </span>
+                        </a>
+
+                        <ul class="space-y-2" x-show="open" x-on:click.outside="open=false">
+                            <li><a href="#" class="flex pl-2 hover:text-blue-500">Alert</a></li>
+                            <li><a href="#" class="flex pl-2 hover:text-blue-500">Button</a></li>
+                            <li><a href="#" class="flex pl-2 hover:text-blue-500">Card</a></li>
+                            <li><a href="#" class="flex pl-2 hover:text-blue-500">Form</a></li>
+                            <li><a href="#" class="flex pl-2 hover:text-blue-500">Table</a></li>
+                            <li><a href="#" class="flex pl-2 hover:text-blue-500">Icons</a></li>
+                        </ul>
+                    </li>
+
+                    <li x-data="accordion">
+                        <a href="#" class="flex items-center gap-2 py-2 hover:text-blue-500" x-on:click="toggle">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M4.355.522a.5.5 0 0 1 .623.333l.291.956A4.979 4.979 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A4.985 4.985 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623zM4 7v4a4 4 0 0 0 3.5 3.97V7H4zm4.5 0v7.97A4 4 0 0 0 12 11V7H8.5zM12 6a3.989 3.989 0 0 0-1.334-2.982A3.983 3.983 0 0 0 8 2a3.983 3.983 0 0 0-2.667 1.018A3.989 3.989 0 0 0 4 6h8z"/>
+                                </svg>
+                            </span>
+                            <span class="whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 translate-x-28 collapse' : ''">Errors</span>
+                            <span class="ml-auto" :class="collapse ? 'hidden' : ''">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                            </span>
+                        </a>
+
+                        <ul class="space-y-2" x-show="open" x-on:click.outside="open=false">
+                            <li><a href="#" class="flex pl-2 hover:text-blue-500">404</a></li>
+                            <li><a href="#" class="flex pl-2 hover:text-blue-500">500</a></li>
+                            <li><a href="#" class="flex pl-2 hover:text-blue-500">503</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="flex items-center gap-2 py-2 hover:text-blue-500">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M4.355.522a.5.5 0 0 1 .623.333l.291.956A4.979 4.979 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A4.985 4.985 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623zM4 7v4a4 4 0 0 0 3.5 3.97V7H4zm4.5 0v7.97A4 4 0 0 0 12 11V7H8.5zM12 6a3.989 3.989 0 0 0-1.334-2.982A3.983 3.983 0 0 0 8 2a3.983 3.983 0 0 0-2.667 1.018A3.989 3.989 0 0 0 4 6h8z"/>
+                                </svg>
+                            </span>
+                            <span class="whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 translate-x-28 collapse' : ''">Errors</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Bottom -->
+            <nav class="flex flex-col px-2 mt-auto text-gray-700">
+                <ul>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 py-4 hover:text-blue-500" x-on:click="collapse=!collapse">
+                            <span>
+                                <template x-if="!collapse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                                    </svg> 
+                                </template>
+
+                                <template x-if="collapse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" :width="collapse ? 24 : 20" :height="collapse ? 24 : 20" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                                      </svg>
+                                </template>
+                            </span>
+                            <span class="whitespace-pre overflow-hidden duration-500" :class="collapse ? 'opacity-0 translate-x-28 collapse' : ''">Collapse</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- Side navigation end -->
+
+        <div class="w-screen bg-gray-50 px-10 relative">
+            <button class="bg-blue-500 text-white px-2 py-1 rounded" x-on:click="collapse=!collapse">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                </svg>                                                
+            </button>
+
+            <h1 class="text-2xl font-semibold">Dashboard</h1>
+            <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+
+            <div class="my-12" x-data="{count: 10}">
+                <button x-on:click="count++" class="bg-blue-500 text-white px-2 hover:bg-blue-700">Increment</button>
+                <h2 class="text-2xl" x-text="count"></h2>
+                <button x-on:click="count--" class="bg-blue-500 text-white px-2 hover:bg-blue-700">Decrement</button>
+            </div>
+
+            <div x-data="{ open: false }">
+                <button @click="open = ! open">Toggle Content 1</button>
+             
+                <div x-show="open">
+                    Content...
+                </div>
+            </div>
+
+            <div x-data="{ open: false }">
+                <button @click="open = ! open">Toggle Content 2</button>
+             
+                <div x-show="open">
+                    Content...
+                </div>
+            </div>
+
+            <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, quam, magnam quibusdam numquam voluptate cumque odit quas exercitationem qui aliquid nulla blanditiis ut fugiat maxime soluta repellendus delectus quae velit quod laboriosam. Distinctio molestias commodi unde, dolor animi ducimus quo ad est laboriosam debitis asperiores quia repellat suscipit architecto harum neque accusantium consequatur aspernatur optio soluta impedit quasi id saepe quis? Unde quia facilis, a laudantium eos maxime accusantium vero! Optio, veniam accusamus nemo harum ratione recusandae cumque incidunt exercitationem amet, minus quidem. Modi omnis soluta perferendis, fugit architecto officiis nemo distinctio consequuntur magni suscipit rerum vitae illo quam repellat.</p>
+            </div>
+
+            <div class="h-screen bg-indigo-600"></div>
+        </div>
+
+        <!-- Overlay -->
+        <!--
+        <div class="w-screen h-screen bg-gray-200 bg-opacity-60 absolute top-0 left-0 lg:hidden z-0"></div>
+        -->
+    </div>
+    <!-- Wrapper end -->
+
+    <!-- Javascript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('accordion', () => ({
+                open: false,
+                toggle() {
+                    this.open = ! this.open
+                },
+            }))
+        });
+    </script>
+</body>
+</html>

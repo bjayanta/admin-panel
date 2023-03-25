@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Admin panel</title>
+
+    <!-- Stylesheet -->
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body x-data="{asideCollapse:false}">
+    
+    <!-- Wrapper -->
+    <div class="relative">
+        <!-- Sidebar navigation -->
+        <aside class="fixed top-0 left-0 h-screen px-4 overflow-hidden bg-white" :class="asideCollapse ? 'w-20' : 'w-80'">
+            <!-- Brand -->
+			<a href="dashboard.html" class="flex items-center h-16">
+				<img src="assets/images/logo.png" class="w-6 h-6" alt="JB Enterprise" />
+				<span class="text-xl font-semibold ml-2" :class="asideCollapse ? 'hidden' : ''">JB Enterprise</span>
+			</a>
+
+            <!-- Basic -->
+            <nav class="mb-2">
+				<ul>
+					<li>
+						<a href="dashboard.html">
+							<span :class="asideCollapse ? 'hidden' : ''">Dashboard</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<span :class="asideCollapse ? 'hidden' : ''">Media</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+            <!-- Basic end -->
+
+            <!-- Pages -->
+            <nav class="mb-2">
+				<strong>Pages</strong>
+				<ul>
+					<li>
+						<a href="#">
+							<span>Starter</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Pages</span>
+						</a>
+						<ul>
+							<li><a href="#">Faq</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Empty page</a></li>
+							<li><a href="#">Notifications</a></li>
+							<li><a href="#">Members</a></li>
+							<li><a href="#">Mail templates</a></li>
+							<li><a href="#">Under construction</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">
+							<span>Errors</span>
+						</a>
+						<ul>
+							<li><a href="#">404</a></li>
+							<li><a href="#">500</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+            <!-- Pages end -->
+
+            <!-- Modules -->
+            <nav class="mb-2">
+				<strong>Modules</strong>
+				<ul>
+					<li>
+						<a href="#">
+							<span>Module</span>
+						</a>
+						<ul>
+							<li><a href="module-records.html">Records</a></li>
+							<li><a href="module-form.html">Form</a></li>
+							<li><a href="module-trash.html">Trash</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+            <!-- Modules end -->
+
+            <!-- Company -->
+            <nav>
+				<strong>Company</strong>
+				<ul>
+					<li>
+						<a href="#">
+							<span>Getting started</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<span>Customization</span>
+						</a>
+						<ul>
+							<li><a href="#">Styling</a></li>
+							<li><a href="#">Plugin</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#">
+							<span>Support</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<span>Change log</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>License</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Copyright</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" x-on:click="asideCollapse=!asideCollapse">
+							<span>Collapse</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+            <!-- Company end -->
+        </aside>
+        <!-- Sidebar navigation end -->
+
+        <!-- Container -->
+        <div :class="asideCollapse ? 'ml-20' : 'ml-80'">
+            <!-- Navigation -->
+            <nav class="h-16 flex items-center px-4 space-x-2 bg-yellow-500">
+                <a href="#" class="flex items-center" x-on:click="asideCollapse=!asideCollapse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+
+                    <!-- 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg> 
+                    -->
+
+                    <span>Collapse</span>
+                </a>
+
+                <span>Navigation</span>
+            </nav>
+            <!-- Navigation end -->
+
+            <!-- Page header -->
+            <header class="h-screen bg-green-500">Page header</header>
+            <!-- Page header end -->
+
+            <!-- Content -->
+            <section class="h-screen bg-blue-500">
+                <h1 class="text-2xl">Content</h1>
+            </section>
+            <!-- Content end -->
+        </div>
+        <!-- Container end -->
+
+        <!-- Overlay -->
+		<div class="overlay">Overlay</div>
+    </div>
+    <!-- Wrapper end -->
+
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
