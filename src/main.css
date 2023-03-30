@@ -1,0 +1,27 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "assets/styles/aside.css";
+/* @import "assets/styles/components.css"; */
+/* @import "assets/styles/utilities.css"; */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #B2B2B2;
+}

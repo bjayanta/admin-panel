@@ -1,0 +1,27 @@
+/* .aside-collapse aside {
+  @apply w-20;
+}
+
+.aside-collapse aside h4 {
+  @apply invisible;
+}
+
+.aside-collapse main {
+  @apply ml-20;
+}
+
+.aside-collapse a span.chevron-right,
+.aside-collapse a span.menu-title {
+  @apply hidden;
+}
+
+@media (max-width: 768px) {
+  .aside-collapse aside {
+    @apply w-80;
+  }
+
+  .aside-collapse a span.chevron-right,
+  .aside-collapse aside a span.menu-title {
+    @apply block;
+  }
+} */

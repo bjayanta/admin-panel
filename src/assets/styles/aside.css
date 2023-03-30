@@ -1,0 +1,86 @@
+
+/* Aside navigation */
+@layer base {
+    aside {
+      @apply w-80;
+      @apply bg-white
+    }
+  
+    aside .dropdown {
+      @apply relative;
+    }
+  
+    aside .dropdown .dropdown-menu {
+      @apply hidden;
+    }
+  
+    aside .dropdown .dropdown-menu.show {
+      @apply block;
+    }
+    
+    main {
+      @apply ml-80;
+    }
+
+    @media (max-width: 768px) {
+      aside {
+        @apply w-20;
+      }
+  
+      aside a span.chevron-right,
+      aside a span.menu-title {
+        @apply hidden;
+      }
+  
+      aside h4 {
+        @apply invisible;
+      }
+  
+      aside .dropdown:hover .dropdown-menu,
+      aside .dropdown .dropdown-menu.show {
+        @apply block;
+        @apply absolute;
+        @apply top-0;
+        @apply left-20;
+        @apply w-80;
+        @apply bg-white;
+        @apply border;
+        @apply shadow;
+        @apply rounded;
+        @apply z-10;
+        @apply ml-[1px]
+      }
+  
+      main {
+        @apply ml-20;
+      }
+    }
+  }
+
+.aside-collapse aside {
+  @apply w-20;
+}
+
+.aside-collapse aside h4 {
+  @apply invisible;
+}
+
+.aside-collapse main {
+  @apply ml-20;
+}
+
+.aside-collapse a span.chevron-right,
+.aside-collapse a span.menu-title {
+  @apply hidden;
+}
+
+@media (max-width: 768px) {
+  .aside-collapse aside {
+    @apply w-80;
+  }
+
+  .aside-collapse a span.chevron-right,
+  .aside-collapse aside a span.menu-title {
+    @apply block;
+  }
+}
