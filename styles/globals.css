@@ -32,3 +32,22 @@ body {
   font-family: 'Inter', sans-serif;
   /* font-family: 'Satoshi', sans-serif; */
 }
+
+.wrapper {
+  @apply bg-teal-400;
+}
+
+.aside {
+  width: 5rem;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+}
+
+.aside .aside-item {
+  @apply flex h-10 w-10 text-purple-600 bg-indigo-600/20  items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-indigo-600/20 focus:bg-indigo-600/20 active:bg-indigo-600/25 dark:hover:bg-blue-300/20 dark:focus:bg-blue-300/20 dark:active:bg-blue-300/25
+}
+
+.aside .aside-item .active {
+  @apply flex h-10 w-10 text-purple-600 bg-indigo-600/20  items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-indigo-600/20 focus:bg-indigo-600/20 active:bg-indigo-600/25 dark:hover:bg-blue-300/20 dark:focus:bg-blue-300/20 dark:active:bg-blue-300/25
+}

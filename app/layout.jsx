@@ -1,4 +1,5 @@
 import '@styles/globals.css'
+import Aside from "@components/Aside";
 
 export const metadata = {
   title: 'Admin Template',
@@ -8,7 +9,10 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body>
+      <body className='flex bg-blue-50'>
+        {/* Main aside navigation */}
+        <Aside />
+
         <main>
           {children}
         </main>
